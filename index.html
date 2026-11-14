@@ -37,7 +37,7 @@
       <div>
         <div class="eyebrow"><i></i> THE CAGEDDRAGON AUTHENTICATION COLLECTION</div>
         <h1>First impressions<br/>start at <span class="gradient-word">sign in.</span></h1>
-        <p class="hero-copy">A curated library of authentication interfaces, crafted to help ambitious products feel unmistakably their own. Explore the concepts, open the original previews, and find a direction for your next build.</p>
+        <p class="hero-copy">A curated library of 60 authentication interfaces, each available in 20 coordinated color themes. Explore 1,200 ways to make a first impression feel unmistakably yours.</p>
         <div class="hero-cta"><a class="btn btn-primary" href="#library">Explore all designs <span>↗</span></a><a class="btn btn-secondary" href="#contact">Discuss a project <span>↗</span></a></div>
         <div class="hero-footnote">Original Stitch AI exports · Preview images and HTML included</div>
       </div>
@@ -51,8 +51,8 @@
 
     <div class="shell"><section class="stats" aria-label="Collection statistics">
       <div class="stat"><strong>60</strong><span>AUTHENTICATION<br/>DESIGN CONCEPTS</span></div>
-      <div class="stat"><strong>03</strong><span>WAYS TO EXPLORE<br/>THE COLLECTION</span></div>
-      <div class="stat"><strong>01</strong><span>PLACE TO FIND<br/>YOUR NEXT DIRECTION</span></div>
+      <div class="stat"><strong>20</strong><span>COLOR THEMES<br/>PER TEMPLATE</span></div>
+      <div class="stat"><strong>1,200</strong><span>COLORFUL DESIGN<br/>COMBINATIONS</span></div>
     </section></div>
 
     <section class="library" id="library"><div class="shell">
@@ -65,14 +65,14 @@
 
     <section class="manifesto" id="approach"><div class="shell"><div class="manifesto-inner">
       <div><div class="section-kicker">DESIGNED TO BE EXPLORED</div><h2>Not just a login screen.<br/>A brand's first handshake.</h2><p>From quiet, minimal entry points to expressive, industry-led experiences, this collection gives product teams and clients a starting point for shaping the moment users enter their digital world.</p></div>
-      <div class="manifesto-points"><div class="point"><b>Visual directions</b>Minimal, editorial, expressive, and experimental styles.</div><div class="point"><b>Authentication flows</b>Passkeys, QR, email links, phone OTP, and more.</div><div class="point"><b>Industry concepts</b>Fintech, education, travel, commerce, gaming, and more.</div><div class="point"><b>Original exports</b>Each card includes the source preview and HTML design.</div></div>
+      <div class="manifesto-points"><div class="point"><b>Visual directions</b>Minimal, editorial, expressive, and experimental styles.</div><div class="point"><b>Authentication flows</b>Passkeys, QR, email links, phone OTP, and more.</div><div class="point"><b>Industry concepts</b>Fintech, education, travel, commerce, gaming, and more.</div><div class="point"><b>Original exports</b>Each live design includes 20 coordinated, switchable color themes.</div></div>
     </div></div></section>
 
     <section class="contact" id="contact"><div class="shell"><div class="contact-box"><div><h2>Found a direction you like?</h2><p>Choose a design and start a conversation about adapting it to your product, brand, or next launch.</p></div><button class="btn btn-primary" id="projectBtn">Prepare a project inquiry ↗</button></div></div></section>
   </main>
-  <footer class="footer"><div class="shell footer-inner"><div><strong>CAGEDDRAGON</strong> &nbsp;·&nbsp; A considered start for ambitious products.</div><div>Template previews and source HTML are included in this collection.</div></div></footer>
+  <footer class="footer"><div class="shell footer-inner"><div><strong>CAGEDDRAGON</strong> &nbsp;·&nbsp; A considered start for ambitious products.</div><div>Every live template includes a 20-theme colorway selector.</div></div></footer>
 
-  <div class="modal" id="previewModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-panel"><div class="modal-head"><div><h3 id="modalTitle">Template preview</h3><p id="modalDescription"></p></div><button class="close" id="closeModal" aria-label="Close preview">×</button></div><div class="modal-image"><img id="modalImage" src="" alt="Selected template full preview"/></div><div class="modal-actions"><a class="btn btn-primary" id="modalLive" href="#" target="_blank" rel="noopener">Open live HTML preview ↗</a><a class="btn btn-secondary" id="modalDownload" href="#" download>Download HTML source ↓</a></div></div></div>
+  <div class="modal" id="previewModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-panel"><div class="modal-head"><div><h3 id="modalTitle">Template preview</h3><p id="modalDescription"></p></div><button class="close" id="closeModal" aria-label="Close preview">×</button></div><div class="modal-image"><img id="modalImage" src="" alt="Selected template full preview"/></div><div class="modal-actions"><a class="btn btn-primary" id="modalLive" href="#" target="_blank" rel="noopener">Open 20-theme preview ↗</a><a class="btn btn-secondary" id="modalDownload" href="#" download>Download HTML source ↓</a></div></div></div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script>
@@ -97,7 +97,7 @@
       if(!list.length){grid.innerHTML='<div class="empty"><strong>No matching designs</strong>Try a different keyword or clear the current filter.</div>';return;}
       grid.innerHTML=list.map(t=>`<article class="template-card">
         <div class="preview"><img src="${t.preview}" alt="${escapeHtml(t.title)} screenshot" loading="lazy"/><span class="preview-number">${t.number} / 60</span>${t.featured?'<span class="featured-tag">FEATURED</span>':''}</div>
-        <div class="card-body"><div class="card-meta"><span class="tag">${escapeHtml(t.group)}</span><span class="group-tag">STITCH EXPORT</span></div><h3>${escapeHtml(t.title)}</h3><p>${escapeHtml(t.description)}</p>
+        <div class="card-body"><div class="card-meta"><span class="tag">${escapeHtml(t.group)}</span><span class="group-tag">20 COLOR THEMES</span></div><h3>${escapeHtml(t.title)}</h3><p>${escapeHtml(t.description)}</p>
         <div class="card-actions"><button class="open-btn" data-preview="${escapeHtml(t.id)}">Quick view ↗</button><a href="${t.live}" target="_blank" rel="noopener">Live preview ↗</a></div></div>
       </article>`).join('');
       grid.querySelectorAll('[data-preview]').forEach(btn=>btn.addEventListener('click',()=>openPreview(btn.dataset.preview)));
@@ -105,7 +105,7 @@
     function openPreview(id){
       const t=templates.find(x=>x.id===id); if(!t)return;
       document.getElementById('modalTitle').textContent=t.title;
-      document.getElementById('modalDescription').textContent=`${t.group} · ${t.description}`;
+      document.getElementById('modalDescription').textContent=`${t.group} · ${t.description} · 20 color themes available inside live preview`;
       document.getElementById('modalImage').src=t.preview;
       document.getElementById('modalLive').href=t.live;
       document.getElementById('modalDownload').href=t.live;
