@@ -1,11 +1,11 @@
 # CagedDragon Template Showcase
 
-A static portfolio catalogue built from the 60 original Stitch AI authentication designs supplied in this conversation.
+A static design portfolio built from the 60 original Stitch AI authentication templates supplied in this conversation.
 
 ## What's included
-- `index.html` — responsive CagedDragon gallery with search, filters, sorting, and quick views.
+- `index.html` — responsive CagedDragon gallery with search, filters, sorting, and **interactive Quick View** previews.
 - `catalog.json` — catalogue metadata for all 60 designs.
-- `templates/` — original Stitch HTML and screenshot for every design, enhanced with an interactive 20-colorway selector.
+- `templates/` — original Stitch HTML and screenshot for every design, enhanced with the repaired 20-colorway selector.
 - **1,200 live design variations** — 60 templates × 20 color themes.
 
 ## The 20 color themes
@@ -30,10 +30,13 @@ A static portfolio catalogue built from the 60 original Stitch AI authentication
 19. Graphite Monochrome
 20. Porcelain & Ink
 
-Open any template's Live preview and use the floating CagedDragon Colorways panel in the lower-right corner to switch palettes. The selected colorway is remembered in the browser and can be changed at any time. Each color theme updates the page's semantic background, surface, text, primary, secondary, tertiary, and outline tokens while preserving the original layout and typography. The gallery thumbnail screenshots remain the original Stitch images; open a live HTML preview to switch themes. Decorative artwork or image assets embedded in an original design may retain their source colors.
+## How the repaired colorway selector works
+Open any design with **Quick view** or **Live preview**. Click the floating **CagedDragon Colorways** control in the lower-right corner and choose one of the 20 palettes. The selected theme immediately updates the page's semantic background, surface, text, primary, secondary, tertiary, border, outline, and related utility colors. Theme switching uses direct CSS overrides based on the actual semantic classes in each page; it does not rely on Tailwind regenerating its stylesheet at runtime. Your chosen palette is saved in the browser and can be changed at any time. A theme can also be passed into a preview URL using `?palette=dragon-amethyst` (or another palette ID).
+
+The original layout, typography, and screenshots remain intact. Hard-coded artwork, raster imagery, and one-off arbitrary color values may retain their source colors by design.
 
 ## Run locally
-Open `index.html` in a modern browser. For the most reliable loading of the individual templates, run a local static server from this folder:
+Use a local static server for the gallery and embedded Quick View. This avoids browser restrictions that can affect local-file iframes. From this folder, run:
 
 ```bash
 python -m http.server 8000
@@ -49,4 +52,4 @@ The “Prepare a project inquiry” button copies a starter inquiry to the visit
 You can publish the whole folder as a static site on Vercel, Netlify, GitHub Pages, or another static host.
 
 ## Source note
-The screenshots and original HTML structure are preserved from the supplied Stitch export. The gallery, CagedDragon identity, colorway selector, and 20 semantic theme palettes were added for this portfolio website.
+The screenshots and original HTML structure are preserved from the supplied Stitch export. The gallery, CagedDragon identity, interactive previews, repaired colorway selector, and 20 semantic theme palettes were added for this portfolio website.
