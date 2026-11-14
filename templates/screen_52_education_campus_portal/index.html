@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-background": "#e3e1e9",
+          "primary-container": "#8083ff",
+          "outline": "#908fa0",
+          "on-error": "#690005",
+          "tertiary-container": "#009eb9",
+          "secondary-container": "#ee9800",
+          "surface-bright": "#38393f",
+          "outline-variant": "#464554",
+          "on-tertiary-fixed-variant": "#004e5c",
+          "on-secondary-fixed": "#2a1700",
+          "surface-tint": "#c0c1ff",
+          "surface-dim": "#121318",
+          "on-surface-variant": "#c7c4d7",
+          "primary-fixed": "#e1e0ff",
+          "error": "#ffb4ab",
+          "on-primary": "#1000a9",
+          "primary": "#c0c1ff",
+          "on-secondary": "#472a00",
+          "on-surface": "#e3e1e9",
+          "on-tertiary": "#003640",
+          "surface-container-lowest": "#0d0e13",
+          "tertiary-fixed-dim": "#4cd7f6",
+          "surface-container": "#1e1f25",
+          "on-primary-fixed-variant": "#2f2ebe",
+          "on-error-container": "#ffdad6",
+          "on-primary-container": "#0d0096",
+          "secondary": "#ffb95f",
+          "on-tertiary-fixed": "#001f26",
+          "inverse-on-surface": "#2f3036",
+          "surface-container-high": "#292a2f",
+          "secondary-fixed": "#ffddb8",
+          "background": "#121318",
+          "surface-container-highest": "#34343a",
+          "on-primary-fixed": "#07006c",
+          "error-container": "#93000a",
+          "on-secondary-fixed-variant": "#653e00",
+          "surface-variant": "#34343a",
+          "surface": "#121318",
+          "on-secondary-container": "#5b3800",
+          "tertiary-fixed": "#acedff",
+          "surface-container-low": "#1a1b21",
+          "primary-fixed-dim": "#c0c1ff",
+          "secondary-fixed-dim": "#ffb95f",
+          "on-tertiary-container": "#002f38",
+          "inverse-primary": "#494bd6",
+          "inverse-surface": "#e3e1e9",
+          "tertiary": "#4cd7f6"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-xs": "0.25rem",
+          "space-md": "1rem",
+          "space-sm": "0.5rem",
+          "margin-mobile": "1.25rem",
+          "margin": "2.5rem",
+          "space-xl": "2.5rem",
+          "gutter-mobile": "1rem",
+          "space-lg": "1.5rem",
+          "gutter": "1.5rem"
+        },
+        "fontFamily": {
+          "label-sm": [
+            "Inter"
+          ],
+          "code-mono": [
+            "Space Grotesk"
+          ],
+          "display-hero-mobile": [
+            "Space Grotesk"
+          ],
+          "label-lg": [
+            "Inter"
+          ],
+          "headline-md": [
+            "Space Grotesk"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg": [
+            "Space Grotesk"
+          ],
+          "headline-lg-mobile": [
+            "Space Grotesk"
+          ],
+          "display-hero": [
+            "Space Grotesk"
+          ],
+          "body-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "label-md": [
+            "Inter"
+          ]
+        },
+        "fontSize": {
+          "label-sm": [
+            "10px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.06em",
+              "fontWeight": "600"
+            }
+          ],
+          "code-mono": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0.2em",
+              "fontWeight": "500"
+            }
+          ],
+          "display-hero-mobile": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "label-lg": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "22px",
+              "fontWeight": "400"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "26px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg-mobile": [
+            "26px",
+            {
+              "lineHeight": "34px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "display-hero": [
+            "48px",
+            {
+              "lineHeight": "56px",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-sm": [
+            "18px",
+            {
+              "lineHeight": "26px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "500"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased min-h-screen relative selection:bg-primary-container selection:text-on-primary-container"><div class="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-primary-container/10 via-surface-container-lowest to-background"></div><main class="relative z-10 w-full min-h-screen flex flex-col justify-between"><div class="flex flex-col w-full">
+<!-- Top Institutional Bar & Real-time Network Telemetry -->
+<header class="w-full bg-surface-container-lowest px-4 sm:px-8 py-3 flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase text-tertiary tracking-widest">EduRoam 802.1X Node</span>
+</div>
+<span class="text-outline-variant font-label-sm text-label-sm">/</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider hidden sm:inline">Academic Year 2024–2025 · Trimester II</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 bg-surface-container-high px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-secondary text-base">verified_user</span>
+<span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Campus Network: Nominal</span>
+</div>
+<div class="flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-sm">lock</span>
+<span class="font-label-sm text-label-sm hidden md:inline">TLS 1.3 · Mutual-Auth Vault</span>
+</div>
+</div>
+</header>
+<!-- Main Asymmetric Grid Section -->
+<section class="w-full max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 py-8 lg:py-16">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+<!-- Left Column: Institutional Manifesto & Academic Artifacts (7 cols) -->
+<div class="lg:col-span-7 flex flex-col space-y-10">
+<!-- University Crest Header -->
+<div class="flex items-center gap-5">
+<div class="w-14 h-14 rounded-xl bg-gradient-to-br from-surface-container-highest to-surface-container flex items-center justify-center text-primary shadow-xl">
+<svg class="w-8 h-8 text-secondary" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 48 48">
+<path d="M24 4L6 14v12c0 11.5 7.7 22.2 18 24 10.3-1.8 18-12.5 18-24V14L24 4z"></path>
+<path d="M24 12v20"></path>
+<path d="M14 22l10-4 10 4"></path>
+<circle cx="24" cy="32" fill="currentColor" r="3"></circle>
+</svg>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm tracking-widest uppercase text-secondary">Veritas Universitas · Fundata MDCCCLXXXVIII</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight mt-0.5">Central Institutional Gateway</h2>
+</div>
+</div>
+<!-- Major Institutional Heading -->
+<div class="space-y-4">
+<h1 class="font-display-hero text-display-hero text-on-surface leading-tight tracking-tight">
+            Empowering Discovery.<br/>
+<span class="text-primary font-serif italic">Guarding Knowledge.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+            Access collegiate computing clusters, peer-reviewed archival manuscripts, quantum simulation engines, and student scholarship registries across all thirteen sovereign faculties.
+          </p>
+</div>
+<!-- Visual Media Feature: Historic Quad & High-Compute Visuals -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="relative rounded-xl overflow-hidden bg-surface-container-low shadow-xl group">
+<div class="w-full h-52 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Monolithic stone gothic revival university library atrium bathed in dramatic golden morning sunlight with student researchers consulting ancient archival folios and digital slate displays, deep collegiate tones, architectural photography" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBkUVgsOi_hotn43OH2WT4VLm9F8UXnSRjko7HOoC1FD1M2U3iDBOSzmkMJvPhYjTKXnf9Joyxe6MbtjTw40HCMWyYnwi56rFOvKuX3x07kqxJvuENfc5y20ikv0wXvySY6Lpa0RPsb7ryDfxaVruvzQu-ZPiU-8xbmR00NKcKVudY7_QtdbrZUB6pLyFteHnXtq4Vja9zwP97ODUHf4zjsRAQwm7rAZp-RgAQxfrGr')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/40 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+<div>
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Library Collections</p>
+<p class="font-headline-sm text-headline-sm text-on-surface">Rare Manuscripts Vault</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">arrow_outward</span>
+</div>
+</div>
+<div class="relative rounded-xl overflow-hidden bg-surface-container-low shadow-xl group">
+<div class="w-full h-52 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Interior of state of the art cryogenic supercomputing server bay at an elite research institute with softly glowing indigo and cyan telemetry lines, deep architectural depth, cinematic server rack arrays" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCfdapz__DCfbFMok4HtesvOAqzFR1V06US2wWczVmkMpIQlzLrsvYjyQQrgN3ijX6T92HjHnhC6bo-NbtVYSUfiGLZWx1kQ78mil1EnwGKUYwkFwedX_tmxktP3SfykqfC0ps1k457hBWlPwZrYY70D9j8LAKdRGpPBjTqJCI62mk82U5QJ5zhRjvZ5SoExkwKLdMaCwV_teBb-W9oPFbiXdQ7DMnky1-ylhU0eSmM')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/40 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+<div>
+<p class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest">HPC Facility</p>
+<p class="font-headline-sm text-headline-sm text-on-surface">Cray-Orion Cluster: Online</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">arrow_outward</span>
+</div>
+</div>
+</div>
+<!-- Live Campus Bulletin & Research Cluster Noticeboard -->
+<div class="rounded-xl bg-surface-container-low p-6 space-y-4 shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">campaign</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Academic Notices &amp; System Dispatch</h3>
+</div>
+<span class="font-code-mono text-xs text-outline tracking-wider">SYNC // 14:02:18 UTC</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+<!-- Bulletin 1 -->
+<div class="bg-surface-container rounded-lg p-4 space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-highest text-secondary-fixed">Folios 1492</span>
+<span class="font-label-sm text-label-sm text-outline">Today</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-medium">Rare Folios Digitization Milestone</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                1,840 illuminated legal codes from the Bolognese corpus are now indexed in the Vector Archival Engine.
+              </p>
+</div>
+<!-- Bulletin 2 -->
+<div class="bg-surface-container rounded-lg p-4 space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-highest text-tertiary-fixed-dim">Computing Node</span>
+<span class="font-label-sm text-label-sm text-tertiary">99.98% Cap</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-medium">Astrophysics Grid Allocation</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Trimester batch allocations for gravitational wave parameter estimation queues active until 23:59 EST.
+              </p>
+</div>
+</div>
+</div>
+<!-- Security & Legal Protocol Badges -->
+<div class="flex flex-wrap items-center gap-4 text-outline pt-2">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-base text-secondary">shield</span>
+<span>FERPA Compliant Infrastructure</span>
+</div>
+<span>•</span>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-base text-primary">key</span>
+<span>WebAuthn FIDO2 Level 3</span>
+</div>
+<span>•</span>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-base text-tertiary">fingerprint</span>
+<span>Hardware Token Supported</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Institutional Authentication Module (5 cols) -->
+<div class="lg:col-span-5">
+<div class="bg-surface-container-low rounded-2xl p-6 sm:p-8 lg:p-10 shadow-2xl relative overflow-hidden backdrop-blur-xl">
+<!-- Subtle ambient top gradient aura -->
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Card Header & Badge -->
+<div class="relative z-10 space-y-2 mb-8">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary bg-surface-container px-3 py-1 rounded-full">
+                Single Sign-On (SSO)
+              </span>
+<div class="flex items-center gap-1.5 text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-ping"></span>
+<span class="font-label-sm text-label-sm">Duo MFA Ready</span>
+</div>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Institutional Ingress</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Sign in with your centralized academic directory credentials.</p>
+</div>
+<!-- Role Selector Segmented Pill Tabs -->
+<div class="relative z-10 mb-6">
+<label class="block font-label-sm text-label-sm uppercase tracking-wider text-outline mb-2">Select Primary Affiliation</label>
+<div class="grid grid-cols-3 gap-1 bg-surface-container-lowest p-1.5 rounded-xl" id="role-selector">
+<button class="role-btn py-2 px-3 rounded-lg font-label-md text-label-md text-center transition-all bg-primary-container text-on-primary-container shadow-md" onclick="switchRole(this, 'student')" type="button">
+                Student
+              </button>
+<button class="role-btn py-2 px-3 rounded-lg font-label-md text-label-md text-center transition-all text-on-surface-variant hover:text-on-surface" onclick="switchRole(this, 'faculty')" type="button">
+                Faculty
+              </button>
+<button class="role-btn py-2 px-3 rounded-lg font-label-md text-label-md text-center transition-all text-on-surface-variant hover:text-on-surface" onclick="switchRole(this, 'staff')" type="button">
+                Staff
+              </button>
+</div>
+</div>
+<!-- Form Area -->
+<form class="relative z-10 space-y-5" onsubmit="event.preventDefault(); simulateAuth();">
+<!-- NetID Input -->
+<div class="space-y-1.5">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="netid">University NetID or Email</label>
+<a class="font-label-sm text-label-sm text-primary hover:underline" href="#helpdesk">Lookup NetID</a>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-outline text-lg pointer-events-none">account_circle</span>
+<input class="w-full bg-surface-container text-on-surface placeholder:text-outline font-body-md text-body-md pl-11 pr-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition-all" id="netid" placeholder="e.g. j.harvard24@veritas.edu" required="" type="text"/>
+</div>
+<p class="font-body-sm text-body-sm text-outline" id="role-hint">Format: Academic handle followed by @veritas.edu or NetID</p>
+</div>
+<!-- Password / Passkey Field -->
+<div class="space-y-1.5">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="password">Institutional Password or Passkey</label>
+<a class="font-label-sm text-label-sm text-secondary hover:underline" href="#reset">Forgot Credential?</a>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-outline text-lg pointer-events-none">lock</span>
+<input class="w-full bg-surface-container text-on-surface placeholder:text-outline font-body-md text-body-md pl-11 pr-11 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition-all" id="password" placeholder="••••••••••••••••" required="" type="password"/>
+<button aria-label="Toggle password visibility" class="absolute right-3.5 text-outline hover:text-on-surface transition-colors flex items-center justify-center p-1" onclick="togglePasswordVisibility()" type="button">
+<span class="material-symbols-outlined text-lg" id="pwd-icon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Duo Security WebAuthn Indicator Container -->
+<div class="p-3.5 rounded-xl bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-lg">phonelink_lock</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Duo Push / Hardware Token</p>
+<p class="font-body-sm text-body-sm text-outline">Auto-prompt will fire on primary device</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container-high px-2 py-1 rounded">2FA Req</span>
+</div>
+<!-- Checkbox: Remember Workstation -->
+<div class="flex items-center gap-3 pt-1">
+<input class="w-4 h-4 rounded bg-surface-container text-primary focus:ring-primary focus:ring-offset-surface-container-lowest" id="remember" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-on-surface-variant cursor-pointer select-none" for="remember">
+                Remember authentication on this workstation for the academic semester (30 days)
+              </label>
+</div>
+<!-- Primary Action Button -->
+<button class="w-full py-3.5 px-6 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-headline-sm text-headline-sm flex items-center justify-center gap-3 transition-all duration-200 shadow-lg cursor-pointer group" id="submit-btn" type="submit">
+<span id="btn-text">ACCESS CAMPUS PORTAL</span>
+<span class="material-symbols-outlined text-lg transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</form>
+<!-- Alternative Auth Modes -->
+<div class="relative z-10 mt-6 pt-6 bg-surface-container/50 rounded-xl p-4 flex flex-col gap-3">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline text-center">Cryptographic &amp; Guest Options</span>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex items-center justify-center gap-2 py-2 px-3 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-base text-primary">fingerprint</span>
+<span>FIDO2 Passkey</span>
+</button>
+<button class="flex items-center justify-center gap-2 py-2 px-3 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-base text-secondary">vpn_key</span>
+<span>YubiKey PIV</span>
+</button>
+</div>
+</div>
+<!-- Support & Helpdesk Footer Inside Auth Card -->
+<div class="relative z-10 mt-6 pt-4 text-center space-y-2">
+<div class="flex items-center justify-center gap-4 text-outline font-label-sm text-label-sm">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#helpdesk">
+<span class="material-symbols-outlined text-xs">support_agent</span>
+<span>IT Helpdesk: Ext. 4400</span>
+</a>
+<span>•</span>
+<a class="hover:text-primary transition-colors" href="#tty">TTY Relay 711</a>
+</div>
+<p class="font-body-sm text-body-sm text-outline">
+              Use constitutes adherence to the 
+              <a class="text-on-surface hover:underline" href="#code">Academic Honesty Code</a> and Acceptable Use Framework.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Institutional Global Footer Strip -->
+<footer class="w-full bg-surface-container-lowest py-6 px-4 sm:px-8 mt-auto">
+<div class="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-outline font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-secondary">domain</span>
+<span>© 2025 Board of Regents of the University. All Rights Reserved.</span>
+</div>
+<div class="flex flex-wrap items-center gap-6">
+<a class="hover:text-on-surface transition-colors" href="#privacy">Institutional Privacy Policy</a>
+<a class="hover:text-on-surface transition-colors" href="#security">Security Incident Response</a>
+<a class="hover:text-on-surface transition-colors" href="#accessibility">ADA Accessibility Standards</a>
+<span class="font-code-mono text-xs px-2 py-0.5 rounded bg-surface-container-high text-primary">BUILD ID: v25.4.11-PROD</span>
+</div>
+</div>
+</footer>
+<!-- Micro-interactions & Segmented Tab Script -->
+<script>
+    function switchRole(button, role) {
+      const buttons = document.querySelectorAll('.role-btn');
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-primary-container', 'text-on-primary-container', 'shadow-md');
+        btn.classList.add('text-on-surface-variant');
+      });
+      button.classList.add('bg-primary-container', 'text-on-primary-container', 'shadow-md');
+      button.classList.remove('text-on-surface-variant');
+
+      const netidInput = document.getElementById('netid');
+      const hint = document.getElementById('role-hint');
+
+      if (role === 'student') {
+        netidInput.placeholder = 'e.g. s.jordan25@veritas.edu';
+        hint.textContent = 'Format: Student matriculation handle followed by @veritas.edu';
+      } else if (role === 'faculty') {
+        netidInput.placeholder = 'e.g. prof.chernoff@physics.veritas.edu';
+        hint.textContent = 'Format: Faculty departmental address or primary ResearchNet ID';
+      } else if (role === 'staff') {
+        netidInput.placeholder = 'e.g. d.morales@admin.veritas.edu';
+        hint.textContent = 'Format: Administrative staff NetID identifier';
+      }
+    }
+
+    function togglePasswordVisibility() {
+      const pwdField = document.getElementById('password');
+      const pwdIcon = document.getElementById('pwd-icon');
+      if (pwdField.type === 'password') {
+        pwdField.type = 'text';
+        pwdIcon.textContent = 'visibility_off';
+      } else {
+        pwdField.type = 'password';
+        pwdIcon.textContent = 'visibility';
+      }
+    }
+
+    function simulateAuth() {
+      const btn = document.getElementById('submit-btn');
+      const btnText = document.getElementById('btn-text');
+      btn.disabled = true;
+      btn.classList.add('opacity-80', 'cursor-not-allowed');
+      btnText.textContent = 'DISPATCHING DUO PUSH NOTIFICATION...';
+
+      setTimeout(() => {
+        btnText.textContent = 'VERIFYING BIOMETRICS...';
+      }, 1400);
+
+      setTimeout(() => {
+        btn.classList.remove('opacity-80', 'cursor-not-allowed');
+        btn.disabled = false;
+        btnText.textContent = 'INGRESS CONFIRMED · REDIRECTING';
+        btn.classList.add('bg-tertiary-container', 'text-on-tertiary-container');
+      }, 2600);
+    }
+  </script>
+</div></main></body></html>

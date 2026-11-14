@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_blank" name="shell-type"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #0c0d10;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    .grid-lines-bg {
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .crosshair-corner {
+      position: relative;
+    }
+    .crosshair-corner::before {
+      content: '+';
+      position: absolute;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      line-height: 1;
+      color: rgba(255, 255, 255, 0.25);
+    }
+    .swiss-border {
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#0c0d10",
+            "surface-container-lowest": "#07080a",
+            "surface-container-low": "#111317",
+            "surface-container": "#16181f",
+            "surface-container-high": "#1f222b",
+            "surface-container-highest": "#2c2f3b",
+            "on-surface": "#f5f5f7",
+            "on-surface-variant": "#9ca1b2",
+            "outline": "#4b5063",
+            "outline-variant": "#2b2f3d",
+            "swiss-red": "#ff2b18",
+            "swiss-red-dark": "#d61f0e",
+            "klein-blue": "#002fff",
+            "klein-blue-light": "#365cff",
+            "primary": "#ff2b18",
+            "tertiary": "#002fff"
+          },
+          fontFamily: {
+            "space": ["Space Grotesk", "sans-serif"],
+            "mono": ["JetBrains Mono", "monospace"],
+            "sans": ["Inter", "system-ui", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0c0d10] font-sans text-on-surface min-h-screen antialiased selection:bg-swiss-red selection:text-white">
+<main class="min-h-screen w-full relative flex flex-col justify-between p-3 md:p-6 lg:p-8">
+<!-- Top Coordinate Bar & Swiss Header -->
+<header class="w-full bg-[#111317] border border-white/10 px-4 md:px-6 py-3 flex flex-wrap items-center justify-between gap-y-3 z-20">
+<div class="flex items-center space-x-4">
+<!-- Iconic Swiss Cross Square in International Klein Blue -->
+<div class="w-6 h-6 bg-klein-blue flex items-center justify-center font-mono text-xs font-bold text-white tracking-tighter">
+          +
+        </div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:space-x-3">
+<span class="font-mono text-xs font-semibold tracking-wider text-white uppercase">SWISS ARCHIVE // 21</span>
+<span class="hidden sm:inline text-white/30 text-xs">/</span>
+<span class="font-mono text-[11px] tracking-widest text-[#9ca1b2] uppercase">ZÜRICH • KREIS 1 [47.3769° N, 8.5417° E]</span>
+</div>
+</div>
+<div class="flex items-center space-x-6 text-xs font-mono">
+<div class="hidden lg:flex items-center space-x-2 text-[#9ca1b2]">
+<span class="text-white/40">SYSTEM MATRIX:</span>
+<span class="text-white font-medium">DIN 1451 / 60° PROJECTION</span>
+</div>
+<div class="flex items-center space-x-2 bg-black/40 border border-white/10 px-2.5 py-1">
+<span class="w-2 h-2 bg-swiss-red rounded-none"></span>
+<span class="text-white text-[11px] font-bold tracking-widest">GATEWAY ACTIVE</span>
+</div>
+<span class="font-mono text-[11px] text-[#9ca1b2] hidden md:inline">HELVETICA / BASEL 1957</span>
+</div>
+</header>
+<!-- Main Asymmetric Poster Canvas (Josef Müller-Brockmann + Wim Crouwel Constructivism) -->
+<div class="w-full my-4 md:my-6 flex-1 flex flex-col justify-center items-center">
+<div class="w-full max-w-[1520px] bg-[#07080a] border border-white/15 grid grid-cols-1 lg:grid-cols-12 shadow-2xl relative overflow-hidden">
+<!-- Background Hairline Grid & Coordinates Overlay -->
+<div class="absolute inset-0 grid-lines-bg pointer-events-none opacity-40"></div>
+<div class="absolute top-0 right-1/2 bottom-0 w-[1px] bg-white/10 hidden lg:block pointer-events-none"></div>
+<!-- ============================================================ -->
+<!-- LEFT COLUMN: Wim Crouwel / Müller-Brockmann Constructivist Poster (7 cols) -->
+<!-- ============================================================ -->
+<div class="lg:col-span-7 p-6 sm:p-8 md:p-12 xl:p-16 flex flex-col justify-between relative border-b lg:border-b-0 lg:border-r border-white/15 bg-gradient-to-br from-[#07080a] via-[#0d0f14] to-[#07080a]">
+<!-- Poster Header Meta -->
+<div class="relative z-10 flex items-start justify-between">
+<div class="space-y-1">
+<div class="inline-flex items-center space-x-2 bg-swiss-red text-white text-[10px] font-mono font-bold tracking-widest px-2 py-0.5 uppercase">
+                NORM 21 // RATIO 8:5
+              </div>
+<h1 class="text-3xl sm:text-5xl xl:text-6xl font-space font-bold tracking-tighter uppercase text-white leading-none pt-2">
+                ZÜRICH // SYSTEM PORTAL
+              </h1>
+<p class="font-mono text-xs text-[#9ca1b2] tracking-wider pt-1">
+                MAX BILL ARCHIVES • TYPOGRAFISCHE MITTEILUNGEN BASEL
+              </p>
+</div>
+<!-- Giant Architectural Number 21 -->
+<div class="text-right select-none pl-4">
+<span class="font-space text-7xl sm:text-8xl xl:text-9xl font-bold tracking-tighter text-white/[0.07] block leading-none -mt-4">
+                21
+              </span>
+</div>
+</div>
+<!-- Central Constructivist Geometry Artwork -->
+<div class="relative my-8 sm:my-14 xl:my-16 flex items-center justify-center min-h-[280px] sm:min-h-[360px] z-10">
+<!-- Diagonal Calibration Axis Line -->
+<div class="absolute w-[140%] h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent rotate-[-32deg] pointer-events-none"></div>
+<div class="absolute w-[120%] h-[1px] bg-gradient-to-r from-transparent via-swiss-red/30 to-transparent rotate-[58deg] pointer-events-none"></div>
+<!-- International Klein Blue Primary Circle (Massive Brockmann visual counterweight) -->
+<div class="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 flex items-center justify-center">
+<div class="absolute inset-0 rounded-full bg-klein-blue shadow-[0_0_80px_rgba(0,47,255,0.35)] transition-transform duration-700 hover:scale-[1.02]"></div>
+<!-- Offset Swiss Vermilion Red Architectural Square Intersect -->
+<div class="absolute -top-4 -right-4 sm:-top-6 sm:-right-6 w-36 h-36 sm:w-48 sm:h-48 md:w-56 md:h-56 bg-swiss-red p-4 sm:p-6 flex flex-col justify-between text-white shadow-2xl">
+<span class="font-mono text-[10px] sm:text-xs font-bold tracking-widest uppercase">SECTION B-04</span>
+<div class="space-y-1">
+<div class="h-0.5 bg-white w-full"></div>
+<div class="h-0.5 bg-white/60 w-3/4"></div>
+<div class="h-0.5 bg-white/30 w-1/2"></div>
+</div>
+<div class="font-mono text-[9px] sm:text-[10px] tracking-tight">KONTROLLE: 100% NOMINAL</div>
+</div>
+<!-- Floating Frosted Crisp Data Glass Slate with Swiss Typography -->
+<div class="absolute -bottom-6 -left-4 sm:-bottom-8 sm:-left-6 w-52 sm:w-64 bg-[#111317]/90 backdrop-blur-md border border-white/20 p-4 sm:p-5 text-left z-20 shadow-2xl">
+<div class="flex items-center justify-between text-[#9ca1b2] font-mono text-[10px] pb-2 border-b border-white/10">
+<span>ROTATION AXIS</span>
+<span class="text-white font-semibold">φ 1.61803</span>
+</div>
+<div class="pt-2 text-white font-space text-xs sm:text-sm font-semibold tracking-tight uppercase">
+                  ORDNUNG • KLARHEIT • SICHERHEIT
+                </div>
+<div class="mt-2 font-mono text-[10px] text-white/50">
+                  ISO-IEC 29115 LEVEL 4 AUTHN
+                </div>
+</div>
+<!-- Mathematical Crosshair Center Target -->
+<div class="relative z-10 w-8 h-8 rounded-full border border-white/80 flex items-center justify-center">
+<div class="w-1.5 h-1.5 bg-white rounded-none"></div>
+<div class="absolute -top-3 text-[9px] font-mono text-white/80">0.0</div>
+</div>
+</div>
+</div>
+<!-- Bottom Poster Swiss Typographic Manifesto -->
+<div class="relative z-10 pt-4 border-t border-white/10 flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div class="max-w-lg">
+<span class="font-mono text-[10px] text-swiss-red uppercase tracking-widest block font-bold mb-1">
+                KONSTRUKTIVES PRINZIP
+              </span>
+<p class="font-space text-lg sm:text-xl font-bold uppercase text-white tracking-tight leading-snug">
+                ORDNUNG DURCH MATHEMATISCHE LOGIK.
+              </p>
+<p class="font-sans text-xs sm:text-sm text-[#9ca1b2] mt-1 leading-relaxed">
+                Visual communication calibrated without ornament. Every dimension is tethered to structural modular units, enforcing uncompromising identity boundaries.
+              </p>
+</div>
+<div class="font-mono text-[10px] text-[#9ca1b2] tracking-wider shrink-0 bg-[#16181f] border border-white/10 p-3 self-start md:self-end">
+<div>TYP: BAUHAUS/SWISS</div>
+<div>MODUL: DIN-EN-021</div>
+<div class="text-white mt-1">SESSION KEY: 0x8F94...42E</div>
+</div>
+</div>
+</div>
+<!-- ============================================================ -->
+<!-- RIGHT COLUMN: Precision Swiss Dual-Vector Terminal (5 cols) -->
+<!-- ============================================================ -->
+<div class="lg:col-span-5 bg-[#0f1116] p-6 sm:p-8 md:p-12 flex flex-col justify-between relative">
+<!-- Corner Coordinate Marker -->
+<div class="absolute top-3 right-4 font-mono text-[10px] text-white/20 select-none hidden sm:block">
+            GRID // 05.COL
+          </div>
+<!-- Authentication Terminal Header -->
+<div>
+<!-- Terminal Header Banner -->
+<div class="flex items-center justify-between pb-4 border-b border-white/10">
+<div class="flex items-center space-x-2">
+<span class="w-2.5 h-2.5 bg-swiss-red"></span>
+<span class="font-mono text-xs font-bold tracking-widest text-white uppercase">GATEWAY TERMINAL</span>
+</div>
+<span class="font-mono text-[11px] text-[#9ca1b2] bg-[#16181f] border border-white/10 px-2 py-0.5">
+                PORT 443 / TLS 1.3
+              </span>
+</div>
+<!-- Title & Prompt -->
+<div class="mt-6 sm:mt-8">
+<h2 class="text-2xl sm:text-3xl font-space font-bold uppercase tracking-tight text-white">
+                SYSTEM ACCESS
+              </h2>
+<p class="font-sans text-xs sm:text-sm text-[#9ca1b2] mt-1.5">
+                Provide authenticated operational credentials or initialize hardware-backed biometric cryptographic keys.
+              </p>
+</div>
+<!-- Dual Authentication Vector Toggle Switches -->
+<div class="mt-6 border border-white/15 bg-black/60 p-1 grid grid-cols-2 gap-1 select-none">
+<button class="py-2.5 px-3 text-center font-mono text-xs font-bold tracking-wider uppercase transition-all duration-150 bg-white text-black shadow" id="mode-identity" type="button">
+                01 / IDENTITY HASH
+              </button>
+<button class="py-2.5 px-3 text-center font-mono text-xs font-bold tracking-wider uppercase transition-all duration-150 text-[#9ca1b2] hover:text-white hover:bg-white/5" id="mode-passkey" type="button">
+                02 / FIDO2 PASSKEY
+              </button>
+</div>
+<!-- Interactive Auth Form -->
+<form class="mt-6 space-y-5" id="auth-terminal-form" onsubmit="event.preventDefault(); triggerAuth();">
+<!-- Input Field 1: User Identity -->
+<div class="space-y-1.5" id="field-identity-wrapper">
+<div class="flex items-center justify-between font-mono text-[11px]">
+<label class="text-white uppercase font-bold tracking-wider flex items-center gap-1.5" for="terminal-uid" id="label-uid">
+<span class="text-swiss-red font-bold">»</span> 01. BENUTZER-IDENTIFIKATION
+                  </label>
+<span class="text-[#9ca1b2] text-[10px]">CORP-ID / PKI</span>
+</div>
+<div class="relative">
+<input class="w-full h-12 bg-black/70 border border-white/20 focus:border-white focus:bg-[#16181f] text-white px-3.5 font-mono text-sm tracking-wide rounded-none outline-none transition-colors placeholder:text-white/30" id="terminal-uid" placeholder="CH-8001-XXXX" required="" type="text" value="SWISS-CORP-8001"/>
+<span class="material-symbols-outlined absolute right-3.5 top-3.5 text-white/40 text-lg pointer-events-none">fingerprint</span>
+</div>
+</div>
+<!-- Input Field 2: Password / Secret Key (Visible under identity mode) -->
+<div class="space-y-1.5" id="field-secret-wrapper">
+<div class="flex items-center justify-between font-mono text-[11px]">
+<label class="text-white uppercase font-bold tracking-wider flex items-center gap-1.5" for="terminal-secret">
+<span class="text-swiss-red font-bold">»</span> 02. KRYPTOGRAFISCHER SCHLÜSSEL
+                  </label>
+<a class="text-[#9ca1b2] hover:text-white transition-colors underline underline-offset-2" href="#">RESET</a>
+</div>
+<div class="relative">
+<input class="w-full h-12 bg-black/70 border border-white/20 focus:border-white focus:bg-[#16181f] text-white px-3.5 font-mono text-sm tracking-wide rounded-none outline-none transition-colors placeholder:text-white/30" id="terminal-secret" placeholder="••••••••••••••••" required="" type="password" value="JosefMuller1957#Basel"/>
+<button aria-label="Toggle password visibility" class="absolute right-3 top-3 text-white/40 hover:text-white p-0.5 focus:outline-none" id="pwd-visibility-toggle" type="button">
+<span class="material-symbols-outlined text-lg" id="pwd-icon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Passkey Hardware Touchpoint Panel (Hidden by default, shown when mode 2 chosen) -->
+<div class="hidden border border-klein-blue/40 bg-klein-blue/10 p-4 space-y-3" id="passkey-touchpoint">
+<div class="flex items-center space-x-3">
+<div class="w-8 h-8 bg-klein-blue flex items-center justify-center text-white shrink-0">
+<span class="material-symbols-outlined text-lg">token</span>
+</div>
+<div>
+<div class="font-mono text-xs font-bold text-white uppercase tracking-wider">HARDWARE PASSKEY READY</div>
+<div class="font-mono text-[11px] text-[#9ca1b2]">YubiKey / Apple Secure Enclave / Windows Hello</div>
+</div>
+</div>
+<p class="font-sans text-xs text-[#9ca1b2] leading-relaxed">
+                  Touch your registered security key or confirm biometric prompt on your hardware enclave module.
+                </p>
+</div>
+<!-- Verification Parameters -->
+<div class="pt-1 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 font-mono text-xs">
+<label class="flex items-center space-x-2.5 cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded-none bg-black border-white/30 text-swiss-red focus:ring-0 focus:ring-offset-0 cursor-pointer" type="checkbox"/>
+<span class="text-[#9ca1b2] hover:text-white uppercase text-[11px] tracking-wider">SESSION CACHE (30 TAGE)</span>
+</label>
+<div class="flex items-center space-x-1 text-white/50 text-[10px]">
+<span class="material-symbols-outlined text-sm text-klein-blue-light">lock</span>
+<span>ECDSA-SECP384R1</span>
+</div>
+</div>
+<!-- Primary Action Button: Prominent Swiss Vermilion Red -->
+<button class="w-full h-14 bg-swiss-red hover:bg-swiss-red-dark active:scale-[0.99] text-white font-space font-bold text-base tracking-wider uppercase flex items-center justify-between px-6 transition-all duration-150 shadow-lg group border-none" id="submit-auth-btn" type="submit">
+<span class="tracking-widest">SYSTEM AUTHENTICATION</span>
+<span class="font-mono text-xl transform group-hover:translate-x-1.5 transition-transform duration-200">➔</span>
+</button>
+<!-- Real-time Verification Feedback Stream -->
+<div class="hidden p-3 bg-black border border-white/20 font-mono text-[11px] text-white flex items-center justify-between" id="feedback-stream">
+<div class="flex items-center space-x-2">
+<span class="w-2 h-2 bg-swiss-red animate-ping rounded-none"></span>
+<span id="feedback-text">CHECKING PKI SIGNATURE...</span>
+</div>
+<span class="text-white/40">RFC 7519</span>
+</div>
+</form>
+<!-- Enterprise SAML / Federated Connectors -->
+<div class="mt-8 pt-6 border-t border-white/10">
+<div class="flex items-center justify-between mb-3">
+<span class="font-mono text-[10px] tracking-widest text-[#9ca1b2] uppercase">FEDERATED SAML / OKTA SSO</span>
+<span class="h-[1px] flex-1 bg-white/10 ml-3"></span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="h-10 bg-[#16181f] hover:bg-[#1f222b] border border-white/15 px-3 flex items-center justify-between text-left transition-colors text-white font-mono text-xs" type="button">
+<span>MICROSOFT ENTRA</span>
+<span class="text-white/40 text-[10px]">01</span>
+</button>
+<button class="h-10 bg-[#16181f] hover:bg-[#1f222b] border border-white/15 px-3 flex items-center justify-between text-left transition-colors text-white font-mono text-xs" type="button">
+<span>OKTA UNIVERSAL</span>
+<span class="text-white/40 text-[10px]">02</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom Legal / Impressum Strip -->
+<div class="mt-8 pt-4 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 font-mono text-[10px] text-[#9ca1b2]">
+<div>CH-REG: CHE-114.829.401 // AUDITED</div>
+<div class="flex items-center space-x-3">
+<a class="hover:text-white uppercase transition-colors" href="#">IMPRESSUM</a>
+<span class="text-white/20">/</span>
+<a class="hover:text-white uppercase transition-colors" href="#">DATENSCHUTZ</a>
+<span class="text-white/20">/</span>
+<a class="hover:text-white uppercase transition-colors" href="#">COMPLIANCE</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Colophon Strip & Basel Graphic Arts Tribute Footer -->
+<footer class="w-full bg-[#111317] border border-white/10 px-4 md:px-6 py-2.5 flex flex-col sm:flex-row items-center justify-between text-[#9ca1b2] font-mono text-[11px] gap-2 z-20">
+<div class="flex items-center space-x-2">
+<span class="w-1.5 h-1.5 bg-swiss-red"></span>
+<span class="tracking-wide">SWISS CONSTRUCTIVIST SYSTEM // DESIGNED UNDER STRICT GRID RATIOS</span>
+</div>
+<div class="flex items-center space-x-4 tracking-wider">
+<span>ALLGEMEINE GEWERBESCHULE BASEL</span>
+<span class="hidden md:inline text-white/30">|</span>
+<span class="hidden md:inline">ZÜRICH GRAPHISCHE SAMMLUNG</span>
+<span class="text-white font-bold">1957–HEUTE</span>
+</div>
+</footer>
+</main>
+<!-- Interactive JavaScript Logics -->
+<script>
+    // Password visibility toggle
+    const pwdInput = document.getElementById('terminal-secret');
+    const pwdToggle = document.getElementById('pwd-visibility-toggle');
+    const pwdIcon = document.getElementById('pwd-icon');
+
+    if (pwdToggle && pwdInput && pwdIcon) {
+      pwdToggle.addEventListener('click', () => {
+        const isPassword = pwdInput.type === 'password';
+        pwdInput.type = isPassword ? 'text' : 'password';
+        pwdIcon.textContent = isPassword ? 'visibility_off' : 'visibility';
+      });
+    }
+
+    // Auth Mode Vector Selector (Identity Hash vs FIDO2 Passkey)
+    const modeIdentity = document.getElementById('mode-identity');
+    const modePasskey = document.getElementById('mode-passkey');
+    const fieldSecretWrapper = document.getElementById('field-secret-wrapper');
+    const passkeyTouchpoint = document.getElementById('passkey-touchpoint');
+    const labelUid = document.getElementById('label-uid');
+    const uidInput = document.getElementById('terminal-uid');
+
+    if (modeIdentity && modePasskey) {
+      modeIdentity.addEventListener('click', () => {
+        modeIdentity.className = 'py-2.5 px-3 text-center font-mono text-xs font-bold tracking-wider uppercase transition-all duration-150 bg-white text-black shadow';
+        modePasskey.className = 'py-2.5 px-3 text-center font-mono text-xs font-bold tracking-wider uppercase transition-all duration-150 text-[#9ca1b2] hover:text-white hover:bg-white/5';
+        
+        fieldSecretWrapper.classList.remove('hidden');
+        passkeyTouchpoint.classList.add('hidden');
+        labelUid.innerHTML = '<span class="text-swiss-red font-bold">»</span> 01. BENUTZER-IDENTIFIKATION';
+        uidInput.value = 'SWISS-CORP-8001';
+      });
+
+      modePasskey.addEventListener('click', () => {
+        modePasskey.className = 'py-2.5 px-3 text-center font-mono text-xs font-bold tracking-wider uppercase transition-all duration-150 bg-white text-black shadow';
+        modeIdentity.className = 'py-2.5 px-3 text-center font-mono text-xs font-bold tracking-wider uppercase transition-all duration-150 text-[#9ca1b2] hover:text-white hover:bg-white/5';
+        
+        fieldSecretWrapper.classList.add('hidden');
+        passkeyTouchpoint.classList.remove('hidden');
+        labelUid.innerHTML = '<span class="text-klein-blue-light font-bold">»</span> 01. WEBAUTHN CREDENTIAL ID';
+        uidInput.value = 'FIDO2-CH-AUTHN-TOKEN-21';
+      });
+    }
+
+    // Simulated Authentication Routine
+    function triggerAuth() {
+      const feedback = document.getElementById('feedback-stream');
+      const feedbackText = document.getElementById('feedback-text');
+      const submitBtn = document.getElementById('submit-auth-btn');
+      
+      if (!feedback || !submitBtn) return;
+
+      feedback.classList.remove('hidden');
+      feedbackText.textContent = 'VALIDATING MATHEMATICAL HASH SEQUENCE...';
+      feedbackText.className = 'text-white';
+      submitBtn.classList.add('opacity-75', 'pointer-events-none');
+
+      setTimeout(() => {
+        feedbackText.textContent = 'SESSION VALIDATED // ACCESS AUTHORIZED: ZÜRICH PORTAL #21';
+        feedback.classList.remove('border-white/20');
+        feedback.classList.add('border-klein-blue', 'bg-klein-blue/20');
+        submitBtn.classList.remove('opacity-75', 'pointer-events-none');
+      }, 1200);
+    }
+  </script>
+</body></html>

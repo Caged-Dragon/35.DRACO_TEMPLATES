@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_blank" name="shell-type"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+    .glass-specular {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.01) 100%);
+      box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.12);
+    }
+    .sheet-glow {
+      box-shadow: 0 -25px 60px -15px rgba(128, 131, 255, 0.15), 0 -1px 0 1px rgba(192, 193, 255, 0.15);
+    }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-lowest": "#0d0e13",
+            "surface-container-high": "#292a2f",
+            "on-primary-fixed-variant": "#2f2ebe",
+            "surface": "#121318",
+            "on-secondary-container": "#5b3800",
+            "primary": "#c0c1ff",
+            "on-error": "#690005",
+            "primary-container": "#8083ff",
+            "inverse-on-surface": "#2f3036",
+            "surface-bright": "#38393f",
+            "background": "#121318",
+            "primary-fixed-dim": "#c0c1ff",
+            "on-tertiary-fixed": "#001f26",
+            "on-tertiary-container": "#002f38",
+            "tertiary-fixed": "#acedff",
+            "secondary-fixed-dim": "#ffb95f",
+            "on-surface-variant": "#c7c4d7",
+            "inverse-primary": "#494bd6",
+            "secondary": "#ffb95f",
+            "surface-dim": "#121318",
+            "surface-tint": "#c0c1ff",
+            "tertiary-container": "#009eb9",
+            "on-background": "#e3e1e9",
+            "secondary-container": "#ee9800",
+            "on-error-container": "#ffdad6",
+            "surface-container-highest": "#34343a",
+            "on-primary": "#1000a9",
+            "surface-container-low": "#1a1b21",
+            "outline-variant": "#464554",
+            "tertiary": "#4cd7f6",
+            "on-secondary-fixed-variant": "#653e00",
+            "on-secondary": "#472a00",
+            "on-tertiary": "#003640",
+            "error-container": "#93000a",
+            "surface-container": "#1e1f25",
+            "inverse-surface": "#e3e1e9",
+            "on-primary-fixed": "#07006c",
+            "tertiary-fixed-dim": "#4cd7f6",
+            "primary-fixed": "#e1e0ff",
+            "secondary-fixed": "#ffddb8",
+            "on-tertiary-fixed-variant": "#004e5c",
+            "on-secondary-fixed": "#2a1700",
+            "on-surface": "#e3e1e9",
+            "surface-variant": "#34343a",
+            "error": "#ffb4ab",
+            "outline": "#908fa0",
+            "on-primary-container": "#0d0096"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "fontFamily": {
+            "display-hero": ["Space Grotesk"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "label-sm": ["Inter"],
+            "body-md": ["Plus Jakarta Sans"],
+            "label-lg": ["Inter"],
+            "headline-lg": ["Space Grotesk"],
+            "code-mono": ["Space Grotesk"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "label-md": ["Inter"],
+            "headline-md": ["Space Grotesk"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface-container-lowest font-body-md text-body-md text-on-background min-h-screen selection:bg-primary selection:text-on-primary antialiased overflow-x-hidden">
+<main class="w-full min-h-screen relative flex flex-col justify-between items-stretch bg-surface-container-lowest">
+<!-- Dynamic Ambient Architectural Glass & Specular Light Background -->
+<div class="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+<!-- High-End Architectural Glass Atrium Photography -->
+<div class="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-screen scale-105 transform filter brightness-90 saturate-75" data-alt="Monolithic architectural glass atrium with dramatic geometric mullions at dusk with deep atmospheric indigo shadows and electric cyan edge lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAgAOqGGb_641kW2CdQdfs4ftnIjfJq2oWLaatmRn8VBDme8LuffvqtDplZLSxwjj13Eftf9hmLQQE1j2mEJelz3LmzC1CjB8as_Y2yG6FjxejwlRDL2gXdGmIXCqDoVLKnaJ25WBFqQYuiEN1jfKYDX_YximSmco-xWTwxiSn567McJbgdJtUrCaGLQ6qkDg9HrISXVz1_ja7r_eD57-a4ZddCWljoBAheMPXfm3b5');"></div>
+<!-- Atmospheric Radial Gradient Flares -->
+<div class="absolute -top-40 left-1/3 w-[900px] h-[550px] bg-gradient-to-br from-primary-container/20 via-tertiary-container/10 to-transparent rounded-full blur-[140px]"></div>
+<div class="absolute top-1/3 -right-20 w-[550px] h-[550px] bg-tertiary/15 rounded-full blur-[130px]"></div>
+<!-- Architectural Matrix Ray Pattern -->
+<svg class="absolute inset-0 w-full h-full opacity-20 stroke-outline-variant" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="64" id="matrix-grid" patternunits="userSpaceOnUse" width="64">
+<path d="M 64 0 L 0 0 0 64" fill="none" stroke="currentColor" stroke-width="0.65"></path>
+<circle cx="64" cy="64" fill="currentColor" opacity="0.6" r="1.2"></circle>
+</pattern>
+</defs>
+<rect fill="url(#matrix-grid)" height="100%" width="100%"></rect>
+</svg>
+<!-- Glass Horizon Vignette -->
+<div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/70 via-surface-container-lowest/80 to-surface-container-lowest"></div>
+</div>
+<!-- UPPER CANVAS: Ethereal Monumental Typography & Telemetry Cluster -->
+<header class="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 pt-7 pb-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+<!-- Moniker Brand Seal -->
+<div class="flex items-center space-x-4">
+<div class="w-11 h-11 rounded-xl bg-surface-container-high/80 border border-outline-variant/40 flex items-center justify-center text-primary shadow-xl backdrop-blur-md group hover:border-primary/60 transition-all duration-300">
+<span class="material-symbols-outlined text-2xl text-tertiary group-hover:scale-110 transition-transform" style="font-variation-settings: 'FILL' 1;">dataset</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center space-x-2.5">
+<span class="font-headline-md text-xl tracking-wider text-on-surface uppercase font-bold">LUMEN</span>
+<span class="text-tertiary font-code-mono text-xs tracking-widest font-semibold">// ZERO TRUST IDENTITY</span>
+</div>
+<span class="font-label-sm text-[11px] text-outline tracking-[0.2em] uppercase">Architectural Gateway Core</span>
+</div>
+</div>
+<!-- Real-Time Ingress Telemetry Metrics -->
+<div class="flex flex-wrap items-center gap-3 bg-surface-container-low/80 backdrop-blur-xl border border-outline-variant/30 px-4 py-2 rounded-full shadow-2xl">
+<div class="flex items-center gap-2">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
+</span>
+<span class="font-code-mono text-xs text-on-surface font-medium">0.8ms • Zurich Region Alpha</span>
+</div>
+<span class="text-outline-variant text-xs">|</span>
+<div class="flex items-center gap-1.5 text-xs font-code-mono text-primary">
+<span class="material-symbols-outlined text-sm">security</span>
+<span>TLS 1.3 / Quantum-Resistant</span>
+</div>
+<span class="text-outline-variant text-xs hidden sm:inline">|</span>
+<div class="hidden sm:flex items-center gap-1 text-xs font-code-mono text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+<span>INGRESS OK</span>
+</div>
+</div>
+</header>
+<!-- Mid-Canvas Architectural Narrative -->
+<div class="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 flex-1 flex flex-col justify-center items-start py-6 lg:py-10">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container/60 border border-outline-variant/40 backdrop-blur-md mb-4">
+<span class="material-symbols-outlined text-tertiary text-sm">hub</span>
+<span class="font-code-mono text-[11px] text-tertiary uppercase tracking-wider">Spatial Security Fabric • Mesh 09</span>
+</div>
+<h1 class="font-display-hero text-3xl sm:text-4xl lg:text-5xl text-on-surface font-bold tracking-tight leading-[1.15]">
+          Architectural ingress for <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-tertiary to-secondary">distributed cloud systems</span>.
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3 max-w-xl leading-relaxed">
+          Zero-trust contextual authentication across edge nodes, cloud execution sandboxes, and hardware-secured dev workstations.
+        </p>
+</div>
+</div>
+<!-- BOTTOM-ANCHORED FROSTED SHEET TERMINAL PANEL -->
+<section class="relative z-20 w-full max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+<div class="w-full bg-surface-container/90 backdrop-blur-2xl rounded-t-[32px] lg:rounded-t-[40px] sheet-glow border-t border-x border-outline-variant/35 pt-3 pb-8 px-5 sm:px-10 lg:px-14 transition-all duration-300">
+<!-- Tactile Drag Handle / Pill Bar with micro-telemetry pill -->
+<div class="w-full flex flex-col items-center justify-center pb-5 pt-1 cursor-grab active:cursor-grabbing group">
+<div class="w-16 h-1.5 rounded-full bg-outline-variant/80 group-hover:bg-primary group-hover:w-20 transition-all duration-200"></div>
+<span class="font-code-mono text-[10px] text-outline tracking-[0.25em] uppercase mt-2 opacity-50 group-hover:opacity-100 transition-opacity duration-200">
+            SECURE BOTTOM-SHEET TERMINAL
+          </span>
+</div>
+<!-- Inside Bottom Sheet: Sophisticated Dual-Wing Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-start">
+<!-- LEFT WING: Fast-track Biometric Passkey, Enterprise Badging & Instant SSO -->
+<div class="lg:col-span-5 flex flex-col space-y-6">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="px-2.5 py-0.5 rounded-full text-[10px] font-code-mono uppercase tracking-wider bg-primary/10 text-primary border border-primary/20">
+                  Instant Access
+                </span>
+<span class="text-outline text-xs">•</span>
+<span class="text-on-surface-variant text-xs font-label-md">FIDO2 / WebAuthn Active</span>
+</div>
+<h2 class="font-headline-lg text-2xl lg:text-3xl font-semibold text-on-surface tracking-tight">
+                Authorize Identity
+              </h2>
+<p class="font-body-md text-xs sm:text-sm text-on-surface-variant mt-1.5 leading-relaxed">
+                Connect seamlessly using physical passkeys, corporate OAuth providers, or workstation credential keys.
+              </p>
+</div>
+<!-- Face ID / Hardware Passkey Hero Trigger Card -->
+<button class="w-full p-4 rounded-2xl glass-specular bg-surface-container-high/50 border border-outline-variant/40 hover:border-tertiary/50 hover:bg-surface-container-high/80 transition-all duration-200 text-left flex items-center justify-between group" type="button">
+<div class="flex items-center space-x-3.5">
+<div class="w-11 h-11 rounded-xl bg-tertiary/10 border border-tertiary/20 flex items-center justify-center text-tertiary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-2xl">fingerprint</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-sm text-on-surface font-semibold flex items-center gap-1.5">
+                    Fast-Track Biometric Passkey
+                    <span class="material-symbols-outlined text-emerald-400 text-sm">verified</span>
+</span>
+<span class="font-body-sm text-xs text-outline">Face ID, Touch ID, or YubiKey 5 Series</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-tertiary group-hover:translate-x-1 transition-all">chevron_right</span>
+</button>
+<!-- Instant Federated SSO Buttons -->
+<div class="flex flex-col space-y-2.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[11px] text-outline uppercase tracking-wider font-semibold">Federated Corporate SSO</span>
+<span class="font-code-mono text-[10px] text-tertiary">SAML 2.0</span>
+</div>
+<div class="grid grid-cols-3 gap-3">
+<!-- Apple ID SSO -->
+<button aria-label="Sign in with Apple" class="flex items-center justify-center gap-2 py-3 px-3 rounded-xl bg-surface-container-high/70 hover:bg-surface-bright border border-outline-variant/30 text-on-surface hover:text-primary transition-all duration-200 group" type="button">
+<svg class="w-4 h-4 fill-current transition-transform duration-200 group-hover:scale-110" viewbox="0 0 24 24">
+<path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.34c.64-.78 1.08-1.86.96-2.95-1 .04-2.13.67-2.8 1.46-.59.68-1.1 1.77-.96 2.83 1.12.09 2.18-.58 2.8-1.34z"></path>
+</svg>
+<span class="font-label-md text-xs font-medium">Apple</span>
+</button>
+<!-- Google Workspace SSO -->
+<button aria-label="Sign in with Google Workspace" class="flex items-center justify-center gap-2 py-3 px-3 rounded-xl bg-surface-container-high/70 hover:bg-surface-bright border border-outline-variant/30 text-on-surface hover:text-primary transition-all duration-200 group" type="button">
+<svg class="w-4 h-4 fill-current transition-transform duration-200 group-hover:scale-110" viewbox="0 0 24 24">
+<path d="M21.35 11.1h-9.17v2.98h5.27c-.23 1.26-.95 2.33-2.02 3.05v2.53h3.27c1.91-1.76 3.02-4.36 3.02-7.44 0-.58-.05-1.13-.15-1.65z"></path>
+<path d="M12.18 20.5c2.75 0 5.06-.91 6.75-2.48l-3.27-2.53c-.91.61-2.08.97-3.48.97-2.67 0-4.94-1.8-5.75-4.22H3.04v2.61c1.71 3.4 5.25 5.65 9.14 5.65z"></path>
+<path d="M6.43 12.24c-.21-.61-.33-1.27-.33-1.94s.12-1.33.33-1.94V5.75H3.04C2.37 7.08 2 8.58 2 10.3s.37 3.22 1.04 4.55l3.39-2.61z"></path>
+<path d="M12.18 4.08c1.5 0 2.85.52 3.91 1.52l2.93-2.93C17.23 1.01 14.92 0 12.18 0 8.29 0 4.75 2.25 3.04 5.65l3.39 2.61c.81-2.42 3.08-4.18 5.75-4.18z"></path>
+</svg>
+<span class="font-label-md text-xs font-medium">Google</span>
+</button>
+<!-- GitHub Enterprise SSO -->
+<button aria-label="Sign in with GitHub Enterprise" class="flex items-center justify-center gap-2 py-3 px-3 rounded-xl bg-surface-container-high/70 hover:bg-surface-bright border border-outline-variant/30 text-on-surface hover:text-primary transition-all duration-200 group" type="button">
+<svg class="w-4 h-4 fill-current transition-transform duration-200 group-hover:scale-110" viewbox="0 0 24 24">
+<path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path>
+</svg>
+<span class="font-label-md text-xs font-medium">GitHub</span>
+</button>
+</div>
+</div>
+<!-- Hardware Badge Indicator -->
+<div class="px-4 py-3 rounded-xl bg-surface-container-low/70 border border-outline-variant/30 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">token</span>
+<span class="font-body-sm text-xs text-on-surface-variant">HSM Hardware Enclave Sync:</span>
+</div>
+<span class="font-code-mono text-xs text-secondary font-semibold">VERIFIED</span>
+</div>
+</div>
+<!-- RIGHT WING: Focused Credential Fields & Glowing Violet-to-Cyan CTA -->
+<div class="lg:col-span-7 bg-surface-container-low/90 border border-outline-variant/30 p-6 sm:p-7 rounded-2xl shadow-xl flex flex-col justify-between">
+<form class="flex flex-col space-y-4" onsubmit="event.preventDefault();">
+<!-- Floating Micro-Label Email Field -->
+<div class="relative group">
+<label class="block font-label-md text-xs text-on-surface-variant font-medium mb-1.5 flex justify-between" for="terminal-email">
+<span>Enterprise Workstation Identity</span>
+<span class="font-code-mono text-[10px] text-tertiary">PKI RESOLVER</span>
+</label>
+<div class="relative flex items-center">
+<span class="absolute left-3.5 material-symbols-outlined text-outline text-lg pointer-events-none group-focus-within:text-primary transition-colors">badge</span>
+<input class="w-full bg-surface-container-highest/80 border border-outline-variant/40 hover:border-outline text-on-surface font-body-md text-sm rounded-xl pl-11 pr-4 py-3 placeholder:text-outline/70 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-200" id="terminal-email" name="email" placeholder="alex.vance@lumencore.io" required="" type="email" value="alex.vance@lumencore.io"/>
+</div>
+</div>
+<!-- Floating Micro-Label Password / Secret Key Field -->
+<div class="relative group">
+<div class="flex justify-between items-center mb-1.5">
+<label class="font-label-md text-xs text-on-surface-variant font-medium" for="terminal-secret">Security Key Passphrase</label>
+<a class="font-label-sm text-xs text-primary hover:text-primary-fixed transition-colors" href="#recovery">Reset Key?</a>
+</div>
+<div class="relative flex items-center">
+<span class="absolute left-3.5 material-symbols-outlined text-outline text-lg pointer-events-none group-focus-within:text-primary transition-colors">lock</span>
+<input class="w-full bg-surface-container-highest/80 border border-outline-variant/40 hover:border-outline text-on-surface font-body-md text-sm rounded-xl pl-11 pr-11 py-3 placeholder:text-outline/70 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-200" id="terminal-secret" name="password" placeholder="••••••••••••••••" required="" type="password" value="SuperSecureToken99"/>
+<button aria-label="Toggle password visibility" class="absolute right-3.5 text-outline hover:text-on-surface transition-colors flex items-center" id="togglePassword" type="button">
+<span class="material-symbols-outlined text-lg" id="eyeIcon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Checkbox & Hardware Token Status -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-1">
+<label class="flex items-center space-x-2.5 cursor-pointer select-none group">
+<input checked="" class="w-4 h-4 rounded bg-surface-container-highest border-outline-variant text-primary focus:ring-0 cursor-pointer" id="remember-workstation" name="remember" type="checkbox"/>
+<span class="font-body-md text-xs sm:text-sm text-on-surface-variant group-hover:text-on-surface transition-colors">
+                    Remember this workstation for 30 days
+                  </span>
+</label>
+<div class="inline-flex items-center gap-1.5 text-[11px] font-code-mono text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+<span>KEY HARDWARE VALIDATED</span>
+</div>
+</div>
+<!-- Electric Glowing Violet-to-Cyan Gradient CTA Button -->
+<div class="pt-2">
+<button class="relative w-full py-4 px-6 rounded-xl font-label-lg text-sm tracking-wider uppercase font-bold text-surface-container-lowest bg-gradient-to-r from-primary via-primary-container to-tertiary shadow-[0_0_30px_-5px_rgba(128,131,255,0.65)] hover:shadow-[0_0_40px_0px_rgba(76,215,246,0.6)] hover:brightness-110 active:scale-[0.99] transition-all duration-300 flex items-center justify-center space-x-2.5 group overflow-hidden" type="submit">
+<span class="relative z-10 text-on-primary-container">AUTHORIZE TERMINAL ACCESS</span>
+<span class="material-symbols-outlined relative z-10 text-on-primary-container text-lg transition-transform duration-200 group-hover:translate-x-1.5">arrow_forward</span>
+<div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 pointer-events-none"></div>
+</button>
+</div>
+</form>
+</div>
+</div>
+<!-- Terminal Footer: Compliance & Governance Directory -->
+<footer class="pt-6 mt-6 border-t border-outline-variant/20 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-outline">
+<div class="flex flex-wrap items-center justify-center md:justify-start gap-4">
+<a class="hover:text-on-surface transition-colors" href="#help">Terminal Support</a>
+<span class="text-outline-variant">•</span>
+<a class="hover:text-on-surface transition-colors" href="#specs">Zero-Trust Architecture Spec</a>
+<span class="text-outline-variant">•</span>
+<a class="hover:text-on-surface transition-colors" href="#security">Quantum Ingress Charter</a>
+</div>
+<div class="flex items-center space-x-2 font-code-mono text-[11px] text-outline-variant">
+<span>REGION: CH-ZUR-01</span>
+<span>•</span>
+<span class="text-on-surface-variant font-medium">TERMINAL v5.2</span>
+</div>
+</footer>
+</div>
+</section>
+</main>
+<!-- Interactive Script for Micro-Interactions -->
+<script>
+    (function initBottomTerminal() {
+      const toggleBtn = document.getElementById('togglePassword');
+      const passwordInput = document.getElementById('terminal-secret');
+      const eyeIcon = document.getElementById('eyeIcon');
+
+      if (toggleBtn && passwordInput && eyeIcon) {
+        toggleBtn.addEventListener('click', () => {
+          const isPassword = passwordInput.getAttribute('type') === 'password';
+          passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
+          eyeIcon.textContent = isPassword ? 'visibility_off' : 'visibility';
+        });
+      }
+    })();
+  </script>
+</body></html>

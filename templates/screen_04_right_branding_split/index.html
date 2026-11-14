@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-primary": "#494bd6", "secondary-fixed-dim": "#ffb95f", "on-tertiary-container": "#002f38", "tertiary": "#4cd7f6", "surface": "#121318", "on-error": "#690005", "error-container": "#93000a", "on-secondary": "#472a00", "surface-container-lowest": "#0d0e13", "on-tertiary-fixed": "#001f26", "error": "#ffb4ab", "surface-container-high": "#292a2f", "on-tertiary": "#003640", "primary": "#c0c1ff", "on-primary-fixed-variant": "#2f2ebe", "surface-bright": "#38393f", "on-surface": "#e3e1e9", "outline": "#908fa0", "inverse-on-surface": "#2f3036", "on-surface-variant": "#c7c4d7", "on-tertiary-fixed-variant": "#004e5c", "surface-dim": "#121318", "surface-container": "#1e1f25", "on-background": "#e3e1e9", "on-secondary-container": "#5b3800", "surface-tint": "#c0c1ff", "on-primary-container": "#0d0096", "on-primary": "#1000a9", "tertiary-container": "#009eb9", "inverse-surface": "#e3e1e9", "background": "#121318", "surface-container-highest": "#34343a", "tertiary-fixed-dim": "#4cd7f6", "outline-variant": "#464554", "secondary": "#ffb95f", "secondary-container": "#ee9800", "surface-variant": "#34343a", "on-primary-fixed": "#07006c", "tertiary-fixed": "#acedff", "on-secondary-fixed-variant": "#653e00", "primary-container": "#8083ff", "primary-fixed": "#e1e0ff", "primary-fixed-dim": "#c0c1ff", "surface-container-low": "#1a1b21", "on-error-container": "#ffdad6", "on-secondary-fixed": "#2a1700", "secondary-fixed": "#ffddb8" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "space-xs": "0.25rem", "margin": "2.5rem", "margin-mobile": "1.25rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "space-md": "1rem", "gutter-mobile": "1rem", "gutter": "1.5rem" }, "fontFamily": { "headline-lg": [ "Space Grotesk" ], "code-mono": [ "Space Grotesk" ], "headline-sm": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "label-md": [ "Inter" ], "label-lg": [ "Inter" ], "display-hero-mobile": [ "Space Grotesk" ], "headline-lg-mobile": [ "Space Grotesk" ], "headline-md": [ "Space Grotesk" ], "label-sm": [ "Inter" ], "body-lg": [ "Plus Jakarta Sans" ], "display-hero": [ "Space Grotesk" ], "body-md": [ "Plus Jakarta Sans" ] }, "fontSize": { "headline-lg": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "code-mono": [ "18px", { "lineHeight": "24px", "letterSpacing": "0.2em", "fontWeight": "500" } ], "headline-sm": [ "18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "display-hero-mobile": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "label-sm": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" } ], "body-lg": [ "16px", { "lineHeight": "26px", "fontWeight": "400" } ], "display-hero": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "700" } ], "body-md": [ "14px", { "lineHeight": "22px", "fontWeight": "400" } ] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased min-h-screen selection:bg-primary-container selection:text-on-primary"><main class="w-full min-h-screen bg-surface"><div class="flex flex-col w-full">
+<div class="w-full min-h-screen flex flex-col lg:flex-row bg-surface">
+<!-- LEFT PANEL: Authentication Gateway (approx 45% on desktop) -->
+<div class="w-full lg:w-[45%] flex flex-col justify-between p-6 sm:p-10 lg:p-14 bg-surface z-10">
+<!-- Top Bar: Navigation & Wordmark -->
+<div class="flex items-center justify-between gap-4 mb-8">
+<a class="inline-flex items-center gap-2 text-on-surface-variant hover:text-on-surface transition-colors py-1.5 px-3 rounded-lg hover:bg-surface-container" href="#home">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span class="font-label-md text-label-md">Portal Home</span>
+</a>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">SSO 2.4.1 Active</span>
+</div>
+</div>
+<!-- Main Sign-In Core Container -->
+<div class="w-full max-w-[440px] mx-auto my-auto flex flex-col">
+<!-- Brand Wordmark & Hierarchy -->
+<div class="flex items-center gap-3 mb-6">
+<div class="w-7 h-7 rounded-lg bg-surface-container-highest flex items-center justify-center shadow-inner">
+<span class="material-symbols-outlined text-primary text-[18px]">account_balance</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Monolith Financial Studio</span>
+</div>
+<div class="mb-8">
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-2">Sign in to Capital Portal</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Institutional trading and asset allocation telemetry</p>
+</div>
+<!-- Federated Logins (Terminal & Enterprise) -->
+<div class="flex flex-col gap-3 mb-6">
+<button class="w-full h-12 px-4 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface flex items-center justify-between transition-all shadow-sm group" type="button">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary text-[20px] group-hover:scale-110 transition-transform">terminal</span>
+<span class="font-label-lg text-label-lg">Continue with Bloomberg Terminal ID</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">ID KEY</span>
+</button>
+<button class="w-full h-12 px-4 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface flex items-center justify-between transition-all shadow-sm group" type="button">
+<div class="flex items-center gap-3">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"></path>
+</svg>
+<span class="font-label-lg text-label-lg">Continue with Google Workspace</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</button>
+</div>
+<!-- Distinct Monospaced Divider -->
+<div class="relative flex items-center justify-center my-4">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full h-px bg-surface-container-highest"></div>
+</div>
+<span class="relative px-3 bg-surface font-label-sm text-label-sm uppercase tracking-wider text-outline">or account email</span>
+</div>
+<!-- Form Elements -->
+<form class="flex flex-col gap-4 mt-2" onsubmit="event.preventDefault();">
+<!-- Work Email -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="work-email">Institutional Email</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-[20px] text-outline">alternate_email</span>
+<input class="w-full h-12 pl-11 pr-4 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container transition-all text-body-md font-body-md shadow-sm" id="work-email" placeholder="trader@monolith-cap.com" type="email"/>
+</div>
+</div>
+<!-- Master Password with toggle -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface" for="master-password">Master Password</label>
+<a class="font-label-sm text-label-sm text-primary hover:underline" href="#reset">Forgot Key?</a>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-[20px] text-outline">shield_lock</span>
+<input class="w-full h-12 pl-11 pr-12 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container transition-all text-body-md font-body-md shadow-sm" id="master-password" placeholder="••••••••••••••••" type="password"/>
+<button aria-label="Toggle password visibility" class="absolute right-3.5 text-outline hover:text-on-surface transition-colors p-1" id="pw-reveal-btn" onclick="
+                  const input = document.getElementById('master-password');
+                  const icon = document.getElementById('pw-icon');
+                  if (input.type === 'password') {
+                    input.type = 'text';
+                    icon.textContent = 'visibility_off';
+                  } else {
+                    input.type = 'password';
+                    icon.textContent = 'visibility';
+                  }
+                " type="button">
+<span class="material-symbols-outlined text-[20px]" id="pw-icon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Workstation Switch -->
+<div class="flex items-center justify-between py-1">
+<label class="flex items-center gap-3 cursor-pointer" for="station-toggle">
+<div class="relative inline-flex items-center">
+<input checked="" class="sr-only peer" id="station-toggle" type="checkbox"/>
+<div class="w-10 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-surface after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-inverse-primary"></div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface select-none">Remember this workstation</span>
+</label>
+<span class="font-label-sm text-label-sm text-outline">30-Day Lease</span>
+</div>
+<!-- CTA: Secure Login Button with Luxury Accent -->
+<button class="w-full h-12 mt-2 rounded-lg bg-surface-bright hover:bg-surface-container-highest text-tertiary-fixed font-label-lg text-label-lg flex items-center justify-center gap-2 transition-all shadow-md group active:scale-[0.99]" type="submit">
+<span class="material-symbols-outlined text-[20px] text-tertiary group-hover:rotate-12 transition-transform">lock_open</span>
+<span>Secure Login</span>
+</button>
+</form>
+<!-- Hardware Token Note -->
+<div class="mt-4 p-3 rounded-lg bg-surface-container-low flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">verified_user</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Hardware FIDO2 token or TOTP authenticator prompt will be dispatched upon credential match.</p>
+</div>
+<!-- Registration & Support Hotline -->
+<div class="mt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+            New allocation entity? 
+            <a class="text-tertiary font-label-sm text-label-sm hover:underline ml-1" href="#register">Apply for Clearance</a>
+</div>
+<div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-surface-container">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">support_agent</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">24/7 Desk: +1 (800) 492-8000</span>
+</div>
+</div>
+</div>
+<!-- Left Panel Bottom Legal -->
+<div class="mt-8 pt-4 flex items-center justify-between text-outline">
+<span class="font-label-sm text-label-sm">Secured by Monolith Encrypted Gateway v4.9</span>
+<div class="flex gap-4">
+<a class="font-label-sm text-label-sm hover:text-on-surface" href="#legal">SOC2 Compliant</a>
+<a class="font-label-sm text-label-sm hover:text-on-surface" href="#status">Systems OK</a>
+</div>
+</div>
+</div>
+<!-- RIGHT PANEL: Visual Showcase & Luxury Financial Editorial (approx 55% on desktop) -->
+<div class="relative w-full lg:w-[55%] min-h-[640px] lg:min-h-screen flex flex-col justify-between p-8 sm:p-12 lg:p-16 overflow-hidden bg-surface-container-lowest">
+<!-- Rich Editorial Background Layer -->
+<div class="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-luminosity scale-105" data-alt="An atmospheric aerial architectural photograph of an ultra-modern glass trading monolith tower bathed in deep emerald, pine green, and moody obsidian night tones. Cinematic dramatic shadows, high contrast light streaks reflecting off brushed steel mullions and dynamic digital displays." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBqrJJMQCnMhYPCDbhswmdnh5Pmw_W7EQMabhP8L9Z6zfIzNbJXPaJVzXpJduWYAvDgRMRwk1LeY8Pl3BKyimi6gI7tMDZLYqqSIO7Ljwmh6IO54VgugZ4NuH6Ww041WtN8MKr5XQf0da_FYenlpK8XAZ9Y3-R_mO0sxcW-bdEOG4koeYkbrlBmkWFzhjbK9nqUe_-CIcaJ_lXvV-1IjDGbCnn6s6CuV_249qeMl_ZU')"></div>
+<!-- Subtle Ambient Forest Gradient Wash -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/80 to-transparent"></div>
+<div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-tertiary-container/20 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-inverse-primary/10 blur-3xl pointer-events-none"></div>
+<!-- Top Right Live Market Status Ticker -->
+<div class="relative z-10 flex flex-wrap items-center justify-between gap-4">
+<div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface-container/80 backdrop-blur-md shadow-lg">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm text-on-surface tracking-wider uppercase">NYSE: Open</span>
+</div>
+<span class="text-outline text-label-sm">•</span>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm text-on-surface tracking-wider uppercase">LSE: Open</span>
+</div>
+<span class="text-outline text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-tertiary-fixed font-semibold tracking-wider uppercase">Telemetry: Normal</span>
+</div>
+<div class="hidden sm:flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase">256-Bit Quantum Resistant</span>
+</div>
+</div>
+<!-- Center Showcase Content: Metric Card & Liquidity Wave Graphic -->
+<div class="relative z-10 my-auto py-10 flex flex-col gap-8 max-w-xl">
+<!-- Big Institutional Metric Card -->
+<div class="p-6 sm:p-8 rounded-xl bg-surface-container/70 backdrop-blur-xl shadow-2xl flex flex-col gap-6 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-tertiary/5 rounded-bl-full pointer-events-none"></div>
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-tertiary-fixed">Active Assets Monitored</span>
+<div class="font-display-hero text-display-hero sm:text-display-hero text-on-surface font-semibold tracking-tight mt-1">
+                $42.8B<span class="text-tertiary text-headline-lg">+</span>
+</div>
+</div>
+<div class="flex flex-col sm:items-end">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Telemetry SLA</span>
+<div class="font-headline-md text-headline-md text-tertiary flex items-center gap-1.5 mt-1">
+<span class="material-symbols-outlined text-[22px]">network_check</span>
+<span>99.999%</span>
+</div>
+</div>
+</div>
+<!-- Abstract Financial Liquidity Wave SVG Chart -->
+<div class="w-full flex flex-col gap-2">
+<div class="flex items-center justify-between text-outline">
+<span class="font-label-sm text-label-sm">High-Frequency Telemetry Stream (24h)</span>
+<span class="font-label-sm text-label-sm text-tertiary">+14.2% Volatility Hedged</span>
+</div>
+<div class="w-full h-28 relative flex items-end">
+<!-- Inline High-Fi Wave Chart -->
+<svg class="w-full h-full overflow-visible" fill="none" preserveaspectratio="none" viewbox="0 0 400 100">
+<defs>
+<lineargradient id="liquidityGlow" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#4cd7f6" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#4cd7f6" stop-opacity="0.0"></stop>
+</lineargradient>
+<lineargradient id="strokeGrad" x1="0" x2="1" y1="0" y2="0">
+<stop offset="0%" stop-color="#c0c1ff"></stop>
+<stop offset="50%" stop-color="#4cd7f6"></stop>
+<stop offset="100%" stop-color="#acedff"></stop>
+</lineargradient>
+</defs>
+<!-- Shaded Wave Body -->
+<path d="M0,75 C50,45 80,85 130,40 C180,-5 220,65 270,30 C320,-5 360,35 400,10 L400,100 L0,100 Z" fill="url(#liquidityGlow)"></path>
+<!-- Main Line -->
+<path d="M0,75 C50,45 80,85 130,40 C180,-5 220,65 270,30 C320,-5 360,35 400,10" stroke="url(#strokeGrad)" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Data Nodes -->
+<circle class="fill-tertiary" cx="130" cy="40" r="3.5"></circle>
+<circle class="fill-tertiary" cx="270" cy="30" r="3.5"></circle>
+<circle class="fill-surface-bright stroke-tertiary" cx="400" cy="10" r="4.5" stroke-width="2"></circle>
+</svg>
+</div>
+<!-- Monospaced Axis / Micro Tickers -->
+<div class="flex items-center justify-between text-outline pt-2">
+<span class="font-code-mono text-label-sm">00:00 UTC</span>
+<span class="font-code-mono text-label-sm">06:00 UTC</span>
+<span class="font-code-mono text-label-sm">12:00 UTC</span>
+<span class="font-code-mono text-label-sm">18:00 UTC</span>
+<span class="font-code-mono text-label-sm text-tertiary">LIVE</span>
+</div>
+</div>
+</div>
+<!-- Editorial Quote from CIO with Headshot -->
+<div class="relative p-6 rounded-xl bg-surface-container-low/60 backdrop-blur-md flex flex-col sm:flex-row items-start sm:items-center gap-5 shadow-lg">
+<div class="relative shrink-0">
+<img class="w-14 h-14 rounded-full object-cover shadow-md" data-alt="Close-up professional studio portrait of an experienced Chief Investment Officer with silver hair, wearing tailored dark charcoal bespoke business attire, confident, calm and commanding demeanor against a deep studio background with subtle cool studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCr4kPxKM7BBbZQwthl90G5Wtur0kw1G5Xbng440KRaWz2j8XyUOo9s_qiwO4vC-AYmXP_TsniV5yDO5GM794YJaEhWWzesb9rr0vkjsPzCVORf56RW2MGkzQun8gjCfzpw2-KEqLr1uWnptU_WSz9z1LRuJRP3skjfucjwRZcEAP0ZZiFH4Ub3p2gEVYhhQ_XZAcc-zl7DXuy0pkJ6gBH3GED60QrUesCHbZyU33j"/>
+<div class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[12px]">verified</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<p class="font-body-md text-body-md text-on-surface italic">
+              “In ultra-low latency capital preservation, sub-millisecond execution and audited access governance aren’t options—they are the entire strategy.”
+            </p>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Eleanor Vance-Sterling</span>
+<span class="text-outline text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-tertiary-fixed">Chief Investment Officer, Apex Quant</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Editorial Bottom Metadata Strip -->
+<div class="relative z-10 flex flex-wrap items-center justify-between gap-4 pt-4 text-on-surface-variant">
+<div class="flex items-center gap-3">
+<span class="font-label-sm text-label-sm tracking-widest uppercase text-outline">Terminal Session</span>
+<span class="font-code-mono text-label-sm bg-surface-container px-2 py-0.5 rounded text-tertiary">NODE_US_EAST_09</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-tertiary">fingerprint</span>
+<span class="font-label-sm text-label-sm">Hardware Token WebAuthn Ready</span>
+</div>
+</div>
+</div>
+</div>
+</div></main></body></html>

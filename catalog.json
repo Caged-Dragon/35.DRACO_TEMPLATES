@@ -1,0 +1,602 @@
+[
+  {
+    "id": "screen_01_pure_minimal",
+    "title": "Pure Minimal",
+    "group": "Visual styles",
+    "description": "A calm, considered interface with a clear hierarchy and restrained detail.",
+    "preview": "templates/screen_01_pure_minimal/screen.png",
+    "live": "templates/screen_01_pure_minimal/index.html",
+    "featured": false,
+    "number": "01"
+  },
+  {
+    "id": "screen_02_luxury_dark",
+    "title": "Luxury Dark",
+    "group": "Visual styles",
+    "description": "A refined visual direction with an elevated, premium feel.",
+    "preview": "templates/screen_02_luxury_dark/screen.png",
+    "live": "templates/screen_02_luxury_dark/index.html",
+    "featured": false,
+    "number": "02"
+  },
+  {
+    "id": "screen_03_left_branding_split",
+    "title": "Left Branding Split",
+    "group": "Visual styles",
+    "description": "A distinctive composition that gives the sign-in experience a strong visual structure.",
+    "preview": "templates/screen_03_left_branding_split/screen.png",
+    "live": "templates/screen_03_left_branding_split/index.html",
+    "featured": true,
+    "number": "03"
+  },
+  {
+    "id": "screen_04_right_branding_split",
+    "title": "Right Branding Split",
+    "group": "Visual styles",
+    "description": "A distinctive composition that gives the sign-in experience a strong visual structure.",
+    "preview": "templates/screen_04_right_branding_split/screen.png",
+    "live": "templates/screen_04_right_branding_split/index.html",
+    "featured": false,
+    "number": "04"
+  },
+  {
+    "id": "screen_05_glassmorphism",
+    "title": "Glassmorphism",
+    "group": "Visual styles",
+    "description": "An original authentication concept from the Stitch design collection.",
+    "preview": "templates/screen_05_glassmorphism/screen.png",
+    "live": "templates/screen_05_glassmorphism/index.html",
+    "featured": true,
+    "number": "05"
+  },
+  {
+    "id": "screen_06_colorful_gradient",
+    "title": "Colorful Gradient",
+    "group": "Visual styles",
+    "description": "An original authentication concept from the Stitch design collection.",
+    "preview": "templates/screen_06_colorful_gradient/screen.png",
+    "live": "templates/screen_06_colorful_gradient/index.html",
+    "featured": false,
+    "number": "06"
+  },
+  {
+    "id": "screen_07_corporate_enterprise",
+    "title": "Corporate Enterprise",
+    "group": "Industry kits",
+    "description": "A tailored access experience for a specific product or business context.",
+    "preview": "templates/screen_07_corporate_enterprise/screen.png",
+    "live": "templates/screen_07_corporate_enterprise/index.html",
+    "featured": false,
+    "number": "07"
+  },
+  {
+    "id": "screen_08_modern_saas",
+    "title": "Modern Saas",
+    "group": "Industry kits",
+    "description": "A tailored access experience for a specific product or business context.",
+    "preview": "templates/screen_08_modern_saas/screen.png",
+    "live": "templates/screen_08_modern_saas/index.html",
+    "featured": false,
+    "number": "08"
+  },
+  {
+    "id": "screen_09_creative_agency",
+    "title": "Creative Agency",
+    "group": "Visual styles",
+    "description": "An original authentication concept from the Stitch design collection.",
+    "preview": "templates/screen_09_creative_agency/screen.png",
+    "live": "templates/screen_09_creative_agency/index.html",
+    "featured": false,
+    "number": "09"
+  },
+  {
+    "id": "screen_10_elegant_luxury",
+    "title": "Elegant Luxury",
+    "group": "Visual styles",
+    "description": "A refined visual direction with an elevated, premium feel.",
+    "preview": "templates/screen_10_elegant_luxury/screen.png",
+    "live": "templates/screen_10_elegant_luxury/index.html",
+    "featured": true,
+    "number": "10"
+  },
+  {
+    "id": "screen_11_neo_brutalist",
+    "title": "Neo Brutalist",
+    "group": "Visual styles",
+    "description": "An original authentication concept from the Stitch design collection.",
+    "preview": "templates/screen_11_neo_brutalist/screen.png",
+    "live": "templates/screen_11_neo_brutalist/index.html",
+    "featured": false,
+    "number": "11"
+  },
+  {
+    "id": "screen_12_futuristic_technology",
+    "title": "Futuristic Technology",
+    "group": "Visual styles",
+    "description": "A bold, atmospheric direction for products that want a memorable first impression.",
+    "preview": "templates/screen_12_futuristic_technology/screen.png",
+    "live": "templates/screen_12_futuristic_technology/index.html",
+    "featured": false,
+    "number": "12"
+  },
+  {
+    "id": "screen_13_editorial_magazine",
+    "title": "Editorial Magazine",
+    "group": "Visual styles",
+    "description": "An original authentication concept from the Stitch design collection.",
+    "preview": "templates/screen_13_editorial_magazine/screen.png",
+    "live": "templates/screen_13_editorial_magazine/index.html",
+    "featured": false,
+    "number": "13"
+  },
+  {
+    "id": "screen_14_illustration_story",
+    "title": "Illustration Story",
+    "group": "Visual styles",
+    "description": "An original authentication concept from the Stitch design collection.",
+    "preview": "templates/screen_14_illustration_story/screen.png",
+    "live": "templates/screen_14_illustration_story/index.html",
+    "featured": false,
+    "number": "14"
+  },
+  {
+    "id": "screen_15_full_bleed_photography",
+    "title": "Full Bleed Photography",
+    "group": "Visual styles",
+    "description": "An original authentication concept from the Stitch design collection.",
+    "preview": "templates/screen_15_full_bleed_photography/screen.png",
+    "live": "templates/screen_15_full_bleed_photography/index.html",
+    "featured": false,
+    "number": "15"
+  },
+  {
+    "id": "screen_16_vertical_brand_sidebar",
+    "title": "Vertical Brand Sidebar",
+    "group": "Visual styles",
+    "description": "A distinctive composition that gives the sign-in experience a strong visual structure.",
+    "preview": "templates/screen_16_vertical_brand_sidebar/screen.png",
+    "live": "templates/screen_16_vertical_brand_sidebar/index.html",
+    "featured": false,
+    "number": "16"
+  },
+  {
+    "id": "screen_17_floating_authentication_card",
+    "title": "Floating Authentication Card",
+    "group": "Visual styles",
+    "description": "An original authentication concept from the Stitch design collection.",
+    "preview": "templates/screen_17_floating_authentication_card/screen.png",
+    "live": "templates/screen_17_floating_authentication_card/index.html",
+    "featured": false,
+    "number": "17"
+  },
+  {
+    "id": "screen_19_dual_panel_creative",
+    "title": "Dual Panel Creative",
+    "group": "Visual styles",
+    "description": "A distinctive composition that gives the sign-in experience a strong visual structure.",
+    "preview": "templates/screen_19_dual_panel_creative/screen.png",
+    "live": "templates/screen_19_dual_panel_creative/index.html",
+    "featured": false,
+    "number": "18"
+  },
+  {
+    "id": "screen_20_premium_brand_signature",
+    "title": "Premium Brand Signature",
+    "group": "Visual styles",
+    "description": "A refined visual direction with an elevated, premium feel.",
+    "preview": "templates/screen_20_premium_brand_signature/screen.png",
+    "live": "templates/screen_20_premium_brand_signature/index.html",
+    "featured": false,
+    "number": "19"
+  },
+  {
+    "id": "screen_21_swiss_modernist",
+    "title": "Swiss Modernist",
+    "group": "Visual styles",
+    "description": "A calm, considered interface with a clear hierarchy and restrained detail.",
+    "preview": "templates/screen_21_swiss_modernist/screen.png",
+    "live": "templates/screen_21_swiss_modernist/index.html",
+    "featured": false,
+    "number": "20"
+  },
+  {
+    "id": "screen_21_swiss_modernist_variant",
+    "title": "Swiss Modernist \u00b7 variant",
+    "group": "Visual styles",
+    "description": "A calm, considered interface with a clear hierarchy and restrained detail.",
+    "preview": "templates/screen_21_swiss_modernist_variant/screen.png",
+    "live": "templates/screen_21_swiss_modernist_variant/index.html",
+    "featured": false,
+    "number": "21"
+  },
+  {
+    "id": "screen_22_soft_neumorphic",
+    "title": "Soft Neumorphic",
+    "group": "Visual styles",
+    "description": "A calm, considered interface with a clear hierarchy and restrained detail.",
+    "preview": "templates/screen_22_soft_neumorphic/screen.png",
+    "live": "templates/screen_22_soft_neumorphic/index.html",
+    "featured": false,
+    "number": "22"
+  },
+  {
+    "id": "screen_23_monochrome_studio",
+    "title": "Monochrome Studio",
+    "group": "Visual styles",
+    "description": "A calm, considered interface with a clear hierarchy and restrained detail.",
+    "preview": "templates/screen_23_monochrome_studio/screen.png",
+    "live": "templates/screen_23_monochrome_studio/index.html",
+    "featured": false,
+    "number": "23"
+  },
+  {
+    "id": "screen_24_retro_futurism_y2k",
+    "title": "Retro Futurism Y2k",
+    "group": "Visual styles",
+    "description": "An original authentication concept from the Stitch design collection.",
+    "preview": "templates/screen_24_retro_futurism_y2k/screen.png",
+    "live": "templates/screen_24_retro_futurism_y2k/index.html",
+    "featured": false,
+    "number": "24"
+  },
+  {
+    "id": "screen_25_developer_terminal",
+    "title": "Developer Terminal",
+    "group": "Industry kits",
+    "description": "A tailored access experience for a specific product or business context.",
+    "preview": "templates/screen_25_developer_terminal/screen.png",
+    "live": "templates/screen_25_developer_terminal/index.html",
+    "featured": false,
+    "number": "25"
+  },
+  {
+    "id": "screen_26_botanical_organic",
+    "title": "Botanical Organic",
+    "group": "Visual styles",
+    "description": "An original authentication concept from the Stitch design collection.",
+    "preview": "templates/screen_26_botanical_organic/screen.png",
+    "live": "templates/screen_26_botanical_organic/index.html",
+    "featured": false,
+    "number": "26"
+  },
+  {
+    "id": "screen_27_engineering_blueprint",
+    "title": "Engineering Blueprint",
+    "group": "Visual styles",
+    "description": "A bold, atmospheric direction for products that want a memorable first impression.",
+    "preview": "templates/screen_27_engineering_blueprint/screen.png",
+    "live": "templates/screen_27_engineering_blueprint/index.html",
+    "featured": false,
+    "number": "27"
+  },
+  {
+    "id": "screen_28_paper_cut_layers",
+    "title": "Paper Cut Layers",
+    "group": "Visual styles",
+    "description": "An original authentication concept from the Stitch design collection.",
+    "preview": "templates/screen_28_paper_cut_layers/screen.png",
+    "live": "templates/screen_28_paper_cut_layers/index.html",
+    "featured": false,
+    "number": "28"
+  },
+  {
+    "id": "screen_29_duotone_photography",
+    "title": "Duotone Photography",
+    "group": "Visual styles",
+    "description": "An original authentication concept from the Stitch design collection.",
+    "preview": "templates/screen_29_duotone_photography/screen.png",
+    "live": "templates/screen_29_duotone_photography/index.html",
+    "featured": false,
+    "number": "29"
+  },
+  {
+    "id": "screen_30_bento_grid_authentication",
+    "title": "Bento Grid Authentication",
+    "group": "Visual styles",
+    "description": "An original authentication concept from the Stitch design collection.",
+    "preview": "templates/screen_30_bento_grid_authentication/screen.png",
+    "live": "templates/screen_30_bento_grid_authentication/index.html",
+    "featured": true,
+    "number": "30"
+  },
+  {
+    "id": "screen_31_warm_pastel_modern",
+    "title": "Warm Pastel Modern",
+    "group": "Visual styles",
+    "description": "A calm, considered interface with a clear hierarchy and restrained detail.",
+    "preview": "templates/screen_31_warm_pastel_modern/screen.png",
+    "live": "templates/screen_31_warm_pastel_modern/index.html",
+    "featured": false,
+    "number": "31"
+  },
+  {
+    "id": "screen_32_diagonal_composition",
+    "title": "Diagonal Composition",
+    "group": "Visual styles",
+    "description": "A distinctive composition that gives the sign-in experience a strong visual structure.",
+    "preview": "templates/screen_32_diagonal_composition/screen.png",
+    "live": "templates/screen_32_diagonal_composition/index.html",
+    "featured": false,
+    "number": "32"
+  },
+  {
+    "id": "screen_33_premium_browser_window",
+    "title": "Premium Browser Window",
+    "group": "Visual styles",
+    "description": "A distinctive composition that gives the sign-in experience a strong visual structure.",
+    "preview": "templates/screen_33_premium_browser_window/screen.png",
+    "live": "templates/screen_33_premium_browser_window/index.html",
+    "featured": false,
+    "number": "33"
+  },
+  {
+    "id": "screen_34_vertical_editorial",
+    "title": "Vertical Editorial",
+    "group": "Visual styles",
+    "description": "A distinctive composition that gives the sign-in experience a strong visual structure.",
+    "preview": "templates/screen_34_vertical_editorial/screen.png",
+    "live": "templates/screen_34_vertical_editorial/index.html",
+    "featured": false,
+    "number": "34"
+  },
+  {
+    "id": "screen_35_qr_code_first",
+    "title": "Qr Code First",
+    "group": "Authentication flows",
+    "description": "A focused sign-in experience built around a distinct authentication method.",
+    "preview": "templates/screen_35_qr_code_first/screen.png",
+    "live": "templates/screen_35_qr_code_first/index.html",
+    "featured": false,
+    "number": "35"
+  },
+  {
+    "id": "screen_36_passkey_first",
+    "title": "Passkey First",
+    "group": "Authentication flows",
+    "description": "A focused sign-in experience built around a distinct authentication method.",
+    "preview": "templates/screen_36_passkey_first/screen.png",
+    "live": "templates/screen_36_passkey_first/index.html",
+    "featured": true,
+    "number": "36"
+  },
+  {
+    "id": "screen_37_email_magic_link",
+    "title": "Email Magic Link",
+    "group": "Authentication flows",
+    "description": "A focused sign-in experience built around a distinct authentication method.",
+    "preview": "templates/screen_37_email_magic_link/screen.png",
+    "live": "templates/screen_37_email_magic_link/index.html",
+    "featured": false,
+    "number": "37"
+  },
+  {
+    "id": "screen_38_enterprise_workspace_access",
+    "title": "Enterprise Workspace Access",
+    "group": "Industry kits",
+    "description": "A tailored access experience for a specific product or business context.",
+    "preview": "templates/screen_38_enterprise_workspace_access/screen.png",
+    "live": "templates/screen_38_enterprise_workspace_access/index.html",
+    "featured": false,
+    "number": "38"
+  },
+  {
+    "id": "screen_39_phone_number_and_otp",
+    "title": "Phone Number And Otp",
+    "group": "Authentication flows",
+    "description": "A focused sign-in experience built around a distinct authentication method.",
+    "preview": "templates/screen_39_phone_number_and_otp/screen.png",
+    "live": "templates/screen_39_phone_number_and_otp/index.html",
+    "featured": false,
+    "number": "39"
+  },
+  {
+    "id": "screen_40_global_multilingual_sign_in",
+    "title": "Global Multilingual Sign In",
+    "group": "Authentication flows",
+    "description": "A focused sign-in experience built around a distinct authentication method.",
+    "preview": "templates/screen_40_global_multilingual_sign_in/screen.png",
+    "live": "templates/screen_40_global_multilingual_sign_in/index.html",
+    "featured": false,
+    "number": "40"
+  },
+  {
+    "id": "screen_41_scandinavian_calm",
+    "title": "Scandinavian Calm",
+    "group": "Visual styles",
+    "description": "A calm, considered interface with a clear hierarchy and restrained detail.",
+    "preview": "templates/screen_41_scandinavian_calm/screen.png",
+    "live": "templates/screen_41_scandinavian_calm/index.html",
+    "featured": false,
+    "number": "41"
+  },
+  {
+    "id": "screen_42_art_deco_glamour",
+    "title": "Art Deco Glamour",
+    "group": "Visual styles",
+    "description": "A refined visual direction with an elevated, premium feel.",
+    "preview": "templates/screen_42_art_deco_glamour/screen.png",
+    "live": "templates/screen_42_art_deco_glamour/index.html",
+    "featured": false,
+    "number": "42"
+  },
+  {
+    "id": "screen_44_topographic_contour",
+    "title": "Topographic Contour",
+    "group": "Visual styles",
+    "description": "A bold, atmospheric direction for products that want a memorable first impression.",
+    "preview": "templates/screen_44_topographic_contour/screen.png",
+    "live": "templates/screen_44_topographic_contour/index.html",
+    "featured": false,
+    "number": "43"
+  },
+  {
+    "id": "screen_45_floating_3d_islands",
+    "title": "Floating 3d Islands",
+    "group": "Visual styles",
+    "description": "A bold, atmospheric direction for products that want a memorable first impression.",
+    "preview": "templates/screen_45_floating_3d_islands/screen.png",
+    "live": "templates/screen_45_floating_3d_islands/index.html",
+    "featured": false,
+    "number": "44"
+  },
+  {
+    "id": "screen_46_accessibility_first_high_contrast",
+    "title": "Accessibility First High Contrast",
+    "group": "Visual styles",
+    "description": "An original authentication concept from the Stitch design collection.",
+    "preview": "templates/screen_46_accessibility_first_high_contrast/screen.png",
+    "live": "templates/screen_46_accessibility_first_high_contrast/index.html",
+    "featured": false,
+    "number": "45"
+  },
+  {
+    "id": "screen_47_architectural_concrete",
+    "title": "Architectural Concrete",
+    "group": "Visual styles",
+    "description": "An original authentication concept from the Stitch design collection.",
+    "preview": "templates/screen_47_architectural_concrete/screen.png",
+    "live": "templates/screen_47_architectural_concrete/index.html",
+    "featured": false,
+    "number": "46"
+  },
+  {
+    "id": "screen_48_bottom_sheet_authentication_1",
+    "title": "Bottom Sheet Authentication 1",
+    "group": "Authentication flows",
+    "description": "A focused sign-in experience built around a distinct authentication method.",
+    "preview": "templates/screen_48_bottom_sheet_authentication_1/screen.png",
+    "live": "templates/screen_48_bottom_sheet_authentication_1/index.html",
+    "featured": false,
+    "number": "47"
+  },
+  {
+    "id": "screen_48_bottom_sheet_authentication_2",
+    "title": "Bottom Sheet Authentication 2",
+    "group": "Authentication flows",
+    "description": "A focused sign-in experience built around a distinct authentication method.",
+    "preview": "templates/screen_48_bottom_sheet_authentication_2/screen.png",
+    "live": "templates/screen_48_bottom_sheet_authentication_2/index.html",
+    "featured": false,
+    "number": "48"
+  },
+  {
+    "id": "screen_49_immersive_abstract_sculpture",
+    "title": "Immersive Abstract Sculpture",
+    "group": "Visual styles",
+    "description": "A bold, atmospheric direction for products that want a memorable first impression.",
+    "preview": "templates/screen_49_immersive_abstract_sculpture/screen.png",
+    "live": "templates/screen_49_immersive_abstract_sculpture/index.html",
+    "featured": false,
+    "number": "49"
+  },
+  {
+    "id": "screen_50_premium_fintech_access",
+    "title": "Premium Fintech Access",
+    "group": "Industry kits",
+    "description": "A tailored access experience for a specific product or business context.",
+    "preview": "templates/screen_50_premium_fintech_access/screen.png",
+    "live": "templates/screen_50_premium_fintech_access/index.html",
+    "featured": true,
+    "number": "50"
+  },
+  {
+    "id": "screen_51_e_commerce_member_sign_in",
+    "title": "E Commerce Member Sign In",
+    "group": "Industry kits",
+    "description": "A tailored access experience for a specific product or business context.",
+    "preview": "templates/screen_51_e_commerce_member_sign_in/screen.png",
+    "live": "templates/screen_51_e_commerce_member_sign_in/index.html",
+    "featured": false,
+    "number": "51"
+  },
+  {
+    "id": "screen_52_education_campus_portal",
+    "title": "Education Campus Portal",
+    "group": "Industry kits",
+    "description": "A tailored access experience for a specific product or business context.",
+    "preview": "templates/screen_52_education_campus_portal/screen.png",
+    "live": "templates/screen_52_education_campus_portal/index.html",
+    "featured": true,
+    "number": "52"
+  },
+  {
+    "id": "screen_53_travel_explorer_sign_in",
+    "title": "Travel Explorer Sign In",
+    "group": "Industry kits",
+    "description": "A tailored access experience for a specific product or business context.",
+    "preview": "templates/screen_53_travel_explorer_sign_in/screen.png",
+    "live": "templates/screen_53_travel_explorer_sign_in/index.html",
+    "featured": false,
+    "number": "53"
+  },
+  {
+    "id": "screen_54_creator_portfolio_access",
+    "title": "Creator Portfolio Access",
+    "group": "Industry kits",
+    "description": "A tailored access experience for a specific product or business context.",
+    "preview": "templates/screen_54_creator_portfolio_access/screen.png",
+    "live": "templates/screen_54_creator_portfolio_access/index.html",
+    "featured": false,
+    "number": "54"
+  },
+  {
+    "id": "screen_55_hospitality_concierge",
+    "title": "Hospitality Concierge",
+    "group": "Industry kits",
+    "description": "A tailored access experience for a specific product or business context.",
+    "preview": "templates/screen_55_hospitality_concierge/screen.png",
+    "live": "templates/screen_55_hospitality_concierge/index.html",
+    "featured": false,
+    "number": "55"
+  },
+  {
+    "id": "screen_56_esports_gaming_portal",
+    "title": "Esports Gaming Portal",
+    "group": "Industry kits",
+    "description": "A tailored access experience for a specific product or business context.",
+    "preview": "templates/screen_56_esports_gaming_portal/screen.png",
+    "live": "templates/screen_56_esports_gaming_portal/index.html",
+    "featured": true,
+    "number": "56"
+  },
+  {
+    "id": "screen_57_event_and_ticket_access",
+    "title": "Event And Ticket Access",
+    "group": "Industry kits",
+    "description": "A tailored access experience for a specific product or business context.",
+    "preview": "templates/screen_57_event_and_ticket_access/screen.png",
+    "live": "templates/screen_57_event_and_ticket_access/index.html",
+    "featured": false,
+    "number": "57"
+  },
+  {
+    "id": "screen_58_horizontal_layered_composition",
+    "title": "Horizontal Layered Composition",
+    "group": "Visual styles",
+    "description": "A distinctive composition that gives the sign-in experience a strong visual structure.",
+    "preview": "templates/screen_58_horizontal_layered_composition/screen.png",
+    "live": "templates/screen_58_horizontal_layered_composition/index.html",
+    "featured": false,
+    "number": "58"
+  },
+  {
+    "id": "screen_59_dark_monolith",
+    "title": "Dark Monolith",
+    "group": "Visual styles",
+    "description": "A bold, atmospheric direction for products that want a memorable first impression.",
+    "preview": "templates/screen_59_dark_monolith/screen.png",
+    "live": "templates/screen_59_dark_monolith/index.html",
+    "featured": false,
+    "number": "59"
+  },
+  {
+    "id": "screen_60_signature_modular_authentication",
+    "title": "Signature Modular Authentication",
+    "group": "Visual styles",
+    "description": "An original authentication concept from the Stitch design collection.",
+    "preview": "templates/screen_60_signature_modular_authentication/screen.png",
+    "live": "templates/screen_60_signature_modular_authentication/index.html",
+    "featured": false,
+    "number": "60"
+  }
+]

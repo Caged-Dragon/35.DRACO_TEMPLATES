@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&amp;family=Plus+Jakarta+Sans:wght@400;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-secondary-fixed-variant":"#653e00","tertiary-container":"#009eb9","surface-container-lowest":"#0d0e13","on-surface":"#e3e1e9","outline":"#908fa0","primary-fixed":"#e1e0ff","background":"#121318","inverse-primary":"#494bd6","secondary-fixed":"#ffddb8","surface-variant":"#34343a","on-secondary":"#472a00","surface-dim":"#121318","primary-container":"#8083ff","primary-fixed-dim":"#c0c1ff","on-primary":"#1000a9","on-secondary-fixed":"#2a1700","on-error-container":"#ffdad6","on-tertiary":"#003640","surface":"#121318","inverse-surface":"#e3e1e9","secondary-container":"#ee9800","surface-container":"#1e1f25","secondary-fixed-dim":"#ffb95f","surface-container-highest":"#34343a","error-container":"#93000a","tertiary":"#4cd7f6","tertiary-fixed-dim":"#4cd7f6","primary":"#c0c1ff","on-background":"#e3e1e9","on-primary-fixed":"#07006c","error":"#ffb4ab","surface-bright":"#38393f","on-tertiary-container":"#002f38","on-surface-variant":"#c7c4d7","tertiary-fixed":"#acedff","outline-variant":"#464554","surface-container-low":"#1a1b21","on-tertiary-fixed-variant":"#004e5c","on-primary-container":"#0d0096","inverse-on-surface":"#2f3036","surface-tint":"#c0c1ff","surface-container-high":"#292a2f","secondary":"#ffb95f","on-error":"#690005","on-primary-fixed-variant":"#2f2ebe","on-secondary-container":"#5b3800","on-tertiary-fixed":"#001f26"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter":"1.5rem","space-xl":"2.5rem","space-md":"1rem","space-xs":"0.25rem","gutter-mobile":"1rem","space-lg":"1.5rem","space-sm":"0.5rem","margin-mobile":"1.25rem","margin":"2.5rem"},"fontFamily":{"body-sm":["Plus Jakarta Sans"],"label-lg":["Inter"],"headline-md":["Space Grotesk"],"display-hero":["Space Grotesk"],"body-lg":["Plus Jakarta Sans"],"label-sm":["Inter"],"headline-lg-mobile":["Space Grotesk"],"headline-sm":["Plus Jakarta Sans"],"display-hero-mobile":["Space Grotesk"],"code-mono":["Space Grotesk"],"label-md":["Inter"],"headline-lg":["Space Grotesk"],"body-md":["Plus Jakarta Sans"]},"fontSize":{"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"display-hero":["48px",{"lineHeight":"56px","letterSpacing":"-0.03em","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"600"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-hero-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"code-mono":["18px",{"lineHeight":"24px","letterSpacing":"0.2em","fontWeight":"500"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen antialiased selection:bg-primary-container selection:text-on-primary-container"><main class="min-h-screen w-full relative flex flex-col"><div class="flex flex-col w-full text-on-surface">
+<!-- Dynamic Atmospheric Underlay (Scoped within container) -->
+<div class="relative w-full overflow-hidden px-margin-mobile md:px-margin py-space-lg md:py-space-xl flex flex-col items-center justify-center min-h-[calc(100vh-2rem)]">
+<!-- Ambient Glow Nodes -->
+<div class="absolute -top-32 left-1/4 w-96 h-96 bg-primary-container/10 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="absolute -bottom-24 right-1/4 w-[30rem] h-[30rem] bg-tertiary/10 rounded-full blur-[140px] pointer-events-none"></div>
+<div class="w-full max-w-5xl flex flex-col gap-space-md relative z-10">
+<!-- Top Diagnostic HUD Ribbon -->
+<header class="w-full bg-surface-container-low rounded-xl px-space-md py-space-sm flex flex-wrap items-center justify-between gap-space-sm shadow-md">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-lg bg-surface-container text-tertiary">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+</span>
+<span class="font-code-mono text-label-md text-outline hidden sm:inline">sys.env:</span>
+<div class="flex items-center gap-2 bg-surface-container-lowest px-2.5 py-1 rounded text-body-sm font-code-mono text-on-surface truncate">
+<span class="text-tertiary font-semibold">$</span>
+<span class="truncate">sys.auth --target=production-us-east --mode=strict</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md ml-auto text-label-sm font-label-sm">
+<!-- Latency Gauge Indicator -->
+<div class="flex items-center gap-1.5 bg-surface-container px-2.5 py-1 rounded">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
+</span>
+<span class="text-outline uppercase tracking-wider">LATENCY:</span>
+<span class="text-on-surface font-code-mono">14ms</span>
+</div>
+<!-- Region Hash Badge -->
+<div class="hidden md:flex items-center gap-1 text-outline">
+<span class="material-symbols-outlined text-[14px] text-secondary">lock</span>
+<span>TLSv1.3_CHACHA20</span>
+</div>
+</div>
+</header>
+<!-- Main Dual-Pane Console Window -->
+<main class="w-full bg-surface-container-low rounded-xl shadow-xl overflow-hidden flex flex-col">
+<!-- IDE Titlebar & Window Controls -->
+<div class="w-full bg-surface-container px-space-md py-3 flex items-center justify-between select-none">
+<div class="flex items-center gap-space-md">
+<!-- Traffic Lights -->
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-error inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-secondary inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-tertiary inline-block"></span>
+</div>
+<div class="h-4 w-px bg-surface-variant mx-1 hidden sm:block"></div>
+<!-- Tab Selection Group -->
+<nav aria-label="Authentication modes" class="flex items-center gap-1 overflow-x-auto">
+<button class="tab-btn flex items-center gap-1.5 px-3 py-1 rounded text-label-md font-label-md bg-surface-container-high text-primary font-semibold transition-all" id="tab-credentials" onclick="switchAuthTab('credentials')">
+<span class="material-symbols-outlined text-[14px] text-tertiary">data_object</span>
+<span>[credentials.env]</span>
+</button>
+<button class="tab-btn flex items-center gap-1.5 px-3 py-1 rounded text-label-md font-label-md text-outline hover:text-on-surface hover:bg-surface-container-high transition-all" id="tab-oauth" onclick="switchAuthTab('oauth')">
+<span class="material-symbols-outlined text-[14px]">account_tree</span>
+<span>[oauth_flow.sh]</span>
+</button>
+<button class="tab-btn flex items-center gap-1.5 px-3 py-1 rounded text-label-md font-label-md text-outline hover:text-on-surface hover:bg-surface-container-high transition-all" id="tab-ssh" onclick="switchAuthTab('ssh')">
+<span class="material-symbols-outlined text-[14px]">key</span>
+<span>[ssh_key.pub]</span>
+</button>
+</nav>
+</div>
+<!-- Session Metadata Header -->
+<div class="hidden lg:flex items-center gap-3 text-label-sm font-code-mono text-outline">
+<span class="text-tertiary">SESSION_ID:</span>
+<span>0x9E7F...3B21</span>
+<span class="text-secondary font-bold">● ACTIVE</span>
+</div>
+</div>
+<!-- Terminal Workspace Split Frame -->
+<div class="w-full grid grid-cols-1 lg:grid-cols-12 min-h-[500px]">
+<!-- Pane Left: Form Terminal Interface (7 Cols) -->
+<div class="lg:col-span-7 p-space-md sm:p-space-lg lg:p-space-xl flex flex-col justify-between">
+<div>
+<!-- Diagnostic Banner -->
+<div class="flex items-center justify-between mb-space-lg">
+<div>
+<h1 class="font-headline-md text-headline-md tracking-tight text-on-surface">Developer Console Sign-In</h1>
+<p class="font-body-sm text-body-sm text-outline mt-1">Authenticate identity for root deployment permissions.</p>
+</div>
+<div class="hidden sm:flex flex-col items-end">
+<span class="font-code-mono text-label-sm text-tertiary">PROTO: SSH-2.0-OpenSSH_8.9</span>
+<span class="font-code-mono text-label-sm text-outline">AUTH_LEVEL: ZERO-TRUST</span>
+</div>
+</div>
+<!-- View 1: Credentials Tab Content -->
+<section class="space-y-space-md" id="view-credentials">
+<!-- User Ident Input -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<label class="text-on-surface-variant font-code-mono flex items-center gap-1" for="terminal-user">
+<span class="text-tertiary font-bold">&gt;</span> ENTER_IDENTITY:
+                    </label>
+<span class="text-outline text-label-sm">IAM Identity or Email</span>
+</div>
+<div class="relative flex items-center bg-surface-container-lowest rounded-lg focus-within:bg-surface-container-low transition-colors">
+<span class="font-code-mono text-label-md text-tertiary pl-3 select-none">dev@cluster:~$</span>
+<input autocomplete="username" class="w-full bg-transparent px-2.5 py-3 font-code-mono text-body-md text-on-surface placeholder:text-outline/50 outline-none" id="terminal-user" placeholder="alex.vance@acme.corp" type="text" value="alex.vance@acme.corp"/>
+<span class="material-symbols-outlined text-[18px] text-tertiary pr-3 select-none" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+</div>
+<!-- Passphrase Input -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<label class="text-on-surface-variant font-code-mono flex items-center gap-1" for="terminal-pass">
+<span class="text-secondary font-bold">&gt;</span> PASSPHRASE:
+                    </label>
+<button class="text-tertiary hover:underline" onclick="alert('Triggering zero-trust fallback magic link token to verified endpoint.')" type="button">Forgot secret?</button>
+</div>
+<div class="relative flex items-center bg-surface-container-lowest rounded-lg focus-within:bg-surface-container-low transition-colors">
+<span class="font-code-mono text-label-md text-secondary pl-3 select-none">secret:***</span>
+<input autocomplete="current-password" class="w-full bg-transparent px-2.5 py-3 font-code-mono text-body-md text-on-surface placeholder:text-outline/50 outline-none" id="terminal-pass" placeholder="••••••••••••••••" type="password" value="argon2id$v=19$m=65536"/>
+<button class="text-outline hover:text-on-surface pr-3 flex items-center" onclick="togglePassVisibility()" type="button">
+<span class="material-symbols-outlined text-[18px]" id="pass-icon">visibility</span>
+</button>
+</div>
+<!-- Syntactic Validation Hint -->
+<div class="flex items-center gap-2 mt-0.5 text-label-sm font-code-mono text-tertiary">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Entropy: 98.4 bits (Cryptographically High)</span>
+</div>
+</div>
+<!-- Scope / Expiry Selector -->
+<div class="flex flex-col gap-1.5 pt-1">
+<span class="text-on-surface-variant font-code-mono text-label-sm flex items-center gap-1">
+<span class="text-outline font-bold">#</span> TOKEN_TTL_LEASE:
+                  </span>
+<div class="grid grid-cols-2 gap-2" role="radiogroup">
+<button class="ttl-option flex items-center justify-between px-3 py-2 rounded bg-surface-container-high text-primary font-code-mono text-label-md transition-all" onclick="setTokenLease(this)" type="button">
+<span class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+                        [30_DAYS_PERSIST]
+                      </span>
+<span class="text-outline text-label-sm">Standard</span>
+</button>
+<button class="ttl-option flex items-center justify-between px-3 py-2 rounded bg-surface-container text-outline hover:text-on-surface font-code-mono text-label-md transition-all" onclick="setTokenLease(this)" type="button">
+<span class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-outline inline-block"></span>
+                        [EPHEMERAL_SESSION]
+                      </span>
+<span class="text-outline text-label-sm">Revoke on Close</span>
+</button>
+</div>
+</div>
+</section>
+<!-- View 2: OAuth Providers Flow Tab -->
+<section class="hidden space-y-space-md" id="view-oauth">
+<div class="bg-surface-container-lowest p-space-md rounded-lg">
+<p class="font-code-mono text-label-sm text-outline mb-3">$ exec oauth2-proxy --oidc-issuer=cluster-sso</p>
+<div class="flex flex-col gap-2.5">
+<button class="w-full flex items-center justify-between px-space-md py-3 rounded-lg bg-surface-container hover:bg-surface-variant text-on-surface transition-all group" type="button">
+<div class="flex items-center gap-3">
+<svg class="w-5 h-5 fill-current text-on-surface" viewbox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path></svg>
+<span class="font-code-mono text-label-md">GitHub Enterprise SSO</span>
+</div>
+<span class="font-code-mono text-label-sm text-tertiary group-hover:translate-x-1 transition-transform">CONNECT ➔</span>
+</button>
+<button class="w-full flex items-center justify-between px-space-md py-3 rounded-lg bg-surface-container hover:bg-surface-variant text-on-surface transition-all group" type="button">
+<div class="flex items-center gap-3">
+<svg class="w-5 h-5 fill-current text-secondary" viewbox="0 0 24 24"><path d="M23.955 13.587l-1.342-4.135-2.664-8.189a.455.455 0 00-.867 0L16.418 9.45H7.582L4.918 1.263a.455.455 0 00-.867 0L1.387 9.452.045 13.587a.91.91 0 00.33 1.023L12 23.054l11.625-8.444a.91.91 0 00.33-1.023z"></path></svg>
+<span class="font-code-mono text-label-md">GitLab Self-Hosted SAML</span>
+</div>
+<span class="font-code-mono text-label-sm text-tertiary group-hover:translate-x-1 transition-transform">CONNECT ➔</span>
+</button>
+<button class="w-full flex items-center justify-between px-space-md py-3 rounded-lg bg-surface-container hover:bg-surface-variant text-on-surface transition-all group" type="button">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px] text-primary">fingerprint</span>
+<span class="font-code-mono text-label-md">FIDO2 / Hardware Security Key</span>
+</div>
+<span class="font-code-mono text-label-sm text-tertiary group-hover:translate-x-1 transition-transform">TAP KEY ➔</span>
+</button>
+</div>
+</div>
+</section>
+<!-- View 3: SSH Key pub tab -->
+<section class="hidden space-y-space-md" id="view-ssh">
+<div class="bg-surface-container-lowest p-space-md rounded-lg">
+<div class="p-space-lg rounded-lg bg-surface-container flex flex-col items-center justify-center text-center cursor-pointer hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-display-hero text-tertiary mb-2">upload_file</span>
+<span class="font-code-mono text-label-md text-on-surface">Drag id_ed25519.pub or id_rsa.pub here</span>
+<span class="font-body-sm text-body-sm text-outline mt-1">or click to browse local filesystem</span>
+</div>
+<div class="mt-3">
+<label class="font-code-mono text-label-sm text-outline block mb-1" for="ssh-manual-input">Or paste raw OpenSSH public signature:</label>
+<textarea class="w-full bg-surface-container px-3 py-2 rounded text-body-sm font-code-mono text-on-surface placeholder:text-outline/40 outline-none resize-none" id="ssh-manual-input" placeholder="ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG5... root@bastion-01" rows="3"></textarea>
+</div>
+</div>
+</section>
+</div>
+<!-- Primary Push-Authenticate Action CTA -->
+<div class="pt-space-lg flex flex-col gap-3">
+<button class="w-full h-12 rounded-lg bg-tertiary-container hover:bg-tertiary text-on-tertiary-container hover:text-on-tertiary font-code-mono font-semibold flex items-center justify-center gap-2 transition-all shadow-md active:scale-[0.99]" id="auth-submit-btn" onclick="simulateAuthProcess()" type="button">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+<span class="text-label-lg font-label-lg" id="btn-text">[ git push --authenticate ] ➔</span>
+</button>
+<div class="flex items-center justify-between text-label-sm font-code-mono text-outline">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  GPG Sign: ENFORCED
+                </span>
+<a class="text-tertiary hover:underline" href="#">Read docs/security.md</a>
+</div>
+</div>
+</div>
+<!-- Pane Right: Live Terminal Diagnostics & Telemetry (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-space-md sm:p-space-lg flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">monitor_heart</span>
+<span class="font-code-mono text-label-sm text-on-surface font-semibold">REPL_DAEMON_STREAM</span>
+</div>
+<span class="font-code-mono text-label-sm text-secondary bg-surface-container px-2 py-0.5 rounded">STDOUT: 200</span>
+</div>
+<!-- Simulated Terminal Console Output -->
+<div class="bg-surface-container-low rounded-lg p-3.5 font-code-mono text-body-sm space-y-2 text-outline overflow-y-auto max-h-56 lg:max-h-64 select-text" id="terminal-feed">
+<p class="text-outline"><span class="text-secondary">[INIT]</span> Initializing secure enclave session handshake...</p>
+<p class="text-outline"><span class="text-tertiary">[CONN]</span> Socket established to bastion-east.internal:443</p>
+<p class="text-primary"><span class="text-primary">[CERT]</span> Validating X.509 thumbprint: 7B:44:A2...91</p>
+<p class="text-on-surface"><span class="text-tertiary">[INFO]</span> Rate limit window: 100/100 remaining</p>
+<p class="text-secondary"><span class="text-secondary">[CHALLENGE]</span> Awaiting credentials verification payload...</p>
+<p class="text-tertiary flex items-center gap-1" id="cursor-line">
+<span>&gt; _</span>
+</p>
+</div>
+<!-- Cluster Health Architecture Sparkline & Micro Chart -->
+<div class="bg-surface-container-low p-3.5 rounded-lg space-y-2.5">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface font-code-mono">CLUSTER_NODE_LOAD</span>
+<span class="text-tertiary font-code-mono">31.4% Capacity</span>
+</div>
+<!-- Pure Inline Vector Sparkline Visualization -->
+<div class="w-full h-12 flex items-center">
+<svg class="w-full h-10 overflow-visible text-tertiary" fill="none" viewbox="0 0 300 40">
+<path d="M0,32 L20,30 L45,28 L70,35 L95,20 L120,24 L145,15 L170,18 L195,10 L220,14 L245,8 L270,12 L300,5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M0,32 L20,30 L45,28 L70,35 L95,20 L120,24 L145,15 L170,18 L195,10 L220,14 L245,8 L270,12 L300,5 L300,40 L0,40 Z" fill="currentColor" fill-opacity="0.1"></path>
+<circle class="fill-tertiary" cx="300" cy="5" r="3"></circle>
+</svg>
+</div>
+<div class="grid grid-cols-3 gap-2 pt-1 text-center font-code-mono text-label-sm">
+<div class="bg-surface-container rounded p-1.5">
+<span class="text-outline block text-[10px]">REPLICAS</span>
+<span class="text-on-surface font-bold">12/12</span>
+</div>
+<div class="bg-surface-container rounded p-1.5">
+<span class="text-outline block text-[10px]">INGRESS</span>
+<span class="text-on-surface font-bold">1.4 GB/s</span>
+</div>
+<div class="bg-surface-container rounded p-1.5">
+<span class="text-outline block text-[10px]">DROP RATE</span>
+<span class="text-tertiary font-bold">0.000%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Engineering Security Certification Stamp -->
+<div class="pt-space-md">
+<div class="p-3 bg-surface-container rounded-lg flex items-center gap-3">
+<div class="w-9 h-9 rounded bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">security</span>
+</div>
+<div class="min-w-0">
+<h4 class="font-code-mono text-label-sm text-on-surface truncate">SOC2 Type II Certified</h4>
+<p class="font-body-sm text-label-sm text-outline truncate">FIPS 140-3 Compliant Enclave</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Terminal System Status Ticker Footer -->
+<footer class="w-full bg-surface-container px-space-md py-2.5 flex flex-wrap items-center justify-between gap-2 text-label-sm font-code-mono text-outline">
+<div class="flex items-center gap-2">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="text-on-surface tracking-wider">CONNECTED TO REPO DAEMON // CLUSTER: OPERATIONAL // SOC2 COMPLIANT</span>
+</div>
+<div class="flex items-center gap-4 text-label-sm">
+<span class="hidden sm:inline">UTF-8</span>
+<span class="text-tertiary">GIT_BRANCH: main</span>
+<span class="text-outline">v4.19.0-rc2</span>
+</div>
+</footer>
+</main>
+<!-- Bottom Platform Quick Switch Links -->
+<div class="flex flex-wrap items-center justify-between text-body-sm font-code-mono text-outline px-2">
+<div class="flex items-center gap-4">
+<a class="hover:text-on-surface transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[14px]">terminal</span>
+<span>Switch to Web GUI</span>
+</a>
+<span>•</span>
+<a class="hover:text-on-surface transition-colors" href="#">API Keys Vault</a>
+<span>•</span>
+<a class="hover:text-on-surface transition-colors" href="#">Status Dashboard</a>
+</div>
+<div class="text-label-sm">
+<span>HOST: us-east-1a-prod-vpc-3</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function switchAuthTab(tabName) {
+    const tabs = ['credentials', 'oauth', 'ssh'];
+    tabs.forEach(tab => {
+      const btn = document.getElementById('tab-' + tab);
+      const view = document.getElementById('view-' + tab);
+      if (tab === tabName) {
+        btn.classList.remove('text-outline');
+        btn.classList.add('bg-surface-container-high', 'text-primary', 'font-semibold');
+        if (view) view.classList.remove('hidden');
+      } else {
+        btn.classList.remove('bg-surface-container-high', 'text-primary', 'font-semibold');
+        btn.classList.add('text-outline');
+        if (view) view.classList.add('hidden');
+      }
+    });
+
+    const terminalFeed = document.getElementById('terminal-feed');
+    if (terminalFeed) {
+      const line = document.createElement('p');
+      line.className = 'text-primary';
+      line.innerHTML = `<span class="text-tertiary">[EVENT]</span> Switched auth vector tab: [${tabName}.flow]`;
+      terminalFeed.insertBefore(line, document.getElementById('cursor-line'));
+      terminalFeed.scrollTop = terminalFeed.scrollHeight;
+    }
+  }
+
+  function togglePassVisibility() {
+    const passInput = document.getElementById('terminal-pass');
+    const passIcon = document.getElementById('pass-icon');
+    if (passInput && passIcon) {
+      if (passInput.type === 'password') {
+        passInput.type = 'text';
+        passIcon.textContent = 'visibility_off';
+      } else {
+        passInput.type = 'password';
+        passIcon.textContent = 'visibility';
+      }
+    }
+  }
+
+  function setTokenLease(btn) {
+    document.querySelectorAll('.ttl-option').forEach(el => {
+      el.classList.remove('bg-surface-container-high', 'text-primary');
+      el.classList.add('bg-surface-container', 'text-outline');
+      const dot = el.querySelector('span > span');
+      if (dot) {
+        dot.classList.remove('bg-primary');
+        dot.classList.add('bg-outline');
+      }
+    });
+    btn.classList.remove('bg-surface-container', 'text-outline');
+    btn.classList.add('bg-surface-container-high', 'text-primary');
+    const activeDot = btn.querySelector('span > span');
+    if (activeDot) {
+      activeDot.classList.remove('bg-outline');
+      activeDot.classList.add('bg-primary');
+    }
+  }
+
+  function simulateAuthProcess() {
+    const btn = document.getElementById('auth-submit-btn');
+    const btnText = document.getElementById('btn-text');
+    const feed = document.getElementById('terminal-feed');
+    const cursor = document.getElementById('cursor-line');
+    
+    if (!btn || !btnText || !feed) return;
+
+    btn.disabled = true;
+    btn.classList.add('opacity-75');
+    btnText.textContent = '[ verifying token challenge... ]';
+
+    const p1 = document.createElement('p');
+    p1.className = 'text-tertiary';
+    p1.innerHTML = `<span class="text-tertiary">[CIPHER]</span> Negotiating ECDSA signature challenge...`;
+    feed.insertBefore(p1, cursor);
+
+    setTimeout(() => {
+      const p2 = document.createElement('p');
+      p2.className = 'text-on-surface';
+      p2.innerHTML = `<span class="text-secondary">[OK]</span> Access Token Provisioned: exp_claim=unix:1742491200`;
+      feed.insertBefore(p2, cursor);
+      
+      const p3 = document.createElement('p');
+      p3.className = 'text-tertiary font-bold';
+      p3.innerHTML = `<span class="text-tertiary">[SUCCESS]</span> Redirecting to /v2/dashboard/clusters...`;
+      feed.insertBefore(p3, cursor);
+
+      feed.scrollTop = feed.scrollHeight;
+      btnText.textContent = '[ AUTHENTICATION GRANTED ] ✓';
+      btn.classList.remove('bg-tertiary-container', 'text-on-tertiary-container');
+      btn.classList.add('bg-primary', 'text-on-primary');
+
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.classList.remove('opacity-75', 'bg-primary', 'text-on-primary');
+        btn.classList.add('bg-tertiary-container', 'text-on-tertiary-container');
+        btnText.textContent = '[ git push --authenticate ] ➔';
+      }, 3000);
+    }, 1200);
+  }
+</script></main></body></html>

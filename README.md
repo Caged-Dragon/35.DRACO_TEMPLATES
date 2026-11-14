@@ -1,27 +1,27 @@
-# Caged Dragon Sign-in Design Studio
+# CagedDragon Template Showcase
 
-A static, Vercel-ready UI showcase containing 20 independently styled sign-in concepts. Each template is plain HTML, CSS, and vanilla JavaScript in its own folder.
+A static portfolio-style catalogue built from the uploaded Stitch AI authentication template export.
 
-## Project structure
-
-- `index.html`, `site.css`, `site.js`: the responsive template gallery and preview modal.
-- `templates/<slug>/`: standalone template source (`index.html`, `styles.css`, `script.js`, `README.md`).
-- `downloads/<slug>.zip`: individual ZIP for each template, linked from its gallery card.
-- `templates.json`: metadata for search, filtering, and the gallery.
-- `vercel.json`: static hosting headers and route behavior.
+## Included
+- `index.html` — responsive CagedDragon template gallery.
+- `catalog.json` — catalogue metadata for all 60 designs.
+- `templates/` — the original Stitch HTML export for every design, plus its `screen.png` preview.
 
 ## Run locally
+Open `index.html` in a modern browser. For the most reliable local preview of the original HTML designs, serve this folder with a simple static server, for example:
 
-Run `python -m http.server 8080` from this directory, then open `http://localhost:8080`. Serving over HTTP preserves the same relative asset behavior used on Vercel.
+```bash
+python -m http.server 8000
+```
 
-## Deploy to Vercel
+Then open `http://localhost:8000`.
 
-Import the project root into Vercel. Use the **Other** framework preset, leave the build command empty, and set the output directory to `.`. No install command or environment variables are needed.
+The main gallery is self-contained apart from Google Fonts. Original Stitch previews may load Tailwind CSS and fonts from their original CDNs, so an internet connection is recommended when opening an individual live preview.
 
-## Template contents
+## Before publishing
+The “Prepare a project inquiry” button copies a starter inquiry to the visitor's clipboard. It does not send data to a server. Add your preferred email or WhatsApp contact link if you want visitors to send enquiries directly. The gallery itself works without a backend.
 
-Every design is self-contained and uses semantic HTML5, its own responsive CSS, accessible form labels, keyboard-visible focus states, password visibility control, and reduced-motion support. No framework, external image, or remote font is required.
+You can publish the whole folder as a static site on Vercel, Netlify, GitHub Pages, or any static web host.
 
-## Important
-
-These forms are UI demonstrations only. They do not authenticate, submit credentials, or send passwords to a server. Connect them to a separately implemented and secured authentication service before production use.
+## Source note
+The template screenshots and HTML are preserved from the Stitch export supplied in this conversation. The showcase layout, catalogue filters, search, modal preview, and CagedDragon branding were added for this portfolio website.

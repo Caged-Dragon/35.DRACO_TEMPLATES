@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed-dim": "#4cd7f6", "on-surface-variant": "#c7c4d7", "surface-tint": "#c0c1ff", "on-primary-fixed-variant": "#2f2ebe", "on-tertiary-fixed-variant": "#004e5c", "error": "#ffb4ab", "surface-container-high": "#292a2f", "on-primary": "#1000a9", "tertiary-container": "#009eb9", "primary-fixed": "#e1e0ff", "on-secondary": "#472a00", "on-error": "#690005", "inverse-on-surface": "#2f3036", "on-background": "#e3e1e9", "inverse-primary": "#494bd6", "secondary-container": "#ee9800", "surface-bright": "#38393f", "on-tertiary-fixed": "#001f26", "secondary": "#ffb95f", "on-primary-fixed": "#07006c", "on-secondary-fixed-variant": "#653e00", "primary-fixed-dim": "#c0c1ff", "on-tertiary-container": "#002f38", "inverse-surface": "#e3e1e9", "background": "#121318", "on-secondary-fixed": "#2a1700", "surface-variant": "#34343a", "tertiary": "#4cd7f6", "surface-container": "#1e1f25", "on-tertiary": "#003640", "surface-dim": "#121318", "primary": "#c0c1ff", "tertiary-fixed": "#acedff", "surface-container-highest": "#34343a", "secondary-fixed": "#ffddb8", "secondary-fixed-dim": "#ffb95f", "surface": "#121318", "on-surface": "#e3e1e9", "on-primary-container": "#0d0096", "surface-container-lowest": "#0d0e13", "primary-container": "#8083ff", "on-secondary-container": "#5b3800", "error-container": "#93000a", "outline-variant": "#464554", "surface-container-low": "#1a1b21", "on-error-container": "#ffdad6", "outline": "#908fa0" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "space-md": "1rem", "margin": "2.5rem", "margin-mobile": "1.25rem", "gutter": "1.5rem", "space-xl": "2.5rem", "gutter-mobile": "1rem", "space-lg": "1.5rem", "space-xs": "0.25rem" }, "fontFamily": { "body-sm": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "headline-md": [ "Space Grotesk" ], "code-mono": [ "Space Grotesk" ], "label-sm": [ "Inter" ], "display-hero-mobile": [ "Space Grotesk" ], "body-lg": [ "Plus Jakarta Sans" ], "label-md": [ "Inter" ], "label-lg": [ "Inter" ], "display-hero": [ "Space Grotesk" ], "headline-lg": [ "Space Grotesk" ], "body-md": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Space Grotesk" ] }, "fontSize": { "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "headline-sm": [ "18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "code-mono": [ "18px", { "lineHeight": "24px", "letterSpacing": "0.2em", "fontWeight": "500" } ], "label-sm": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" } ], "display-hero-mobile": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-lg": [ "16px", { "lineHeight": "26px", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "display-hero": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "700" } ], "headline-lg": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "22px", "fontWeight": "400" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface min-h-screen selection:bg-primary-container selection:text-on-primary-container antialiased"><main class="w-full min-h-screen bg-background relative flex flex-col items-stretch justify-start"><div class="flex flex-col w-full relative overflow-hidden bg-background select-none min-h-[calc(100vh-4rem)]">
+<!-- Dynamic Ambient Diagonal Mesh Layers -->
+<div class="absolute -top-40 -left-40 w-[680px] h-[680px] rounded-full bg-gradient-to-tr from-primary/10 via-secondary-container/15 to-transparent blur-[140px] pointer-events-none"></div>
+<div class="absolute -bottom-48 -right-32 w-[720px] h-[720px] rounded-full bg-gradient-to-bl from-tertiary/15 via-primary-container/10 to-transparent blur-[160px] pointer-events-none"></div>
+<!-- Background Decorative Velocity Slits / Geometric Grids -->
+<div class="absolute inset-0 pointer-events-none opacity-20">
+<svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="48" id="diag-grid" patterntransform="rotate(14.5)" patternunits="userSpaceOnUse" width="48">
+<line class="text-outline-variant" stroke="currentColor" stroke-dasharray="2 6" stroke-width="0.75" x1="0" x2="0" y1="0" y2="48"></line>
+<line class="text-outline-variant" stroke="currentColor" stroke-dasharray="1 7" stroke-width="0.75" x1="0" x2="48" y1="0" y2="0"></line>
+</pattern>
+</defs>
+<rect fill="url(#diag-grid)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<!-- Main Diagonal Slash Banner (Desktop/Tablet 14.5° Angled Ribbon) -->
+<div class="absolute -inset-x-20 top-1/4 h-32 md:h-44 bg-gradient-to-r from-secondary-container via-primary-container to-tertiary opacity-10 blur-xl transform -rotate-[14.5deg] pointer-events-none"></div>
+<div class="absolute -inset-x-32 top-1/4 h-[2px] bg-gradient-to-r from-transparent via-secondary to-transparent opacity-40 transform -rotate-[14.5deg] pointer-events-none"></div>
+<div class="absolute -inset-x-32 top-[28%] h-[1px] bg-gradient-to-r from-transparent via-tertiary-fixed-dim to-transparent opacity-30 transform -rotate-[14.5deg] pointer-events-none"></div>
+<!-- Core Layout Grid: Asymmetric Split with Diagonal Dynamics -->
+<div class="relative z-10 w-full max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 py-8 lg:py-14 flex-1 flex flex-col justify-between">
+<!-- Top Micro Telemetry Header -->
+<header class="w-full flex items-center justify-between pb-6 mb-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 bg-surface-container-high rounded-lg flex items-center justify-center transform -skew-x-[14deg] shadow-lg shadow-black/40">
+<span class="material-symbols-outlined text-secondary transform skew-x-[14deg] text-[20px]">bolt</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-sm text-on-surface tracking-wider uppercase font-bold">Vortex</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container/20 text-secondary uppercase font-semibold">Kinetic Labs</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">NEURAL MATRIX AUTH // PROTOCOL 9.4</p>
+</div>
+</div>
+<!-- Quick Environment Metrics -->
+<div class="hidden sm:flex items-center gap-6">
+<div class="flex flex-col items-end">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-widest">Network Phase</span>
+<span class="font-code-mono text-body-sm text-tertiary font-bold flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+            SYNCHRONIZED [SH-01]
+          </span>
+</div>
+<div class="w-[1px] h-6 bg-surface-container-highest"></div>
+<div class="flex flex-col items-end">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-widest">Quantum Latency</span>
+<span class="font-code-mono text-body-sm text-secondary font-bold">3.24 ms</span>
+</div>
+</div>
+</header>
+<!-- Center Stage: Asymmetric Canvas -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center my-auto">
+<!-- Left Column: Bold Kinetic Typography & Vector Telemetry (Cols 1-7) -->
+<section class="lg:col-span-7 flex flex-col justify-center space-y-6 relative">
+<!-- Overhead Category Tag with Slashed Badge -->
+<div class="inline-flex items-center gap-2.5">
+<div class="px-3 py-1 rounded bg-surface-container-high text-tertiary-fixed font-code-mono text-label-sm tracking-widest uppercase transform -skew-x-[12deg] shadow-sm">
+<span class="inline-block transform skew-x-[12deg]">VECTOR ANGLE: 14.5° DIVERGENT</span>
+</div>
+<div class="h-1.5 w-1.5 rounded-full bg-secondary"></div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">NODE // ORBITAL GATEWAY</span>
+</div>
+<!-- Hero Headline -->
+<div class="relative">
+<h1 class="font-display-hero text-display-hero text-on-surface leading-none tracking-tight font-bold uppercase">
+            Break The <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary via-primary to-tertiary">Plane.</span>
+</h1>
+<p class="font-headline-md text-headline-sm text-on-surface-variant mt-2 font-medium tracking-normal">
+            AUTHENTICATE IN MOTION.
+          </p>
+</div>
+<!-- Angular Graphic Bar Divider -->
+<div class="flex items-center gap-3 py-2 max-w-xl">
+<div class="w-16 h-1 bg-secondary transform -skew-x-[35deg]"></div>
+<div class="w-28 h-1 bg-primary-container transform -skew-x-[35deg]"></div>
+<div class="flex-1 h-[1px] bg-surface-container-highest"></div>
+<span class="font-code-mono text-body-sm text-outline">KINETIC ENGINE V2.9</span>
+</div>
+<p class="font-body-lg text-body-lg text-outline max-w-lg leading-relaxed">
+          High-velocity identity verification built for autonomous studios, immersive graphics engines, and real-time computing architects. Secure sub-millisecond kinetic handshakes.
+        </p>
+<!-- Dynamic Diagonal Telemetry Indicators -->
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 max-w-xl">
+<div class="p-3.5 rounded-xl bg-surface-container-low shadow-md relative overflow-hidden group hover:bg-surface-container transition-all">
+<div class="absolute top-0 right-0 w-8 h-8 bg-tertiary/10 transform rotate-45 translate-x-4 -translate-y-4"></div>
+<span class="font-label-sm text-label-sm text-outline uppercase block mb-1">Compute Shift</span>
+<div class="flex items-baseline gap-1">
+<span class="font-code-mono text-headline-sm text-tertiary font-bold">128.4</span>
+<span class="font-body-sm text-body-sm text-tertiary-fixed-dim">TFLOPS</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline-variant mt-1 block">Parallel vector hash</span>
+</div>
+<div class="p-3.5 rounded-xl bg-surface-container-low shadow-md relative overflow-hidden group hover:bg-surface-container transition-all">
+<div class="absolute top-0 right-0 w-8 h-8 bg-secondary/10 transform rotate-45 translate-x-4 -translate-y-4"></div>
+<span class="font-label-sm text-label-sm text-outline uppercase block mb-1">State Drift</span>
+<div class="flex items-baseline gap-1">
+<span class="font-code-mono text-headline-sm text-secondary font-bold">0.001</span>
+<span class="font-body-sm text-body-sm text-secondary-fixed">RAD</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline-variant mt-1 block">Zero gyro desync</span>
+</div>
+<div class="col-span-2 sm:col-span-1 p-3.5 rounded-xl bg-surface-container-low shadow-md relative overflow-hidden group hover:bg-surface-container transition-all">
+<div class="absolute top-0 right-0 w-8 h-8 bg-primary/10 transform rotate-45 translate-x-4 -translate-y-4"></div>
+<span class="font-label-sm text-label-sm text-outline uppercase block mb-1">Handshake</span>
+<div class="flex items-baseline gap-1">
+<span class="font-code-mono text-headline-sm text-primary font-bold">99.98</span>
+<span class="font-body-sm text-body-sm text-primary-fixed">%</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline-variant mt-1 block">ECDSA curve ready</span>
+</div>
+</div>
+<!-- Stylized Angled Chevrons Graphic Bar -->
+<div class="flex items-center gap-1.5 pt-2 text-outline-variant">
+<span class="material-symbols-outlined text-[18px] text-secondary">chevron_right</span>
+<span class="material-symbols-outlined text-[18px] text-primary -ml-2">chevron_right</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary -ml-2">chevron_right</span>
+<span class="font-code-mono text-body-sm text-outline ml-2 uppercase tracking-widest">SUBSURFACE CIPHER LINK ARMED</span>
+</div>
+</section>
+<!-- Right Column: Chamfered Diagonal Authentication Card (Cols 8-12) -->
+<section class="lg:col-span-5 relative w-full">
+<!-- Ambient Card Glow Backing -->
+<div class="absolute inset-0 bg-gradient-to-tr from-secondary/10 via-primary/20 to-tertiary/15 blur-2xl -z-10 rounded-2xl transform scale-95 opacity-80 pointer-events-none"></div>
+<!-- Card Container with Chamfered Accent Cutouts -->
+<div class="w-full bg-surface-container-low/95 backdrop-blur-xl rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+<!-- Angled Dynamic Corner Slice Decorator (Top-Right) -->
+<div class="absolute -top-12 -right-12 w-24 h-24 bg-gradient-to-bl from-secondary via-primary to-transparent transform rotate-12 opacity-80 pointer-events-none"></div>
+<div class="absolute top-2 right-2 text-on-surface-variant font-code-mono text-label-sm uppercase font-semibold">
+            MOD://01
+          </div>
+<!-- Quick-Switch Tab Bar -->
+<div class="flex items-center justify-between p-1 bg-surface-container rounded-xl mb-6">
+<button class="flex-1 py-2.5 px-3 rounded-lg font-label-lg text-label-lg transition-all duration-200 text-center flex items-center justify-center gap-2 bg-primary text-on-primary font-semibold shadow-md" id="tab-operator" onclick="switchAuthTab('operator')">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+              Operator Pass
+            </button>
+<button class="flex-1 py-2.5 px-3 rounded-lg font-label-lg text-label-lg transition-all duration-200 text-center flex items-center justify-center gap-2 text-on-surface-variant hover:text-on-surface font-medium" id="tab-ephemeral" onclick="switchAuthTab('ephemeral')">
+<span class="material-symbols-outlined text-[18px]">key</span>
+              Ephemeral Token
+            </button>
+</div>
+<!-- Auth Form Body -->
+<form class="space-y-4" onsubmit="handleAuthSubmit(event)">
+<!-- Field 1: Operator Call-Sign or Work Email -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface uppercase tracking-wider font-semibold" for="callsign">
+                  Operator Call-Sign / ID
+                </label>
+<span class="font-code-mono text-label-sm text-tertiary">RESOLVER: OK</span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-outline text-[20px] pointer-events-none">terminal</span>
+<input class="w-full h-12 pl-11 pr-4 bg-surface-container rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-high transition-all" id="callsign" name="callsign" placeholder="e.g. nova-operator-09" required="" type="text"/>
+</div>
+</div>
+<!-- Field 2: Security Passkey / Biometric Signature -->
+<div class="space-y-1.5" id="secret-field-wrapper">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface uppercase tracking-wider font-semibold" for="secret-key" id="secret-label">
+                  Security Passkey
+                </label>
+<a class="font-label-sm text-label-sm text-secondary hover:underline transition-all" href="#reset">Recover Key</a>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-outline text-[20px] pointer-events-none" id="secret-icon">fingerprint</span>
+<input class="w-full h-12 pl-11 pr-11 bg-surface-container rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-high transition-all tracking-wider" id="secret-key" name="secret-key" placeholder="••••••••••••••••" required="" type="password"/>
+<button class="absolute right-3.5 text-outline hover:text-on-surface transition-colors flex items-center justify-center" onclick="togglePassVisibility()" type="button">
+<span class="material-symbols-outlined text-[20px]" id="eye-icon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Kinetic Checkbox & Remember Device -->
+<div class="flex items-center justify-between pt-1">
+<label class="flex items-center gap-2.5 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded bg-surface-container accent-primary cursor-pointer" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-outline-variant hover:text-on-surface transition-colors">Retain Neural Session</span>
+</label>
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider">WebAuthn Ready</span>
+</div>
+</div>
+<!-- High-Energy Angled Kinetic CTA Button -->
+<div class="pt-2">
+<button class="w-full h-13 py-3 px-6 rounded-xl font-label-lg text-label-lg text-on-primary-fixed uppercase tracking-wider font-bold bg-gradient-to-r from-secondary via-secondary-container to-primary transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 shadow-lg shadow-secondary/20 flex items-center justify-center gap-2 group" id="cta-button" type="submit">
+<span id="cta-text">INITIALIZE KINETIC LINK</span>
+<span class="material-symbols-outlined text-[20px] transition-transform duration-200 group-hover:translate-x-1 font-bold">arrow_forward</span>
+</button>
+</div>
+</form>
+<!-- Federated SSO Divider -->
+<div class="relative my-6 flex items-center justify-center">
+<div class="w-full h-[1px] bg-surface-container-highest"></div>
+<span class="absolute px-3 bg-surface-container-low font-label-sm text-label-sm text-outline uppercase tracking-widest">
+              Federated Node Access
+            </span>
+</div>
+<!-- SSO Buttons Grid -->
+<div class="grid grid-cols-3 gap-2.5">
+<button aria-label="Sign in with GitHub" class="h-11 rounded-lg bg-surface-container hover:bg-surface-container-high transition-all flex items-center justify-center gap-2 text-on-surface shadow-sm group" type="button">
+<svg class="w-4 h-4 fill-current group-hover:scale-110 transition-transform" viewbox="0 0 24 24">
+<path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path>
+</svg>
+<span class="font-label-md text-label-md hidden sm:inline">GitHub</span>
+</button>
+<button aria-label="Sign in with Unreal Engine" class="h-11 rounded-lg bg-surface-container hover:bg-surface-container-high transition-all flex items-center justify-center gap-2 text-on-surface shadow-sm group" type="button">
+<svg class="w-4 h-4 fill-current group-hover:scale-110 transition-transform text-secondary" viewbox="0 0 24 24">
+<path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"></path>
+</svg>
+<span class="font-label-md text-label-md hidden sm:inline">Unreal</span>
+</button>
+<button aria-label="Sign in with Google" class="h-11 rounded-lg bg-surface-container hover:bg-surface-container-high transition-all flex items-center justify-center gap-2 text-on-surface shadow-sm group" type="button">
+<svg class="w-4 h-4 fill-current group-hover:scale-110 transition-transform text-tertiary" viewbox="0 0 24 24">
+<path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"></path>
+</svg>
+<span class="font-label-md text-label-md hidden sm:inline">Google</span>
+</button>
+</div>
+<!-- Bottom Security Status Microline -->
+<div class="mt-6 pt-4 flex items-center justify-between text-outline">
+<span class="font-body-sm text-body-sm flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+              256-bit GCM Stream
+            </span>
+<span class="font-code-mono text-label-sm">ECC: NIST-P384</span>
+</div>
+</div>
+</section>
+</div>
+<!-- Bottom Telemetry Footer: Angular Reference & Protocol Sync -->
+<footer class="w-full pt-8 mt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-outline font-code-mono text-label-sm">
+<div class="flex items-center gap-3">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-semibold tracking-wider">AXIS: 14.5° DIVERGENCE</span>
+<span class="text-surface-container-highest">/</span>
+<span class="text-on-surface-variant font-body-sm">ENCRYPT: AES-GCM-256-V2</span>
+<span class="text-surface-container-highest">/</span>
+<span class="text-tertiary font-body-sm">CIPHER READY</span>
+</div>
+<div class="flex items-center gap-6 font-label-md text-label-md">
+<a class="hover:text-on-surface transition-colors" href="#compliance">SECURITY COMPLIANCE</a>
+<a class="hover:text-on-surface transition-colors" href="#matrix">NODE STATUS</a>
+<a class="hover:text-on-surface transition-colors" href="#privacy">PRIVACY MATRIX</a>
+</div>
+</footer>
+</div>
+<!-- Interactive Logic for Tab Switching and Pass Visibility -->
+<script>
+    function switchAuthTab(type) {
+      const tabOp = document.getElementById('tab-operator');
+      const tabEph = document.getElementById('tab-ephemeral');
+      const secretLabel = document.getElementById('secret-label');
+      const secretInput = document.getElementById('secret-key');
+      const secretIcon = document.getElementById('secret-icon');
+      const ctaText = document.getElementById('cta-text');
+
+      if (type === 'operator') {
+        tabOp.className = "flex-1 py-2.5 px-3 rounded-lg font-label-lg text-label-lg transition-all duration-200 text-center flex items-center justify-center gap-2 bg-primary text-on-primary font-semibold shadow-md";
+        tabEph.className = "flex-1 py-2.5 px-3 rounded-lg font-label-lg text-label-lg transition-all duration-200 text-center flex items-center justify-center gap-2 text-on-surface-variant hover:text-on-surface font-medium";
+        secretLabel.innerText = "Security Passkey";
+        secretInput.placeholder = "••••••••••••••••";
+        secretIcon.innerText = "fingerprint";
+        ctaText.innerText = "INITIALIZE KINETIC LINK";
+      } else {
+        tabEph.className = "flex-1 py-2.5 px-3 rounded-lg font-label-lg text-label-lg transition-all duration-200 text-center flex items-center justify-center gap-2 bg-secondary text-on-secondary font-semibold shadow-md";
+        tabOp.className = "flex-1 py-2.5 px-3 rounded-lg font-label-lg text-label-lg transition-all duration-200 text-center flex items-center justify-center gap-2 text-on-surface-variant hover:text-on-surface font-medium";
+        secretLabel.innerText = "One-Time Matrix Token";
+        secretInput.placeholder = "TOK-XXXX-XXXX-XXXX";
+        secretIcon.innerText = "generating_tokens";
+        ctaText.innerText = "AUTHORIZE EPHEMERAL LINK";
+      }
+    }
+
+    function togglePassVisibility() {
+      const input = document.getElementById('secret-key');
+      const icon = document.getElementById('eye-icon');
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.innerText = 'visibility_off';
+      } else {
+        input.type = 'password';
+        icon.innerText = 'visibility';
+      }
+    }
+
+    function handleAuthSubmit(event) {
+      event.preventDefault();
+      const btn = document.getElementById('cta-button');
+      const ctaText = document.getElementById('cta-text');
+      const prevText = ctaText.innerText;
+      
+      btn.disabled = true;
+      ctaText.innerText = "NEGOTIATING HANDSHAKE...";
+      btn.classList.add('opacity-80');
+
+      setTimeout(() => {
+        ctaText.innerText = "LINK ESTABLISHED";
+        btn.classList.remove('from-secondary', 'via-secondary-container', 'to-primary');
+        btn.classList.add('bg-tertiary', 'text-on-tertiary');
+        setTimeout(() => {
+          btn.disabled = false;
+          ctaText.innerText = prevText;
+          btn.classList.remove('bg-tertiary', 'text-on-tertiary', 'opacity-80');
+          btn.classList.add('from-secondary', 'via-secondary-container', 'to-primary');
+        }, 1800);
+      }, 1000);
+    }
+  </script>
+</div></main></body></html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-bright": "#38393f", "outline": "#908fa0", "surface-container-high": "#292a2f", "on-primary-fixed-variant": "#2f2ebe", "surface-tint": "#c0c1ff", "on-primary": "#1000a9", "surface-container-lowest": "#0d0e13", "background": "#121318", "on-tertiary-fixed": "#001f26", "inverse-surface": "#e3e1e9", "secondary-fixed": "#ffddb8", "on-error-container": "#ffdad6", "tertiary-fixed-dim": "#4cd7f6", "tertiary-fixed": "#acedff", "surface-dim": "#121318", "on-primary-container": "#0d0096", "secondary": "#ffb95f", "on-secondary-fixed": "#2a1700", "surface-container-low": "#1a1b21", "primary": "#c0c1ff", "inverse-primary": "#494bd6", "tertiary": "#4cd7f6", "error-container": "#93000a", "surface": "#121318", "on-tertiary": "#003640", "on-tertiary-fixed-variant": "#004e5c", "secondary-fixed-dim": "#ffb95f", "primary-fixed": "#e1e0ff", "on-secondary": "#472a00", "on-secondary-fixed-variant": "#653e00", "error": "#ffb4ab", "inverse-on-surface": "#2f3036", "surface-variant": "#34343a", "on-secondary-container": "#5b3800", "on-background": "#e3e1e9", "on-surface-variant": "#c7c4d7", "on-primary-fixed": "#07006c", "primary-fixed-dim": "#c0c1ff", "surface-container-highest": "#34343a", "surface-container": "#1e1f25", "primary-container": "#8083ff", "on-surface": "#e3e1e9", "secondary-container": "#ee9800", "outline-variant": "#464554", "tertiary-container": "#009eb9", "on-error": "#690005", "on-tertiary-container": "#002f38" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-mobile": "1rem", "gutter": "1.5rem", "margin": "2.5rem", "space-lg": "1.5rem", "margin-mobile": "1.25rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-md": "1rem" }, "fontFamily": { "label-lg": [ "Inter" ], "label-sm": [ "Inter" ], "code-mono": [ "Space Grotesk" ], "headline-lg-mobile": [ "Space Grotesk" ], "headline-sm": [ "Plus Jakarta Sans" ], "body-md": [ "Plus Jakarta Sans" ], "headline-md": [ "Space Grotesk" ], "body-sm": [ "Plus Jakarta Sans" ], "headline-lg": [ "Space Grotesk" ], "label-md": [ "Inter" ], "display-hero-mobile": [ "Space Grotesk" ], "body-lg": [ "Plus Jakarta Sans" ], "display-hero": [ "Space Grotesk" ] }, "fontSize": { "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "label-sm": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" } ], "code-mono": [ "18px", { "lineHeight": "24px", "letterSpacing": "0.2em", "fontWeight": "500" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-sm": [ "18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "22px", "fontWeight": "400" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "headline-lg": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "display-hero-mobile": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-lg": [ "16px", { "lineHeight": "26px", "fontWeight": "400" } ], "display-hero": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "700" } ] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-background min-h-screen selection:bg-primary selection:text-on-primary"><main class="w-full min-h-screen relative flex flex-col"><div class="flex flex-col w-full relative overflow-hidden selection:bg-tertiary selection:text-on-tertiary">
+<!-- Dynamic Ambient Glow & Background Grid Elements -->
+<div class="absolute -top-32 -left-32 w-96 h-96 bg-tertiary-container/20 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="absolute top-1/3 -right-32 w-[30rem] h-[30rem] bg-primary-container/15 rounded-full blur-[140px] pointer-events-none"></div>
+<div class="absolute -bottom-24 left-1/4 w-80 h-80 bg-secondary-container/10 rounded-full blur-[100px] pointer-events-none"></div>
+<!-- Subtle Cyber Wire Grid Overlay -->
+<div class="absolute inset-0 pointer-events-none opacity-[0.035] bg-[radial-gradient(#c0c1ff_1px,transparent_1px)] [background-size:24px_24px]"></div>
+<div class="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 py-8 lg:py-12 z-10">
+<!-- Top System Telemetry HUD Bar -->
+<div class="flex flex-wrap items-center justify-between gap-4 pb-6 mb-8 lg:mb-12 bg-surface-container-lowest/60 backdrop-blur-md px-6 py-4 rounded-xl shadow-2xl">
+<div class="flex items-center space-x-3">
+<div class="relative flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container-high text-tertiary">
+<span class="material-symbols-outlined text-lg animate-pulse">token</span>
+<span class="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-tertiary shadow-[0_0_8px_#4cd7f6]"></span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center space-x-2">
+<span class="font-code-mono text-label-sm uppercase tracking-widest text-tertiary font-bold">SYNAPSE_OS v4.19.8</span>
+<span class="px-1.5 py-0.5 rounded text-[9px] font-code-mono bg-tertiary/10 text-tertiary uppercase tracking-wider font-semibold">ONLINE</span>
+</div>
+<span class="font-headline-sm text-on-background tracking-tight font-semibold">QUANTUM AUTH GATEWAY</span>
+</div>
+</div>
+<!-- Telemetry Status Pills -->
+<div class="flex flex-wrap items-center gap-3">
+<div class="flex items-center gap-2 bg-surface-container-high/80 px-3 py-1.5 rounded-lg shadow-inner">
+<span class="material-symbols-outlined text-tertiary text-sm">hub</span>
+<span class="font-code-mono text-label-sm text-outline uppercase tracking-wider">NODE:</span>
+<span class="font-code-mono text-label-sm text-on-surface font-semibold tracking-wider">TYO-09.ORBIT</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-high/80 px-3 py-1.5 rounded-lg shadow-inner">
+<span class="material-symbols-outlined text-primary text-sm">shield_locked</span>
+<span class="font-code-mono text-label-sm text-outline uppercase tracking-wider">ENC:</span>
+<span class="font-code-mono text-label-sm text-primary font-semibold tracking-wider">Q-LATTICE 512</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-high/80 px-3 py-1.5 rounded-lg shadow-inner">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary animate-ping"></span>
+<span class="font-code-mono text-label-sm text-tertiary font-medium">0.42ms // STABLE</span>
+</div>
+</div>
+</div>
+<!-- Main Asymmetric Workspace Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+<!-- LEFT COLUMN: Holographic Scanner & Interactive Retinal HUD (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col justify-between bg-surface-container-lowest/80 backdrop-blur-xl p-6 sm:p-8 rounded-2xl relative shadow-2xl overflow-hidden group">
+<!-- Corner Cyber Bracket Accents -->
+<div class="absolute top-3 left-3 w-3 h-3 bg-tertiary/40 [clip-path:polygon(0_0,100%_0,0_100%)]"></div>
+<div class="absolute top-3 right-3 w-3 h-3 bg-tertiary/40 [clip-path:polygon(100%_0,100%_100%,0_0)]"></div>
+<div class="absolute bottom-3 left-3 w-3 h-3 bg-tertiary/40 [clip-path:polygon(0_0,0_100%,100%_100%)]"></div>
+<div class="absolute bottom-3 right-3 w-3 h-3 bg-tertiary/40 [clip-path:polygon(100%_0,100%_100%,0_100%)]"></div>
+<!-- Upper Status Overline -->
+<div class="flex items-center justify-between border-b-0 pb-4">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-tertiary text-base">sensors</span>
+<span class="font-code-mono text-label-sm uppercase tracking-widest text-outline">BIOMETRIC_MATRIX_FEED</span>
+</div>
+<span class="font-code-mono text-label-sm text-tertiary animate-pulse">[OPTICAL_LIVE]</span>
+</div>
+<!-- Center Stage: Retinal HUD Targeting Complex -->
+<div class="relative my-8 py-10 flex flex-col items-center justify-center">
+<!-- Hologram Backlight Aura -->
+<div class="absolute w-64 h-64 bg-tertiary/10 rounded-full blur-3xl transition-transform duration-700 group-hover:scale-110"></div>
+<!-- Multi-Layer Vector HUD Rings -->
+<div class="relative w-72 h-72 flex items-center justify-center">
+<!-- Outermost Segmented Ring -->
+<svg class="absolute inset-0 w-full h-full animate-[spin_30s_linear_infinite] opacity-40 text-tertiary" viewbox="0 0 200 200">
+<circle cx="100" cy="100" fill="none" r="94" stroke="currentColor" stroke-dasharray="14 10 2 10" stroke-width="1.5"></circle>
+<circle cx="100" cy="100" fill="none" r="86" stroke="currentColor" stroke-dasharray="4 8" stroke-width="0.75"></circle>
+</svg>
+<!-- Counter-Rotating Inner Coordinate Ring -->
+<svg class="absolute inset-3 w-[calc(100%-24px)] h-[calc(100%-24px)] animate-[spin_18s_linear_infinite_reverse] opacity-60 text-primary" viewbox="0 0 200 200">
+<circle cx="100" cy="100" fill="none" r="88" stroke="currentColor" stroke-dasharray="32 18 8 18" stroke-width="1.5"></circle>
+<line stroke="currentColor" stroke-width="2" x1="100" x2="100" y1="6" y2="16"></line>
+<line stroke="currentColor" stroke-width="2" x1="100" x2="100" y1="184" y2="194"></line>
+<line stroke="currentColor" stroke-width="2" x1="6" x2="16" y1="100" y2="100"></line>
+<line stroke="currentColor" stroke-width="2" x1="184" x2="194" y1="100" y2="100"></line>
+</svg>
+<!-- Static Cyber Targeting HUD -->
+<div class="absolute inset-10 rounded-full bg-surface-container/60 backdrop-blur-sm flex flex-col items-center justify-center shadow-inner overflow-hidden">
+<!-- Grid Matrix Scanlines -->
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-tertiary/10 to-transparent w-full h-12 -translate-y-full animate-[bounce_3s_ease-in-out_infinite] opacity-75"></div>
+<!-- Retinal Scan Target Point -->
+<div class="relative flex flex-col items-center z-10">
+<span class="material-symbols-outlined text-4xl text-tertiary drop-shadow-[0_0_12px_#4cd7f6]" style="font-variation-settings: 'FILL' 0;">visibility</span>
+<span class="font-code-mono text-label-sm text-tertiary tracking-widest mt-2 font-bold">SYNAPSE_ID</span>
+<span class="font-code-mono text-[10px] text-outline mt-0.5 tracking-wider">AWAITING_CHIP</span>
+</div>
+</div>
+<!-- Orbiting Particle Node -->
+<div class="absolute inset-0 animate-[spin_6s_linear_infinite]">
+<div class="w-3 h-3 bg-tertiary rounded-full shadow-[0_0_10px_#4cd7f6] translate-x-12 translate-y-2"></div>
+</div>
+</div>
+<!-- Real-Time Frequency Waveform Visualizer -->
+<div class="w-full max-w-xs mt-6 px-4 py-2 bg-surface-container-high/40 rounded-lg flex items-center justify-between gap-1 shadow-inner">
+<div class="h-3 w-1 bg-tertiary rounded-full animate-pulse"></div>
+<div class="h-6 w-1 bg-tertiary/80 rounded-full animate-pulse delay-75"></div>
+<div class="h-8 w-1 bg-primary rounded-full animate-pulse delay-150"></div>
+<div class="h-4 w-1 bg-tertiary rounded-full animate-pulse"></div>
+<div class="h-9 w-1 bg-tertiary rounded-full animate-pulse delay-100"></div>
+<div class="h-5 w-1 bg-tertiary/60 rounded-full animate-pulse"></div>
+<div class="h-10 w-1 bg-primary rounded-full animate-pulse delay-200"></div>
+<div class="h-3 w-1 bg-tertiary/40 rounded-full animate-pulse"></div>
+<div class="h-7 w-1 bg-tertiary rounded-full animate-pulse delay-300"></div>
+<div class="h-4 w-1 bg-tertiary/90 rounded-full animate-pulse"></div>
+<div class="h-8 w-1 bg-primary rounded-full animate-pulse delay-75"></div>
+<div class="h-3 w-1 bg-tertiary rounded-full animate-pulse"></div>
+</div>
+</div>
+<!-- Telemetry Data Ticker & Verified Operator Status -->
+<div class="space-y-3 bg-surface-container-high/60 p-4 rounded-xl shadow-inner">
+<div class="flex items-center justify-between text-body-sm">
+<span class="font-code-mono text-outline text-label-sm uppercase">SECURITY PROTOCOL</span>
+<span class="font-code-mono text-tertiary text-label-sm font-semibold">NEURAL_ID_v9</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span class="font-code-mono text-outline text-label-sm uppercase">CLUSTER PARITY</span>
+<span class="font-code-mono text-on-surface text-label-sm">99.9994% OK</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1 overflow-hidden">
+<div class="bg-gradient-to-r from-primary to-tertiary h-full w-[84%] rounded-full shadow-[0_0_8px_#4cd7f6]"></div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Authentication Console Form (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col justify-between bg-surface-container/90 backdrop-blur-2xl p-6 sm:p-10 rounded-2xl relative shadow-2xl">
+<!-- Header Section -->
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-code-mono text-label-sm uppercase tracking-widest text-primary flex items-center gap-1.5 font-bold">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+              SECURE ACCESS INGRESS // PRIVILEGED LEVEL 5
+            </span>
+<span class="font-code-mono text-label-sm text-outline">[CODE: RED]</span>
+</div>
+<h2 class="font-headline-lg text-on-surface font-bold tracking-tight">
+            Verify Neural Identity.
+          </h2>
+<p class="font-body-md text-on-surface-variant mt-2 max-w-xl">
+            Passkey authorization active. Transmit orbital cryptographic signature or authenticate hardware-bound security enclaves.
+          </p>
+</div>
+<!-- Input Form Complex -->
+<form class="space-y-6 my-8" onsubmit="event.preventDefault();">
+<!-- Field 1: Synapse ID / Orbital Address -->
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<label class="font-code-mono text-label-md text-tertiary font-semibold tracking-wider flex items-center gap-1.5" for="synapse-id">
+<span class="material-symbols-outlined text-sm">terminal</span>
+                SYNAPSE ID // ORBITAL ADDR
+              </label>
+<span class="font-code-mono text-label-sm text-outline">HEX_ASCII / ENS</span>
+</div>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-outline group-focus-within:text-tertiary transition-colors">
+<span class="material-symbols-outlined text-lg">alternate_email</span>
+</div>
+<input class="w-full h-12 bg-surface-container-lowest text-on-surface font-code-mono text-label-lg pl-11 pr-4 rounded-xl shadow-inner focus:outline-none focus:bg-surface-container-high transition-all duration-200 placeholder:text-outline/50 placeholder:font-code-mono" id="synapse-id" placeholder="0x9F41...tokyo.synapse.net" type="text" value="architect-09@orbit.synapse.network"/>
+<div class="absolute inset-y-0 right-0 pr-3.5 flex items-center">
+<span class="px-2 py-0.5 rounded text-[10px] font-code-mono bg-tertiary/10 text-tertiary font-semibold tracking-wider">RESOLVED</span>
+</div>
+</div>
+</div>
+<!-- Field 2: Quantum Cipher Key -->
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<label class="font-code-mono text-label-md text-tertiary font-semibold tracking-wider flex items-center gap-1.5" for="quantum-key">
+<span class="material-symbols-outlined text-sm">key</span>
+                QUANTUM CIPHER KEY
+              </label>
+<a class="font-code-mono text-label-sm text-primary hover:text-primary-fixed transition-colors underline-offset-4 hover:underline" href="#reset">
+                KEY_RECOVERY_PROTOCOL
+              </a>
+</div>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-outline group-focus-within:text-tertiary transition-colors">
+<span class="material-symbols-outlined text-lg">lock</span>
+</div>
+<input class="w-full h-12 bg-surface-container-lowest text-on-surface font-code-mono text-label-lg pl-11 pr-12 rounded-xl shadow-inner focus:outline-none focus:bg-surface-container-high transition-all duration-200 placeholder:text-outline/50 tracking-widest" id="quantum-key" placeholder="• • • • • • • • • • • • • • • •" type="password" value="q-superposition-token-77a"/>
+<button aria-label="Toggle password visibility" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-outline hover:text-on-surface transition-colors focus:outline-none" onclick="const input = document.getElementById('quantum-key'); input.type = input.type === 'password' ? 'text' : 'password';" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+</div>
+</div>
+<!-- Hardware Device Binding Option -->
+<div class="flex items-center justify-between pt-1">
+<label class="flex items-center space-x-2.5 cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded bg-surface-container-lowest text-primary focus:ring-0 focus:outline-none accent-primary cursor-pointer" type="checkbox"/>
+<span class="font-code-mono text-label-md text-on-surface-variant font-medium">PERSIST HARDWARE ATTESTATION</span>
+</label>
+<span class="font-code-mono text-label-sm text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">verified_user</span> TPM 2.0 LOCK
+            </span>
+</div>
+<!-- PRIMARY ACTION: Neural Passkey Button -->
+<div class="pt-2">
+<button class="w-full h-14 relative group overflow-hidden rounded-xl bg-tertiary text-on-tertiary font-label-lg font-bold transition-all duration-300 shadow-[0_0_24px_rgba(76,215,246,0.35)] hover:shadow-[0_0_36px_rgba(76,215,246,0.55)] active:scale-[0.99] flex items-center justify-center gap-3" type="submit">
+<!-- Animated Light Sweep Flare -->
+<div class="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+<span class="material-symbols-outlined text-2xl animate-spin" style="animation-duration: 8s;">fingerprint</span>
+<span class="font-code-mono tracking-wider text-label-lg uppercase">AUTHENTICATE VIA NEURAL PASSKEY</span>
+<span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform">bolt</span>
+</button>
+</div>
+</form>
+<!-- ALTERNATIVE AUTHENTICATION PROVIDERS -->
+<div class="space-y-4 pt-4 border-t-0">
+<div class="flex items-center justify-between">
+<div class="h-0.5 flex-1 bg-surface-variant/40"></div>
+<span class="font-code-mono text-label-sm uppercase tracking-widest text-outline px-4">ALTERNATIVE CRYPTO CHANNELS</span>
+<div class="h-0.5 flex-1 bg-surface-variant/40"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<button class="h-12 bg-surface-container-high/80 hover:bg-surface-bright text-on-surface rounded-xl px-4 flex items-center justify-center gap-2.5 transition-all duration-200 shadow-md group" type="button">
+<span class="material-symbols-outlined text-primary text-xl group-hover:scale-110 transition-transform">dataset</span>
+<span class="font-code-mono text-label-md font-semibold tracking-wide">DIRECT SSO // OKTA MESH</span>
+</button>
+<button class="h-12 bg-surface-container-high/80 hover:bg-surface-bright text-on-surface rounded-xl px-4 flex items-center justify-center gap-2.5 transition-all duration-200 shadow-md group" type="button">
+<span class="material-symbols-outlined text-secondary text-xl group-hover:scale-110 transition-transform">key_vertical</span>
+<span class="font-code-mono text-label-md font-semibold tracking-wide">DEVELOPER FIDO2 // YUBI</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- HUD FOOTER: System Uptime, Ping & Terminal Syntax -->
+<div class="mt-8 pt-6 pb-2 flex flex-col md:flex-row items-center justify-between gap-4 text-on-surface-variant bg-surface-container-lowest/40 backdrop-blur-md px-6 py-4 rounded-xl shadow-lg">
+<!-- Quantum Status Ticker -->
+<div class="flex items-center space-x-6 text-body-sm">
+<div class="flex items-center space-x-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-code-mono text-label-sm text-outline">UPTIME:</span>
+<span class="font-code-mono text-label-sm text-on-surface font-semibold">99.999% [982d 14h]</span>
+</div>
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-sm text-tertiary">speed</span>
+<span class="font-code-mono text-label-sm text-outline">SUB-MS PING:</span>
+<span class="font-code-mono text-label-sm text-tertiary font-semibold">0.18 ms</span>
+</div>
+</div>
+<!-- Quick Command Prompt Legend -->
+<div class="flex items-center space-x-4">
+<span class="font-code-mono text-label-sm text-outline hidden sm:inline">PROMPT HINTS:</span>
+<code class="px-2 py-1 rounded bg-surface-container-high text-tertiary font-code-mono text-label-sm shadow-inner">
+          ⌘ + K // COMMAND_PALETTE
+        </code>
+<code class="px-2 py-1 rounded bg-surface-container-high text-primary font-code-mono text-label-sm shadow-inner">
+          ESC // ABORT_HANDSHAKE
+        </code>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Subtle HUD micro-interaction: keystroke listener for tactile feedback
+  document.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      const input = document.getElementById('synapse-id');
+      if (input) {
+        input.focus();
+        input.select();
+      }
+    }
+  });
+</script></main></body></html>

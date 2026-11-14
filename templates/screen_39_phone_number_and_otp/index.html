@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed-variant": "#004e5c", "on-tertiary-container": "#002f38", "error": "#ffb4ab", "surface-dim": "#121318", "surface-container-highest": "#34343a", "secondary-fixed": "#ffddb8", "secondary-container": "#ee9800", "inverse-surface": "#e3e1e9", "primary-container": "#8083ff", "on-primary-container": "#0d0096", "on-primary-fixed": "#07006c", "primary-fixed-dim": "#c0c1ff", "on-surface": "#e3e1e9", "tertiary-container": "#009eb9", "tertiary-fixed": "#acedff", "outline-variant": "#464554", "outline": "#908fa0", "surface-container-lowest": "#0d0e13", "on-secondary-fixed": "#2a1700", "on-primary-fixed-variant": "#2f2ebe", "on-secondary-fixed-variant": "#653e00", "on-secondary-container": "#5b3800", "error-container": "#93000a", "surface-container-low": "#1a1b21", "surface-container-high": "#292a2f", "inverse-on-surface": "#2f3036", "surface": "#121318", "primary": "#c0c1ff", "on-background": "#e3e1e9", "secondary": "#ffb95f", "surface-container": "#1e1f25", "on-primary": "#1000a9", "on-error": "#690005", "inverse-primary": "#494bd6", "background": "#121318", "tertiary-fixed-dim": "#4cd7f6", "on-tertiary": "#003640", "on-secondary": "#472a00", "on-tertiary-fixed": "#001f26", "tertiary": "#4cd7f6", "on-error-container": "#ffdad6", "on-surface-variant": "#c7c4d7", "secondary-fixed-dim": "#ffb95f", "surface-tint": "#c0c1ff", "surface-bright": "#38393f", "primary-fixed": "#e1e0ff", "surface-variant": "#34343a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-mobile": "1rem", "space-md": "1rem", "margin": "2.5rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "margin-mobile": "1.25rem", "gutter": "1.5rem", "space-sm": "0.5rem" }, "fontFamily": { "body-sm": ["Plus Jakarta Sans"], "headline-lg": ["Space Grotesk"], "display-hero-mobile": ["Space Grotesk"], "label-lg": ["Inter"], "display-hero": ["Space Grotesk"], "headline-sm": ["Plus Jakarta Sans"], "label-md": ["Inter"], "headline-md": ["Space Grotesk"], "body-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Space Grotesk"], "code-mono": ["Space Grotesk"], "label-sm": ["Inter"], "body-md": ["Plus Jakarta Sans"] }, "fontSize": { "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "display-hero-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "display-hero": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "code-mono": ["18px", { "lineHeight": "24px", "letterSpacing": "0.2em", "fontWeight": "500" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }] } } } };</script></head><body class="min-h-screen bg-surface font-body-md text-on-surface antialiased flex flex-col items-center justify-center"><main class="w-full flex-1 flex flex-col justify-center items-center px-margin-mobile md:px-margin py-margin"><div class="flex flex-col w-full">
+<div class="w-full max-w-6xl mx-auto py-space-md lg:py-space-xl">
+<!-- Top System Indicator Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-lg px-space-xs text-on-surface-variant font-label-sm uppercase tracking-wider">
+<div class="flex items-center gap-space-xs">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="text-tertiary font-label-md">CELLULAR IDENTITY // E.164 PROTOCOL</span>
+</div>
+<div class="flex items-center gap-space-md font-code-mono text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">lock</span>
+          256-BIT CARRIER ENCRYPTION
+        </span>
+<span class="hidden md:inline text-outline-variant">|</span>
+<span class="hidden md:inline">NODE: AMS-09 // ACTIVE</span>
+</div>
+</div>
+<!-- Main Asymmetric Architectural Canvas Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column: Company & Phone Input Module (7 Columns) -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- Primary Form Card -->
+<div class="bg-surface-container-low rounded-xl p-space-md md:p-space-xl relative overflow-hidden shadow-xl">
+<!-- Subtle Atmospheric Glow Mesh -->
+<div class="absolute -top-24 -left-24 w-72 h-72 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 -right-24 w-72 h-72 bg-tertiary/10 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Header / Client Neutral Identity -->
+<div class="flex items-center justify-between mb-space-lg relative z-10">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[24px]">cell_tower</span>
+</div>
+<div>
+<span class="font-headline-sm text-on-surface block tracking-tight">NEXUS // CELL</span>
+<span class="font-label-sm text-outline uppercase tracking-wider">Zero-Trust Telemetry</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-tertiary">verified_user</span>
+<span class="font-label-sm text-tertiary">STIR/SHAKEN VALIDATED</span>
+</div>
+</div>
+<!-- Title & Context -->
+<div class="mb-space-lg relative z-10">
+<h1 class="font-headline-lg text-on-surface tracking-tight mb-space-xs">Sign in with Phone Number</h1>
+<p class="font-body-md text-on-surface-variant max-w-lg">
+              We'll send an encrypted one-time verification code via SMS or WhatsApp to authenticate your hardware device.
+            </p>
+</div>
+<!-- Verification Channel Selector Toggle -->
+<div class="mb-space-lg relative z-10">
+<label class="block font-label-md text-on-surface-variant mb-space-xs">AUTHENTICATION VECTOR</label>
+<div class="grid grid-cols-2 gap-space-xs bg-surface-container-highest p-1 rounded-lg" id="channelToggle">
+<button class="flex items-center justify-center gap-space-xs py-space-sm rounded-DEFAULT text-on-surface bg-surface-container shadow-sm font-label-md transition-all" id="btn-sms" onclick="switchChannel('sms')" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">sms</span>
+<span>SMS Text Message</span>
+</button>
+<button class="flex items-center justify-center gap-space-xs py-space-sm rounded-DEFAULT text-outline font-label-md transition-all hover:text-on-surface" id="btn-wa" onclick="switchChannel('whatsapp')" type="button">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>WhatsApp Messenger</span>
+</button>
+</div>
+</div>
+<!-- Form Element: Phone Number Input System -->
+<form class="flex flex-col gap-space-md relative z-10" id="phoneForm" onsubmit="event.preventDefault(); triggerCodeDispatch();">
+<div>
+<div class="flex justify-between items-center mb-space-xs">
+<label class="font-label-md text-on-surface-variant" for="phone-input">DEVICE NUMBER</label>
+<span class="font-label-sm text-tertiary">CARRIER AUTO-DETECT ACTIVE</span>
+</div>
+<!-- Combined Country Selector and Phone Input -->
+<div class="grid grid-cols-1 sm:grid-cols-12 gap-space-xs">
+<!-- Country Dropdown Emulation -->
+<div class="sm:col-span-4 relative">
+<select aria-label="Country Dial Code" class="w-full h-12 bg-surface-container text-on-surface font-label-md px-space-md rounded-lg appearance-none cursor-pointer focus:bg-surface-container-highest focus:outline-none transition-colors shadow-sm">
+<option value="+1">🇺🇸 +1 (US/CA)</option>
+<option value="+44">🇬🇧 +44 (UK)</option>
+<option value="+49">🇩🇪 +49 (DE)</option>
+<option value="+33">🇫🇷 +33 (FR)</option>
+<option value="+81">🇯🇵 +81 (JP)</option>
+<option value="+61">🇦🇺 +61 (AU)</option>
+<option value="+65">🇸🇬 +65 (SG)</option>
+<option value="+41">🇨🇭 +41 (CH)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3.5 pointer-events-none text-outline text-[18px]">expand_more</span>
+</div>
+<!-- Input Field -->
+<div class="sm:col-span-8 relative">
+<input class="w-full h-12 bg-surface-container text-on-surface font-headline-sm px-space-md rounded-lg placeholder-outline focus:outline-none focus:bg-surface-container-highest transition-colors shadow-sm" id="phone-input" placeholder="(555) 019-2834" type="tel" value="(555) 019-2834"/>
+<div class="absolute right-3 top-3 flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[20px]">sim_card</span>
+</div>
+</div>
+</div>
+</div>
+<!-- "Remember this device" Checkbox -->
+<label class="flex items-center gap-space-sm cursor-pointer select-none py-1 group">
+<input checked="" class="hidden peer" id="trust-device" type="checkbox"/>
+<div class="w-5 h-5 rounded-DEFAULT bg-surface-container peer-checked:bg-primary flex items-center justify-center transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-on-primary font-bold">check</span>
+</div>
+<span class="font-body-md text-on-surface-variant group-hover:text-on-surface transition-colors">
+                Trust this device for 30 days • <span class="font-label-sm text-outline">Bypasses OTP on recognized hardware</span>
+</span>
+</label>
+<!-- Primary Dispatch Action -->
+<button class="w-full h-12 bg-primary text-on-primary font-label-lg rounded-lg shadow-xl hover:bg-primary-container active:scale-[0.99] transition-all flex items-center justify-center gap-space-xs cursor-pointer mt-space-xs" type="submit">
+<span>Transmit Secure One-Time Code</span>
+<span class="material-symbols-outlined text-[20px]">send</span>
+</button>
+</form>
+<!-- Alternative Methods & Secondary Footer -->
+<div class="mt-space-xl pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md text-center sm:text-left relative z-10">
+<a class="font-label-md text-primary hover:text-primary-fixed-dim transition-colors flex items-center gap-1" href="#password">
+<span class="material-symbols-outlined text-[16px]">key</span>
+              Sign in with password instead
+            </a>
+<a class="font-label-md text-outline hover:text-on-surface transition-colors flex items-center gap-1" href="#support">
+<span class="material-symbols-outlined text-[16px]">headset_mic</span>
+              Lost phone access? Contact Support
+            </a>
+</div>
+</div>
+<!-- Telephony Cryptographic Verification Telemetry Bento -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-md">
+<div class="flex items-center justify-between text-outline mb-space-xs">
+<span class="font-label-sm uppercase">Routing Protocol</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">hub</span>
+</div>
+<div class="font-headline-sm text-on-surface">SS7 Guard</div>
+<div class="font-label-sm text-tertiary mt-1">Interconnect Protected</div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-md">
+<div class="flex items-center justify-between text-outline mb-space-xs">
+<span class="font-label-sm uppercase">SIM-Swap Shield</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">shield</span>
+</div>
+<div class="font-headline-sm text-on-surface">IMSI Monitored</div>
+<div class="font-label-sm text-secondary mt-1">Delta Timestamp: 0s</div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-md">
+<div class="flex items-center justify-between text-outline mb-space-xs">
+<span class="font-label-sm uppercase">Latency Estimate</span>
+<span class="material-symbols-outlined text-[16px] text-primary">speed</span>
+</div>
+<div class="font-headline-sm text-on-surface">340 ms</div>
+<div class="font-label-sm text-primary mt-1">Direct Carrier Peering</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Dual-State OTP Live Verification Simulation Treatment (5 Columns) -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- Interactive OTP Panel -->
+<div class="bg-surface-container-low rounded-xl p-space-md md:p-space-xl relative overflow-hidden shadow-xl">
+<!-- Top Radial Tint -->
+<div class="absolute -top-20 -right-20 w-64 h-64 bg-secondary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-3 h-3 rounded-full bg-secondary animate-pulse"></div>
+<span class="font-label-sm uppercase text-secondary tracking-widest font-bold">STATE: CHALLENGE PENDING</span>
+</div>
+<span class="font-code-mono text-label-sm text-outline">SESSION ID: #882-QX</span>
+</div>
+<h2 class="font-headline-md text-on-surface tracking-tight mb-space-xs">Enter 6-Digit Code</h2>
+<p class="font-body-md text-on-surface-variant mb-space-lg">
+            Dispatched to <span class="text-on-surface font-headline-sm font-code-mono text-[15px]">+1 (555) 019-2834</span> via encrypted SMS bearer.
+          </p>
+<!-- 6-Slot Segregated OTP Block Entry Simulation -->
+<div class="mb-space-lg">
+<div class="flex justify-between items-center gap-space-xs mb-space-sm" id="otp-container">
+<!-- Slot 1: Filled -->
+<div class="flex-1 aspect-[4/5] max-w-[54px] rounded-lg bg-surface-container flex flex-col items-center justify-center shadow-md">
+<span class="font-headline-lg font-code-mono text-on-surface">4</span>
+</div>
+<!-- Slot 2: Filled -->
+<div class="flex-1 aspect-[4/5] max-w-[54px] rounded-lg bg-surface-container flex flex-col items-center justify-center shadow-md">
+<span class="font-headline-lg font-code-mono text-on-surface">8</span>
+</div>
+<!-- Slot 3: Filled -->
+<div class="flex-1 aspect-[4/5] max-w-[54px] rounded-lg bg-surface-container flex flex-col items-center justify-center shadow-md">
+<span class="font-headline-lg font-code-mono text-on-surface">2</span>
+</div>
+<!-- Slot 4: Empty with Active Pulsing Caret -->
+<div class="flex-1 aspect-[4/5] max-w-[54px] rounded-lg bg-surface-container-highest flex flex-col items-center justify-center shadow-md relative">
+<span class="w-0.5 h-6 bg-primary rounded-full animate-pulse"></span>
+</div>
+<!-- Slot 5: Empty -->
+<div class="flex-1 aspect-[4/5] max-w-[54px] rounded-lg bg-surface-container flex flex-col items-center justify-center shadow-md">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+</div>
+<!-- Slot 6: Empty -->
+<div class="flex-1 aspect-[4/5] max-w-[54px] rounded-lg bg-surface-container flex flex-col items-center justify-center shadow-md">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+</div>
+</div>
+<!-- OTP Auxiliary Status & Live Countdown -->
+<div class="flex items-center justify-between text-label-md px-1 mt-space-md">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-code-mono">
+<span class="material-symbols-outlined text-[16px] text-secondary">timer</span>
+<span>Code expires in <span class="text-secondary font-bold" id="otp-timer">01:48</span></span>
+</div>
+<button class="text-primary hover:text-primary-fixed-dim font-label-md cursor-pointer transition-colors" id="resendBtn" onclick="resendCodeSequence()" type="button">
+                Resend Code
+              </button>
+</div>
+</div>
+<!-- Secondary Dual Primary Action Button -->
+<button class="w-full h-12 bg-secondary text-on-secondary font-label-lg rounded-lg shadow-xl hover:bg-secondary-fixed active:scale-[0.99] transition-all flex items-center justify-center gap-space-xs cursor-pointer mb-space-md" onclick="completeVerificationMock()" type="button">
+<span>Verify &amp; Continue →</span>
+</button>
+<!-- Fallback Channel Switcher -->
+<div class="bg-surface-container p-space-md rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px]">mark_chat_unread</span>
+<div>
+<span class="font-label-md text-on-surface block">Didn't get the SMS?</span>
+<span class="font-body-sm text-outline">Push verification code via WhatsApp</span>
+</div>
+</div>
+<button class="px-space-sm py-1 bg-surface-container-highest text-tertiary rounded-md font-label-sm hover:bg-surface-bright transition-colors" onclick="switchChannel('whatsapp')" type="button">
+              Switch Vector
+            </button>
+</div>
+</div>
+<!-- Visual Verification Node Live Telemetry Card -->
+<div class="bg-surface-container-low rounded-xl p-space-md relative overflow-hidden shadow-md">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm uppercase text-outline">TELECOM GATEWAY HANDSHAKE</span>
+<span class="font-code-mono text-label-sm text-tertiary">STIR-ATTESTATION: GRADE-A</span>
+</div>
+<!-- Animated Inline SVG Network Spectrum -->
+<div class="w-full h-16 bg-surface-container rounded-lg p-space-xs flex items-center justify-center overflow-hidden relative">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 300 50">
+<path class="text-surface-container-highest" d="M0 25 Q 35 5, 75 25 T 150 25 T 225 25 T 300 25" fill="none" stroke="currentColor" stroke-width="2"></path>
+<path class="text-tertiary" d="M0 25 Q 35 10, 75 25 T 150 25 T 225 25 T 300 25" fill="none" stroke="currentColor" stroke-width="2">
+<animate attributename="d" dur="3s" repeatcount="indefinite" values="M0 25 Q 35 5, 75 25 T 150 25 T 225 25 T 300 25;
+                          M0 25 Q 35 45, 75 25 T 150 25 T 225 25 T 300 25;
+                          M0 25 Q 35 5, 75 25 T 150 25 T 225 25 T 300 25"></animate>
+</path>
+</svg>
+<div class="absolute inset-0 flex items-center justify-between px-space-md pointer-events-none text-label-sm font-code-mono text-on-surface-variant">
+<span>+1(555)***-2834</span>
+<span class="text-tertiary">SYN-ACK OK</span>
+</div>
+</div>
+<div class="mt-space-sm flex items-center justify-between font-label-sm text-outline">
+<span>E.164 Global Formatter: Compliant</span>
+<span>SIM Auth Token: #994812</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Micro Privacy Footnote -->
+<div class="mt-space-xl text-center text-outline font-body-sm max-w-xl mx-auto">
+      Standard telecommunication message rates may apply. By entering your number, you agree to receive automated security authorization pulses under ISO/IEC 27001 cellular verification standards.
+    </div>
+</div>
+<!-- Interactive State Controller -->
+<script>
+    // Live Countdown Timer logic
+    let remainingSeconds = 108; // 1:48
+    const timerElem = document.getElementById('otp-timer');
+    const resendBtn = document.getElementById('resendBtn');
+
+    const countdownInterval = setInterval(() => {
+      if (remainingSeconds <= 0) {
+        clearInterval(countdownInterval);
+        if (timerElem) timerElem.textContent = "00:00";
+        if (resendBtn) {
+          resendBtn.classList.add('font-bold');
+          resendBtn.textContent = "Resend Code Now";
+        }
+        return;
+      }
+      remainingSeconds--;
+      const mins = Math.floor(remainingSeconds / 60);
+      const secs = remainingSeconds % 60;
+      if (timerElem) {
+        timerElem.textContent = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+      }
+    }, 1000);
+
+    // Channel Switching Micro-interaction
+    function switchChannel(channel) {
+      const smsBtn = document.getElementById('btn-sms');
+      const waBtn = document.getElementById('btn-wa');
+      
+      if (channel === 'whatsapp') {
+        waBtn.className = "flex items-center justify-center gap-space-xs py-space-sm rounded-DEFAULT text-on-surface bg-surface-container shadow-sm font-label-md transition-all";
+        smsBtn.className = "flex items-center justify-center gap-space-xs py-space-sm rounded-DEFAULT text-outline font-label-md transition-all hover:text-on-surface";
+      } else {
+        smsBtn.className = "flex items-center justify-center gap-space-xs py-space-sm rounded-DEFAULT text-on-surface bg-surface-container shadow-sm font-label-md transition-all";
+        waBtn.className = "flex items-center justify-center gap-space-xs py-space-sm rounded-DEFAULT text-outline font-label-md transition-all hover:text-on-surface";
+      }
+    }
+
+    function triggerCodeDispatch() {
+      const btn = event.submitter || document.querySelector('#phoneForm button[type="submit"]');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[20px]">sync</span><span>Dispatching Challenge...</span>';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.innerHTML = '<span class="material-symbols-outlined text-[20px]">done_all</span><span>Code Dispatched Successfully</span>';
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.disabled = false;
+        }, 2200);
+      }, 900);
+    }
+
+    function resendCodeSequence() {
+      remainingSeconds = 120;
+      if (resendBtn) {
+        resendBtn.textContent = "Dispatched!";
+        setTimeout(() => {
+          resendBtn.textContent = "Resend Code";
+        }, 2000);
+      }
+    }
+
+    function completeVerificationMock() {
+      const container = document.getElementById('otp-container');
+      if (container) {
+        container.innerHTML = `
+          <div class="flex-1 aspect-[4/5] max-w-[54px] rounded-lg bg-surface-container flex flex-col items-center justify-center shadow-md"><span class="font-headline-lg font-code-mono text-tertiary">4</span></div>
+          <div class="flex-1 aspect-[4/5] max-w-[54px] rounded-lg bg-surface-container flex flex-col items-center justify-center shadow-md"><span class="font-headline-lg font-code-mono text-tertiary">8</span></div>
+          <div class="flex-1 aspect-[4/5] max-w-[54px] rounded-lg bg-surface-container flex flex-col items-center justify-center shadow-md"><span class="font-headline-lg font-code-mono text-tertiary">2</span></div>
+          <div class="flex-1 aspect-[4/5] max-w-[54px] rounded-lg bg-surface-container flex flex-col items-center justify-center shadow-md"><span class="font-headline-lg font-code-mono text-tertiary">9</span></div>
+          <div class="flex-1 aspect-[4/5] max-w-[54px] rounded-lg bg-surface-container flex flex-col items-center justify-center shadow-md"><span class="font-headline-lg font-code-mono text-tertiary">1</span></div>
+          <div class="flex-1 aspect-[4/5] max-w-[54px] rounded-lg bg-surface-container flex flex-col items-center justify-center shadow-md"><span class="font-headline-lg font-code-mono text-tertiary">7</span></div>
+        `;
+      }
+    }
+  </script>
+</div></main></body></html>

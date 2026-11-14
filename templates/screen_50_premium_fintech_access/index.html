@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-container": "#002f38", "surface-container-lowest": "#0d0e13", "on-tertiary-fixed-variant": "#004e5c", "on-secondary-container": "#5b3800", "on-surface": "#e3e1e9", "surface-dim": "#121318", "inverse-on-surface": "#2f3036", "tertiary-fixed": "#acedff", "surface-variant": "#34343a", "on-secondary-fixed-variant": "#653e00", "outline": "#908fa0", "surface": "#121318", "outline-variant": "#464554", "on-error-container": "#ffdad6", "secondary-fixed-dim": "#ffb95f", "surface-container-low": "#1a1b21", "secondary-container": "#ee9800", "secondary-fixed": "#ffddb8", "surface-tint": "#c0c1ff", "on-primary-container": "#0d0096", "primary-fixed": "#e1e0ff", "surface-bright": "#38393f", "primary-container": "#8083ff", "surface-container-high": "#292a2f", "background": "#121318", "tertiary-fixed-dim": "#4cd7f6", "on-tertiary-fixed": "#001f26", "on-error": "#690005", "on-background": "#e3e1e9", "primary": "#c0c1ff", "on-primary-fixed-variant": "#2f2ebe", "primary-fixed-dim": "#c0c1ff", "error-container": "#93000a", "on-surface-variant": "#c7c4d7", "surface-container": "#1e1f25", "on-secondary-fixed": "#2a1700", "inverse-surface": "#e3e1e9", "secondary": "#ffb95f", "inverse-primary": "#494bd6", "surface-container-highest": "#34343a", "tertiary-container": "#009eb9", "error": "#ffb4ab", "on-primary": "#1000a9", "on-primary-fixed": "#07006c", "tertiary": "#4cd7f6", "on-tertiary": "#003640", "on-secondary": "#472a00" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-mobile": "1.25rem", "margin": "2.5rem", "gutter": "1.5rem", "space-xl": "2.5rem", "space-md": "1rem", "space-lg": "1.5rem", "gutter-mobile": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem" }, "fontFamily": { "headline-md": [ "Space Grotesk" ], "headline-lg-mobile": [ "Space Grotesk" ], "headline-lg": [ "Space Grotesk" ], "display-hero": [ "Space Grotesk" ], "body-sm": [ "Plus Jakarta Sans" ], "body-lg": [ "Plus Jakarta Sans" ], "display-hero-mobile": [ "Space Grotesk" ], "headline-sm": [ "Plus Jakarta Sans" ], "code-mono": [ "Space Grotesk" ], "label-md": [ "Inter" ], "label-sm": [ "Inter" ], "body-md": [ "Plus Jakarta Sans" ], "label-lg": [ "Inter" ] }, "fontSize": { "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-lg": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "display-hero": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "700" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "body-lg": [ "16px", { "lineHeight": "26px", "fontWeight": "400" } ], "display-hero-mobile": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-sm": [ "18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "code-mono": [ "18px", { "lineHeight": "24px", "letterSpacing": "0.2em", "fontWeight": "500" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "label-sm": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "22px", "fontWeight": "400" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-background min-h-screen selection:bg-primary selection:text-on-primary antialiased"><main class="w-full min-h-screen relative flex flex-col justify-center items-stretch bg-background"><div class="flex flex-col w-full text-on-surface">
+<!-- Top Real-time Market & Ledger Telemetry Bar -->
+<div class="w-full bg-surface-container-lowest px- margin-mobile lg:px-margin py-space-xs flex flex-wrap items-center justify-between gap-space-sm text-label-sm font-label-sm">
+<div class="flex items-center gap-space-md overflow-x-auto no-scrollbar py-0.5">
+<div class="flex items-center gap-space-xs">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim animate-pulse"></span>
+<span class="text-outline uppercase tracking-wider">NASDAQ</span>
+<span class="text-tertiary font-code-mono font-medium">+1.24%</span>
+</div>
+<span class="text-outline-variant">/</span>
+<div class="flex items-center gap-space-xs">
+<span class="text-outline uppercase tracking-wider">S&amp;P 500</span>
+<span class="text-on-surface font-code-mono font-medium">5,880.20</span>
+</div>
+<span class="text-outline-variant">/</span>
+<div class="flex items-center gap-space-xs">
+<span class="text-outline uppercase tracking-wider">BTC/USD</span>
+<span class="text-tertiary font-code-mono font-medium">96,420.10</span>
+</div>
+<span class="text-outline-variant">/</span>
+<div class="flex items-center gap-space-xs">
+<span class="text-outline uppercase tracking-wider">US 10Y</span>
+<span class="text-secondary font-code-mono font-medium">4.281%</span>
+</div>
+</div>
+<div class="hidden md:flex items-center gap-space-lg text-outline">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[14px] text-tertiary">lock</span>
+<span>E2E ENCRYPTION: <strong class="text-on-surface font-code-mono font-medium">4096-BIT RSA</strong></span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[14px] text-primary">speed</span>
+<span>LATENCY: <strong class="text-on-surface font-code-mono font-medium">0.8ms TO NYSE MATCHING ENGINE</strong></span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-high px-space-xs py-0.5 rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="text-tertiary-fixed text-[9px] uppercase tracking-widest font-semibold">FEED LIVE</span>
+</div>
+</div>
+</div>
+<!-- Main Grid Layout Container -->
+<div class="w-full max-w-[1440px] mx-auto px-margin-mobile lg:px-margin py-space-lg lg:py-space-xl flex-1 flex flex-col justify-center">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Left Showcase Panel (Asymmetrical 5 of 12 columns) -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- Brand Signature -->
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center shadow-lg relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary-container/20 to-tertiary/20"></div>
+<span class="material-symbols-outlined text-primary text-[24px] relative z-10">account_balance</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">AURA CAPITAL</span>
+<span class="font-label-sm text-label-sm text-tertiary tracking-widest uppercase">Institutional Gateway</span>
+</div>
+</div>
+<!-- Section Copy -->
+<div class="flex flex-col gap-space-xs">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight leading-tight">
+            Institutional Access Terminal.
+          </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+            Secure multi-party cryptographic gateway for authorized portfolio managers, sovereign wealth desks, and prime brokerage liquidity tiers.
+          </p>
+</div>
+<!-- Sleek Virtual Titanium Security Card Graphic -->
+<div class="relative w-full max-w-sm rounded-xl p-space-lg bg-surface-container-high overflow-hidden shadow-2xl transition-all duration-300 hover:scale-[1.01]">
+<!-- Metallic Specular Angle Reflection -->
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-gradient-to-br from-tertiary/10 via-primary/5 to-transparent rounded-full blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col justify-between h-44">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">Aura Prime Enclave</span>
+<span class="font-code-mono text-body-sm text-on-surface font-semibold tracking-wider">TITANIUM TIER</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[28px]">contactless</span>
+</div>
+<!-- Smart Chip & Cryptographic Tag -->
+<div class="flex items-center gap-space-md my-auto">
+<div class="w-11 h-8 rounded bg-surface-bright flex flex-col justify-around p-1 shadow-inner">
+<div class="w-full h-0.5 bg-outline-variant rounded"></div>
+<div class="w-2/3 h-0.5 bg-outline-variant rounded"></div>
+<div class="w-full h-0.5 bg-outline-variant rounded"></div>
+</div>
+<div class="flex flex-col">
+<span class="font-code-mono text-label-sm text-outline">SECURE ELEMENT ID</span>
+<span class="font-code-mono text-body-sm text-on-surface">0x7F2A...E491</span>
+</div>
+</div>
+<div class="flex items-end justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-outline uppercase tracking-wider">Hardware Key Signature</span>
+<span class="font-code-mono text-body-md text-on-surface font-medium tracking-widest">ACCT #8849-XXXX</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary px-space-xs py-0.5 bg-surface-container rounded font-code-mono">ACTIVE L3</span>
+</div>
+</div>
+</div>
+<!-- Visual Telemetry & Ledger Snapshot -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-outline tracking-wider">Node Consensus &amp; Status</span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+              Synchronized
+            </span>
+</div>
+<!-- Micro Sparkline SVG -->
+<div class="h-10 w-full flex items-center">
+<svg class="w-full h-8 overflow-visible" fill="none" preserveaspectratio="none" viewbox="0 0 300 40">
+<path class="text-tertiary" d="M0 32 L30 28 L60 30 L90 18 L120 22 L150 12 L180 15 L210 8 L240 14 L270 4 L300 9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path class="text-tertiary/10" d="M0 32 L30 28 L60 30 L90 18 L120 22 L150 12 L180 15 L210 8 L240 14 L270 4 L300 9 L300 40 L0 40 Z" fill="currentColor"></path>
+</svg>
+</div>
+<div class="grid grid-cols-3 gap-space-xs text-center pt-space-xs">
+<div class="bg-surface-container rounded p-space-xs">
+<div class="text-[10px] text-outline font-label-sm uppercase">Global Liquidity</div>
+<div class="text-body-sm font-code-mono font-medium text-on-surface">$24.8B</div>
+</div>
+<div class="bg-surface-container rounded p-space-xs">
+<div class="text-[10px] text-outline font-label-sm uppercase">Block Time</div>
+<div class="text-body-sm font-code-mono font-medium text-on-surface">392ms</div>
+</div>
+<div class="bg-surface-container rounded p-space-xs">
+<div class="text-[10px] text-outline font-label-sm uppercase">Active HSMs</div>
+<div class="text-body-sm font-code-mono font-medium text-on-surface">18 / 18</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Form Canvas (Asymmetrical 7 of 12 columns) -->
+<div class="lg:col-span-7 flex justify-center lg:justify-end">
+<div class="w-full max-w-xl bg-surface-container rounded-xl p-space-lg lg:p-space-xl shadow-2xl relative flex flex-col gap-space-lg">
+<!-- Top Form Title & Status Badge -->
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Operator Authentication</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Step 1 of 2: Cryptographic Identity Assertion</span>
+</div>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded bg-surface-container-highest text-tertiary font-label-sm text-label-sm font-medium">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span>
+              HSM ONLINE
+            </span>
+</div>
+<!-- Authentication Mode Tabs (Hardware Vector Selector) -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-outline uppercase tracking-wider">Verification Vector</label>
+<div class="grid grid-cols-3 gap-space-xs p-1 bg-surface-container-lowest rounded-lg" id="authModeTabs">
+<button class="flex items-center justify-center gap-1.5 py-2 px-1 rounded font-label-sm text-label-sm transition-all bg-surface text-primary shadow-sm font-medium" id="tab-fido" onclick="setAuthMethod('fido')" type="button">
+<span class="material-symbols-outlined text-[16px]">key</span>
+<span class="truncate">FIDO2 / YubiKey</span>
+</button>
+<button class="flex items-center justify-center gap-1.5 py-2 px-1 rounded font-label-sm text-label-sm text-outline hover:text-on-surface transition-all font-medium" id="tab-enclave" onclick="setAuthMethod('enclave')" type="button">
+<span class="material-symbols-outlined text-[16px]">memory</span>
+<span class="truncate">Hardware Enclave</span>
+</button>
+<button class="flex items-center justify-center gap-1.5 py-2 px-1 rounded font-label-sm text-label-sm text-outline hover:text-on-surface transition-all font-medium" id="tab-iris" onclick="setAuthMethod('iris')" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span class="truncate">Biometric Iris</span>
+</button>
+</div>
+</div>
+<!-- Credential Fields -->
+<form class="flex flex-col gap-space-md" onsubmit="event.preventDefault(); simulateAuth();">
+<!-- Primary Identifier Input -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="corporateId">
+                  Corporate Email or Institutional ID
+                </label>
+<span class="text-tertiary font-label-sm text-label-sm font-code-mono">SSO ROUTED</span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-space-md text-outline text-[20px] pointer-events-none">badge</span>
+<input class="w-full h-12 bg-surface-container-lowest rounded-lg pl-11 pr-28 text-body-md font-body-md text-on-surface placeholder:text-outline/60 focus:outline-none focus:ring-2 focus:ring-tertiary transition-all" id="corporateId" placeholder="name@capital.firm or ID-884920" required="" type="text" value="director@meridian-sovereign.ch"/>
+<div class="absolute right-2 px-space-xs py-1 rounded bg-surface-container-high text-on-surface-variant text-[11px] font-label-sm tracking-wide uppercase">
+                  FEDERATED
+                </div>
+</div>
+</div>
+<!-- Passphrase / Master Key Input -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="passphrase">
+                  Client Master Key / Passphrase
+                </label>
+<a class="text-primary font-label-sm text-label-sm hover:underline" href="#reset">
+                  Emergency Rekeying?
+                </a>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-space-md text-outline text-[20px] pointer-events-none">password</span>
+<input class="w-full h-12 bg-surface-container-lowest rounded-lg pl-11 pr-11 text-body-md font-body-md text-on-surface placeholder:text-outline/60 focus:outline-none focus:ring-2 focus:ring-tertiary transition-all tracking-wider font-code-mono" id="passphrase" placeholder="••••••••••••••••••••••••" required="" type="password" value="Sec88_Quantum#Alpha92K"/>
+<button class="absolute right-space-md text-outline hover:text-on-surface flex items-center justify-center" onclick="togglePassVisibility()" type="button">
+<span class="material-symbols-outlined text-[20px]" id="eyeIcon">visibility_off</span>
+</button>
+</div>
+</div>
+<!-- Dynamic Method Specific Interactive Module -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-space-xs" id="method-container">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">token</span>
+                  FIDO2 Hardware Verification Target
+                </span>
+<span class="font-code-mono text-label-sm text-tertiary font-medium">STATUS: READY</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Insert your registered YubiKey 5C NFC / Security Key into USB port and touch gold contact sensor upon clicking access button.
+              </p>
+</div>
+<!-- Strict Security Constraints Checklist -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<label class="flex items-center gap-space-sm cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded bg-surface-container-lowest accent-tertiary" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">
+                  Strict IP Geofencing Enforced <span class="text-outline text-label-sm">(Zurich Hub #CH-04)</span>
+</span>
+</label>
+<label class="flex items-center gap-space-sm cursor-pointer group">
+<input class="w-4 h-4 rounded bg-surface-container-lowest accent-tertiary" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">
+                  Air-Gapped Session Lease <span class="text-outline text-label-sm">(15-minute zero retention token)</span>
+</span>
+</label>
+</div>
+<!-- Primary High-Impact Submission Action -->
+<button class="w-full h-12 mt-space-sm bg-gradient-to-r from-tertiary-container via-tertiary to-primary-container text-on-tertiary-container font-label-lg text-label-lg font-bold rounded-lg tracking-wider uppercase flex items-center justify-center gap-space-sm shadow-lg hover:shadow-cyan-500/25 hover:brightness-110 active:scale-[0.99] transition-all" id="submitBtn" type="submit">
+<span>AUTHORIZE PORTFOLIO ACCESS</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</form>
+<!-- Alternative Auth Pathway -->
+<div class="flex items-center justify-between text-body-sm text-outline pt-space-xs">
+<span>Trading Desk Emergency Bypass?</span>
+<button class="text-tertiary font-label-sm text-label-sm hover:underline font-medium" type="button">
+              Initiate Dual-Custody Quorum
+            </button>
+</div>
+<!-- Bottom Micro Notification Container for JS state -->
+<div class="hidden rounded p-space-sm bg-surface-container-highest text-body-sm text-tertiary items-center gap-2" id="statusToast">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span id="statusToastMsg">Hardware challenge verified. Loading trading modules...</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Compliance & Regulatory Disclosures Footer -->
+<footer class="w-full bg-surface-container-lowest px-margin-mobile lg:px-margin py-space-md mt-auto">
+<div class="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between gap-space-md text-label-sm font-label-sm text-outline">
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1">
+<span class="flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-tertiary">verified</span>
+          FINRA / SEC Registered
+        </span>
+<span>•</span>
+<span>SOC-2 Type II Certified</span>
+<span>•</span>
+<span>Custody SLA 99.999%</span>
+<span>•</span>
+<a class="hover:text-on-surface underline" href="#disclosures">Banking Partner Disclosures</a>
+</div>
+<div class="font-code-mono text-outline">
+        STATION ID: <span class="text-on-surface font-semibold">ZUR-TERM-8012</span> // REV: 2025.2.4
+      </div>
+</div>
+</footer>
+<!-- Interactive State Logic -->
+<script>
+    function setAuthMethod(method) {
+      const tabFido = document.getElementById('tab-fido');
+      const tabEnclave = document.getElementById('tab-enclave');
+      const tabIris = document.getElementById('tab-iris');
+      const container = document.getElementById('method-container');
+      
+      const inactiveClass = 'flex items-center justify-center gap-1.5 py-2 px-1 rounded font-label-sm text-label-sm text-outline hover:text-on-surface transition-all font-medium';
+      const activeClass = 'flex items-center justify-center gap-1.5 py-2 px-1 rounded font-label-sm text-label-sm transition-all bg-surface text-primary shadow-sm font-medium';
+
+      tabFido.className = inactiveClass;
+      tabEnclave.className = inactiveClass;
+      tabIris.className = inactiveClass;
+
+      if (method === 'fido') {
+        tabFido.className = activeClass;
+        container.innerHTML = `
+          <div class="flex items-center justify-between">
+            <span class="font-label-sm text-label-sm text-outline uppercase tracking-wider flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-primary text-[16px]">token</span>
+              FIDO2 Hardware Verification Target
+            </span>
+            <span class="font-code-mono text-label-sm text-tertiary font-medium">STATUS: READY</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">
+            Insert your registered YubiKey 5C NFC / Security Key into USB port and touch gold contact sensor upon clicking access button.
+          </p>
+        `;
+      } else if (method === 'enclave') {
+        tabEnclave.className = activeClass;
+        container.innerHTML = `
+          <div class="flex items-center justify-between">
+            <span class="font-label-sm text-label-sm text-outline uppercase tracking-wider flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-primary text-[16px]">memory</span>
+              Apple T2 / Intel SGX Enclave Pairing
+            </span>
+            <span class="font-code-mono text-label-sm text-tertiary font-medium">STATUS: LOCKED</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">
+            A challenge packet will be dispatched to local enclave coprocessor #8849. Secure enclave enclave attestations enabled.
+          </p>
+        `;
+      } else if (method === 'iris') {
+        tabIris.className = activeClass;
+        container.innerHTML = `
+          <div class="flex items-center justify-between">
+            <span class="font-label-sm text-label-sm text-outline uppercase tracking-wider flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-primary text-[16px]">visibility</span>
+              Infrared Iris Retinal Telemetry
+            </span>
+            <span class="font-code-mono text-label-sm text-tertiary font-medium">SENSOR: STANDBY</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">
+            Align device camera within line of sight. Dual infrared depth validation complies with EAL6+ banking security directives.
+          </p>
+        `;
+      }
+    }
+
+    function togglePassVisibility() {
+      const passInput = document.getElementById('passphrase');
+      const eyeIcon = document.getElementById('eyeIcon');
+      if (passInput.type === 'password') {
+        passInput.type = 'text';
+        eyeIcon.textContent = 'visibility';
+      } else {
+        passInput.type = 'password';
+        eyeIcon.textContent = 'visibility_off';
+      }
+    }
+
+    function simulateAuth() {
+      const btn = document.getElementById('submitBtn');
+      const toast = document.getElementById('statusToast');
+      const toastMsg = document.getElementById('statusToastMsg');
+      
+      btn.disabled = true;
+      btn.innerHTML = `<span class="material-symbols-outlined animate-spin text-[20px]">sync</span><span>ASSERTING CRYPTOGRAPHIC TOKEN...</span>`;
+      
+      setTimeout(() => {
+        btn.innerHTML = `<span class="material-symbols-outlined text-[20px]">check_circle</span><span>PORTFOLIO VERIFIED</span>`;
+        toast.classList.remove('hidden');
+        toast.classList.add('flex');
+        toastMsg.textContent = 'Mutual TLS established. Redirecting to Citadel Matching Core...';
+      }, 1200);
+    }
+  </script>
+</div></main></body></html>

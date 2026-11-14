@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed-variant": "#004e5c", "on-tertiary-container": "#002f38", "error": "#ffb4ab", "surface-dim": "#121318", "surface-container-highest": "#34343a", "secondary-fixed": "#ffddb8", "secondary-container": "#ee9800", "inverse-surface": "#e3e1e9", "primary-container": "#8083ff", "on-primary-container": "#0d0096", "on-primary-fixed": "#07006c", "primary-fixed-dim": "#c0c1ff", "on-surface": "#e3e1e9", "tertiary-container": "#009eb9", "tertiary-fixed": "#acedff", "outline-variant": "#464554", "outline": "#908fa0", "surface-container-lowest": "#0d0e13", "on-secondary-fixed": "#2a1700", "on-primary-fixed-variant": "#2f2ebe", "on-secondary-fixed-variant": "#653e00", "on-secondary-container": "#5b3800", "error-container": "#93000a", "surface-container-low": "#1a1b21", "surface-container-high": "#292a2f", "inverse-on-surface": "#2f3036", "surface": "#121318", "primary": "#c0c1ff", "on-background": "#e3e1e9", "secondary": "#ffb95f", "surface-container": "#1e1f25", "on-primary": "#1000a9", "on-error": "#690005", "inverse-primary": "#494bd6", "background": "#121318", "tertiary-fixed-dim": "#4cd7f6", "on-tertiary": "#003640", "on-secondary": "#472a00", "on-tertiary-fixed": "#001f26", "tertiary": "#4cd7f6", "on-error-container": "#ffdad6", "on-surface-variant": "#c7c4d7", "secondary-fixed-dim": "#ffb95f", "surface-tint": "#c0c1ff", "surface-bright": "#38393f", "primary-fixed": "#e1e0ff", "surface-variant": "#34343a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-mobile": "1rem", "space-md": "1rem", "margin": "2.5rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "margin-mobile": "1.25rem", "gutter": "1.5rem", "space-sm": "0.5rem" }, "fontFamily": { "body-sm": ["Plus Jakarta Sans"], "headline-lg": ["Space Grotesk"], "display-hero-mobile": ["Space Grotesk"], "label-lg": ["Inter"], "display-hero": ["Space Grotesk"], "headline-sm": ["Plus Jakarta Sans"], "label-md": ["Inter"], "headline-md": ["Space Grotesk"], "body-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Space Grotesk"], "code-mono": ["Space Grotesk"], "label-sm": ["Inter"], "body-md": ["Plus Jakarta Sans"] }, "fontSize": { "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "display-hero-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "display-hero": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "code-mono": ["18px", { "lineHeight": "24px", "letterSpacing": "0.2em", "fontWeight": "500" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }] } } } };</script></head><body class="min-h-screen bg-surface font-body-md text-on-surface antialiased flex flex-col items-center justify-center"><main class="w-full flex-1 flex flex-col justify-center items-center px-margin-mobile md:px-margin py-margin"><div class="flex flex-col w-full max-w-7xl mx-auto py-6">
+<!-- Interactive Locale Control Overlay Bar -->
+<header class="w-full mb-space-lg flex flex-col md:flex-row items-center justify-between gap-4 px-4 py-3 bg-surface-container/70 backdrop-blur-xl rounded-xl shadow-lg">
+<!-- Brand / Ingress Identifier -->
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">public</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface tracking-wider">TERRA</span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-widest bg-surface-container-highest px-2 py-0.5 rounded">INGRESS 040</span>
+</div>
+</div>
+<!-- Locale Switcher Toolbar -->
+<div class="flex flex-wrap items-center justify-end gap-2 text-on-surface-variant">
+<!-- Active Region / Datacenter Pill -->
+<div class="hidden sm:flex items-center gap-2 px-3 py-1.5 bg-surface-container-low rounded-lg text-body-sm font-body-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="text-on-surface">Auto-Routed:</span>
+<span class="font-code-mono text-primary" id="active-datacenter">AP-NORTHEAST-1</span>
+</div>
+<!-- Currency / Region Selector -->
+<div class="relative">
+<button class="flex items-center gap-1.5 px-3 py-1.5 bg-surface-container-low hover:bg-surface-container-high rounded-lg text-label-md font-label-md text-on-surface transition-colors" id="region-btn">
+<span class="material-symbols-outlined text-[16px] text-outline">tune</span>
+<span id="selected-region">APAC (JPY / UTC+9)</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+<div class="hidden absolute right-0 mt-2 w-56 bg-surface-container-high shadow-xl rounded-xl p-2 z-50" id="region-dropdown">
+<div class="px-2 py-1 text-label-sm font-label-sm text-outline uppercase tracking-wider">Compliance Realm</div>
+<button class="w-full text-left px-3 py-2 rounded-lg text-body-sm font-body-sm hover:bg-surface-container text-on-surface flex items-center justify-between" onclick="setRegion('EMEA (EUR / UTC+1)', 'EU-CENTRAL-1 (Frankfurt)')">
+<span>EMEA Zone (EUR €)</span>
+<span class="font-code-mono text-outline text-[11px]">EU-C1</span>
+</button>
+<button class="w-full text-left px-3 py-2 rounded-lg text-body-sm font-body-sm hover:bg-surface-container text-on-surface flex items-center justify-between" onclick="setRegion('APAC (JPY / UTC+9)', 'AP-NORTHEAST-1 (Tokyo)')">
+<span>APAC Zone (JPY ¥)</span>
+<span class="font-code-mono text-outline text-[11px]">AP-NE1</span>
+</button>
+<button class="w-full text-left px-3 py-2 rounded-lg text-body-sm font-body-sm hover:bg-surface-container text-on-surface flex items-center justify-between" onclick="setRegion('AMER (USD / UTC-5)', 'US-EAST-1 (N. Virginia)')">
+<span>Americas (USD $)</span>
+<span class="font-code-mono text-outline text-[11px]">US-E1</span>
+</button>
+</div>
+</div>
+<!-- Language Selector -->
+<div class="relative">
+<button class="flex items-center gap-2 px-3 py-1.5 bg-primary/10 hover:bg-primary/20 text-primary rounded-lg text-label-md font-label-md transition-all" id="lang-btn">
+<span class="material-symbols-outlined text-[18px]">translate</span>
+<span id="current-lang-name">日本語 (JP)</span>
+<span class="material-symbols-outlined text-[14px]">keyboard_arrow_down</span>
+</button>
+<div class="hidden absolute right-0 mt-2 w-64 bg-surface-container-high shadow-2xl rounded-xl p-2 z-50 backdrop-blur-md" id="lang-menu">
+<div class="px-2 py-1 text-label-sm font-label-sm text-outline uppercase tracking-wider">Select Language / 言語</div>
+<div class="grid grid-cols-1 gap-1">
+<button class="w-full text-left px-3 py-2 rounded-lg text-body-sm font-body-sm hover:bg-surface-container flex items-center justify-between group" onclick="changeLanguage('en')">
+<span class="text-on-surface group-hover:text-primary font-medium">English (US)</span>
+<span class="font-code-mono text-label-sm text-outline">EN-US</span>
+</button>
+<button class="w-full text-left px-3 py-2 rounded-lg text-body-sm font-body-sm hover:bg-surface-container flex items-center justify-between group" onclick="changeLanguage('es')">
+<span class="text-on-surface group-hover:text-primary font-medium">Español (LatAm)</span>
+<span class="font-code-mono text-label-sm text-outline">ES-MX</span>
+</button>
+<button class="w-full text-left px-3 py-2 rounded-lg text-body-sm font-body-sm hover:bg-surface-container flex items-center justify-between group" onclick="changeLanguage('fr')">
+<span class="text-on-surface group-hover:text-primary font-medium">Français (Paris)</span>
+<span class="font-code-mono text-label-sm text-outline">FR-FR</span>
+</button>
+<button class="w-full text-left px-3 py-2 rounded-lg text-body-sm font-body-sm hover:bg-surface-container flex items-center justify-between group" onclick="changeLanguage('de')">
+<span class="text-on-surface group-hover:text-primary font-medium">Deutsch (Standard)</span>
+<span class="font-code-mono text-label-sm text-outline">DE-DE</span>
+</button>
+<button class="w-full text-left px-3 py-2 rounded-lg text-body-sm font-body-sm hover:bg-surface-container flex items-center justify-between group" onclick="changeLanguage('ja')">
+<span class="text-on-surface group-hover:text-primary font-medium">日本語 (日本)</span>
+<span class="font-code-mono text-label-sm text-outline">JA-JP</span>
+</button>
+<button class="w-full text-left px-3 py-2 rounded-lg text-body-sm font-body-sm hover:bg-surface-container flex items-center justify-between group" onclick="changeLanguage('ar')">
+<span class="text-on-surface group-hover:text-primary font-medium">العربية (الشرق الأوسط)</span>
+<span class="font-code-mono text-label-sm text-outline">AR-XA</span>
+</button>
+</div>
+</div>
+</div>
+<!-- High Contrast Accessibility Toggle -->
+<button class="p-2 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" id="contrast-toggle" title="Accessibility Mode: High Contrast">
+<span class="material-symbols-outlined text-[18px]">contrast</span>
+</button>
+</div>
+</header>
+<!-- Main Asymmetric Container: Showcase & Global Ingress Gateway -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+<!-- Left Showcase Column: Infrastructure Topology & Multi-Regional Trust (5 cols) -->
+<div class="lg:col-span-5 flex flex-col justify-between p-8 bg-surface-container-low rounded-xl relative overflow-hidden shadow-2xl">
+<!-- Subtle Ambient Glow Orbs -->
+<div class="absolute -top-24 -left-24 w-80 h-80 rounded-full bg-primary-container/10 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 -right-24 w-80 h-80 rounded-full bg-tertiary-container/10 blur-3xl pointer-events-none"></div>
+<!-- Top Branding Context -->
+<div class="relative z-10 flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary font-headline-md text-headline-md shadow-md">
+            ⌘
+          </div>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">TERRA // GLOBAL</div>
+<div class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Enterprise Ingress Architecture</div>
+</div>
+</div>
+<div class="space-y-3 mt-4">
+<span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-tertiary font-label-sm text-label-sm uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-ping"></span>
+            Dynamic Script Adaptation
+          </span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold leading-tight" id="left-hero-title">
+            Seamless cross-border authentication for 190+ jurisdictions.
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant" id="left-hero-desc">
+            Intelligently negotiates localized cryptographic compliance, APPI/GDPR data tenancy, and frictionless federated identities across distributed edge nodes.
+          </p>
+</div>
+<!-- Visual Multi-Region Routing Status Graphic -->
+<div class="p-4 rounded-xl bg-surface-container shadow-inner space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase">Active Edge Sync</span>
+<span class="font-code-mono text-label-sm text-tertiary">99.999% SLA</span>
+</div>
+<!-- Region Mesh Grid Visualizer -->
+<div class="space-y-2">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="flex items-center gap-2 text-on-surface">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                Tokyo, JP (Edge-01)
+              </span>
+<span class="font-code-mono text-on-surface-variant text-[11px]">8ms • Synchronized</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-1.5 rounded-full w-full"></div>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm pt-1">
+<span class="flex items-center gap-2 text-on-surface">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                Frankfurt, DE (Edge-04)
+              </span>
+<span class="font-code-mono text-on-surface-variant text-[11px]">18ms • Synchronized</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-tertiary h-1.5 rounded-full w-full"></div>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm pt-1">
+<span class="flex items-center gap-2 text-on-surface">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                Virginia, US (Edge-09)
+              </span>
+<span class="font-code-mono text-on-surface-variant text-[11px]">22ms • Synchronized</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary h-1.5 rounded-full w-full"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Trust Badges & Local Encryption Assurance -->
+<div class="relative z-10 pt-6 mt-6 bg-surface-container-highest/20 rounded-xl p-4 flex flex-col gap-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[24px]">verified_user</span>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-semibold">Zero-Knowledge Token Tunnel</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Post-Quantum Lattice Cryptography &amp; FIPS 140-3 Validated</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Interactive Multilingual Ingress Form (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container p-6 sm:p-10 rounded-xl shadow-2xl flex flex-col justify-between">
+<div class="space-y-6">
+<!-- Form Header Block -->
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-code-mono text-label-sm text-primary uppercase tracking-wider">Session Token: INGRESS-GL-9104</span>
+<span class="flex items-center gap-1.5 text-label-sm font-label-sm text-tertiary">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span id="secure-tls-label">TLS 1.3 Strict</span>
+</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight" id="form-heading">
+            Welcome back to your global account
+          </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1" id="form-subheading">
+            Access your localized dashboard and international assets with unified enterprise authentication.
+          </p>
+</div>
+<!-- Regional Federated SSO Matrix -->
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider" id="federated-label">Fast Ingress via Global Identity</span>
+<span class="font-label-sm text-label-sm text-primary cursor-pointer hover:underline">SAML / Okta</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+<!-- Google SSO -->
+<button class="flex items-center justify-center gap-2 py-3 px-3 bg-surface-container-high hover:bg-surface-bright rounded-lg text-label-md font-label-md text-on-surface transition-all shadow-sm" type="button">
+<svg class="w-4 h-4" viewbox="0 0 24 24">
+<path d="M12 5c1.6 0 3 .6 4.1 1.7l3.1-3.1C17.3 1.8 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.4 9 5 12 5z" fill="#EA4335"></path>
+<path d="M23.5 12.3c0-.8-.1-1.7-.2-2.3H12v4.6h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.9z" fill="#4285F4"></path>
+<path d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.3 0-.8.2-1.6.4-2.3L1.9 7.3C.7 9.7 0 12.3 0 15.2s.7 5.5 1.9 7.9l3.7-2.9c0-.7 0-1.4 0-5.4z" fill="#FBBC05"></path>
+<path d="M12 23.5c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2.4-6.4-5.2L1.9 16.5C3.7 20.2 7.5 23.5 12 23.5z" fill="#34A853"></path>
+</svg>
+<span>Google</span>
+</button>
+<!-- Apple ID -->
+<button class="flex items-center justify-center gap-2 py-3 px-3 bg-surface-container-high hover:bg-surface-bright rounded-lg text-label-md font-label-md text-on-surface transition-all shadow-sm" type="button">
+<svg class="w-4 h-4 fill-current" viewbox="0 0 170 170">
+<path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.69-3.08-7.82-8.08-12.38-15-6.52-9.9-11.75-21.43-15.68-34.58-3.93-13.16-5.9-25.2-5.9-36.14 0-14.65 3.8-26.65 11.4-36.02 7.6-9.37 17.2-14.16 28.79-14.39 5.3 0 10.83 1.27 16.58 3.81 5.76 2.54 9.4 3.87 10.94 4 2.22-.27 6.13-1.67 11.72-4.2 5.59-2.54 10.6-3.7 15.03-3.5 10.85.54 19.92 4.49 27.2 11.83-9.7 5.86-14.42 14.14-14.16 24.84.26 8.35 3.51 15.35 9.75 21 6.24 5.66 13.57 8.87 21.99 9.64-2.22 6.81-4.7 13.4-7.44 19.78zm-30.85-103.5c0-6.73 2.4-12.79 7.2-18.17 4.8-5.38 10.74-8.58 17.82-9.58.43 1.3.65 2.6.65 3.91 0 6.63-2.56 12.75-7.68 18.36-5.12 5.6-11.13 8.79-18.03 9.57.04-1.39.04-2.75.04-4.09z"></path>
+</svg>
+<span>Apple</span>
+</button>
+<!-- Microsoft -->
+<button class="flex items-center justify-center gap-2 py-3 px-3 bg-surface-container-high hover:bg-surface-bright rounded-lg text-label-md font-label-md text-on-surface transition-all shadow-sm" type="button">
+<svg class="w-4 h-4" viewbox="0 0 21 21">
+<path d="M1 1h9v9H1z" fill="#f25022"></path>
+<path d="M1 11h9v9H1z" fill="#00a4ef"></path>
+<path d="M11 1h9v9h-9z" fill="#7fba00"></path>
+<path d="M11 11h9v9h-9z" fill="#ffb900"></path>
+</svg>
+<span>Microsoft</span>
+</button>
+<!-- LINE / WeChat International Pill -->
+<button class="flex items-center justify-center gap-2 py-3 px-3 bg-surface-container-high hover:bg-surface-bright rounded-lg text-label-md font-label-md text-on-surface transition-all shadow-sm" id="regional-alt-btn" type="button">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+<span id="regional-auth-label">LINE / WeChat</span>
+</button>
+</div>
+</div>
+<!-- Semantic Text Divider -->
+<div class="relative flex py-1 items-center">
+<div class="flex-grow bg-surface-container-highest h-[1px]"></div>
+<span class="flex-shrink mx-4 text-outline font-label-sm text-label-sm uppercase tracking-widest bg-surface-container px-2" id="divider-text">
+            Or sign in with localized credentials
+          </span>
+<div class="flex-grow bg-surface-container-highest h-[1px]"></div>
+</div>
+<!-- Primary Form Inputs -->
+<form class="space-y-4" onsubmit="event.preventDefault(); triggerSimulation();">
+<!-- Universal Multilingual Identifier -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-on-surface" for="identifier-input" id="label-identifier">
+                Work Email / Identifier
+              </label>
+<span class="font-code-mono text-label-sm text-outline" id="translation-hint">
+                Nom d'utilisateur / ユーザー名
+              </span>
+</div>
+<div class="relative">
+<input class="w-full h-12 px-4 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-outline transition-all" id="identifier-input" placeholder="user@enterprise.terra.global" required="" type="text"/>
+<div class="absolute right-3 top-3 text-outline">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</div>
+</div>
+</div>
+<!-- Password / Master Passkey -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-on-surface" for="password-input" id="label-password">
+                Password or Passkey
+              </label>
+<a class="font-label-md text-label-md text-primary hover:underline" href="#" id="link-forgot-password">
+                Forgot credentials?
+              </a>
+</div>
+<div class="relative">
+<input class="w-full h-12 px-4 pr-12 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-outline transition-all" id="password-input" placeholder="••••••••••••••••" required="" type="password"/>
+<button class="absolute right-3 top-3 text-outline hover:text-on-surface transition-colors" id="toggle-pwd-btn" onclick="togglePasswordVisibility()" title="Toggle visual visibility" type="button">
+<span class="material-symbols-outlined text-[20px]" id="pwd-icon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Selection Controls: International Generous Widths -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-1">
+<label class="flex items-center gap-3 cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded bg-surface-container-low text-primary focus:ring-0 focus:ring-offset-0 cursor-pointer" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant" id="label-remember">
+                Trust this device for 30 days
+              </span>
+</label>
+<!-- Hardware Security Key / Passkey Direct CTA -->
+<button class="flex items-center gap-1.5 text-label-md font-label-md text-tertiary hover:text-tertiary-fixed transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">key</span>
+<span id="btn-passkey">Use WebAuthn Passkey</span>
+</button>
+</div>
+<!-- Primary Submit Ingress Button -->
+<div class="pt-2">
+<button class="w-full h-12 bg-primary text-on-primary hover:bg-primary-fixed-dim rounded-lg font-label-lg text-label-lg transition-all flex items-center justify-center gap-2 shadow-lg" id="submit-auth-btn" type="submit">
+<span id="submit-text">Authorize &amp; Enter Ingress</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Quick Session Notification Pill -->
+<div class="hidden mt-4 p-3 bg-primary-container text-on-primary-container rounded-lg font-body-sm text-body-sm flex items-center justify-between" id="status-toast">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+          Authentication routed to localized regional authority.
+        </span>
+<span class="font-code-mono text-label-sm">200 OK</span>
+</div>
+<!-- Registration / Tenant Switcher Footnote -->
+<div class="mt-8 pt-4 bg-surface-container-high/40 rounded-lg p-3 flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="signup-prompt">
+          New enterprise domain or federated user?
+        </span>
+<a class="font-label-md text-label-md text-primary hover:underline" href="#" id="signup-link">
+          Provision Global Ingress Workspace →
+        </a>
+</div>
+</div>
+</div>
+<!-- Multi-Region Legal, Residency, & Server Status Compliance Footer -->
+<footer class="mt-8 pt-6 pb-2 bg-surface-container-low rounded-xl px-6 flex flex-col gap-6 shadow-inner">
+<!-- Top Row: Global Residency Badges & Region Heartbeat -->
+<div class="flex flex-wrap items-center justify-between gap-4">
+<div class="flex flex-wrap items-center gap-3">
+<!-- Compliance Shield Chip -->
+<div class="flex items-center gap-1.5 px-3 py-1 bg-surface-container-highest rounded-full text-label-sm font-label-sm text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-primary">policy</span>
+<span>GDPR (EU) • CCPA (US) • APPI (JP) COMPLIANT</span>
+</div>
+<!-- Data Sovereignty Status -->
+<div class="flex items-center gap-1.5 px-3 py-1 bg-surface-container-highest rounded-full text-label-sm font-label-sm text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-tertiary">database</span>
+<span>In-Country Sovereign Sharding Active</span>
+</div>
+</div>
+<!-- Active Node Heartbeat -->
+<div class="flex items-center gap-4 text-label-sm font-label-sm text-outline font-code-mono">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+          FRANKFURT: 100%
+        </span>
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+          TOKYO: 100%
+        </span>
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+          ASHBURN: 100%
+        </span>
+</div>
+</div>
+<!-- Bottom Row: Multi-Region Copyright & Navigational Legal Links -->
+<div class="flex flex-col md:flex-row items-center justify-between gap-4 text-body-sm font-body-sm text-on-surface-variant pt-2">
+<div>
+        © 2025 TERRA Global Sovereign Infrastructure Inc. Multi-Locale Ingress Gateway v40.2.
+      </div>
+<div class="flex flex-wrap items-center gap-6">
+<a class="hover:text-primary transition-colors" href="#">Privacy Charter &amp; APPI Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Global Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Security Whitepaper</a>
+<a class="hover:text-primary transition-colors" href="#">Sub-Processors List</a>
+<a class="hover:text-primary transition-colors" href="#">Transparency Report</a>
+</div>
+</div>
+</footer>
+</div>
+<script>
+  // Complete Multilingual Locales Dictionary with Real Adaptations
+  const locales = {
+    en: {
+      langName: "English (US)",
+      heroTitle: "Seamless cross-border authentication for 190+ jurisdictions.",
+      heroDesc: "Intelligently negotiates localized cryptographic compliance, APPI/GDPR data tenancy, and frictionless federated identities across distributed edge nodes.",
+      formHeading: "Welcome back to your global account",
+      formSubheading: "Access your localized dashboard and international assets with unified enterprise authentication.",
+      federatedLabel: "Fast Ingress via Global Identity",
+      divider: "Or sign in with localized credentials",
+      identifierLabel: "Work Email / Identifier",
+      identifierHint: "Nom d'utilisateur / ユーザー名",
+      identifierPlaceholder: "user@enterprise.terra.global",
+      passwordLabel: "Password or Passkey",
+      forgotPassword: "Forgot credentials?",
+      rememberMe: "Trust this device for 30 days",
+      passkeyBtn: "Use WebAuthn Passkey",
+      submitBtn: "Authorize & Enter Ingress",
+      signupPrompt: "New enterprise domain or federated user?",
+      signupLink: "Provision Global Ingress Workspace →",
+      regionalAuth: "LINE / WeChat",
+      dir: "ltr"
+    },
+    es: {
+      langName: "Español (LatAm)",
+      heroTitle: "Autenticación transfronteriza sin fricciones en más de 190 jurisdicciones.",
+      heroDesc: "Gestiona de forma inteligente el cumplimiento criptográfico local, la soberanía de datos RGPD/APPI y las identidades federadas.",
+      formHeading: "Bienvenido a su cuenta global corporativa",
+      formSubheading: "Acceda a su panel localizado y activos multinacionales con autenticación empresarial unificada.",
+      federatedLabel: "Ingreso rápido mediante identidad global",
+      divider: "O inicie sesión con credenciales directas",
+      identifierLabel: "Correo corporativo / Identificador",
+      identifierHint: "ID de usuario / Correo verificado",
+      identifierPlaceholder: "usuario@empresa.terra.global",
+      passwordLabel: "Contraseña o Llave de paso (Passkey)",
+      forgotPassword: "¿Olvidó sus credenciales?",
+      rememberMe: "Confiar en este dispositivo por 30 días",
+      passkeyBtn: "Usar Llave WebAuthn",
+      submitBtn: "Autorizar e Iniciar Sesión",
+      signupPrompt: "¿Nuevo dominio o usuario empresarial?",
+      signupLink: "Solicitar Espacio de Trabajo Global →",
+      regionalAuth: "MercadoPago / SSO",
+      dir: "ltr"
+    },
+    fr: {
+      langName: "Français (Paris)",
+      heroTitle: "Authentification internationale fluide dans plus de 190 juridictions.",
+      heroDesc: "Négocie intelligemment la conformité cryptographique locale, la résidence des données RGPD et les identités unifiées.",
+      formHeading: "Bienvenue sur votre compte mondial",
+      formSubheading: "Accédez à votre tableau de bord localisé et à vos actifs internationaux avec une sécurité renforcée.",
+      federatedLabel: "Connexion rapide via identité fédérée",
+      divider: "Ou connectez-vous avec vos identifiants",
+      identifierLabel: "E-mail professionnel / Identifiant",
+      identifierHint: "Nom d'utilisateur / Code d'accès",
+      identifierPlaceholder: "nom@entreprise.terra.global",
+      passwordLabel: "Mot de passe ou Clé d'accès",
+      forgotPassword: "Identifiants oubliés ?",
+      rememberMe: "Faire confiance à cet appareil pendant 30 jours",
+      passkeyBtn: "Utiliser la Clé WebAuthn",
+      submitBtn: "Autoriser et Accéder à l'Ingress",
+      signupPrompt: "Nouveau domaine d'entreprise ou utilisateur ?",
+      signupLink: "Créer un espace mondial dédié →",
+      regionalAuth: "FranceConnect / Pro",
+      dir: "ltr"
+    },
+    de: {
+      langName: "Deutsch (Standard)",
+      heroTitle: "Nahtlose grenzüberschreitende Authentifizierung für über 190 Rechtsräume.",
+      heroDesc: "Intelligente Gewährleistung lokaler kryptografischer DSGVO-Konformität und föderierter Identitäten auf dezentralen Edge-Knoten.",
+      formHeading: "Willkommen zurück in Ihrem globalen Konto",
+      formSubheading: "Greifen Sie mit einheitlicher Authentifizierung auf Ihr lokalisiertes Dashboard und globale Ressourcen zu.",
+      federatedLabel: "Schnellzugriff über globale Identitätsanbieter",
+      divider: "Oder mit Unternehmensanmeldedaten anmelden",
+      identifierLabel: "Geschäftliche E-Mail / Benutzerkennung",
+      identifierHint: "Arbeits-ID / Domänen-Login",
+      identifierPlaceholder: "nutzer@unternehmen.terra.global",
+      passwordLabel: "Passwort oder Haupt-Passkey",
+      forgotPassword: "Passwort vergessen?",
+      rememberMe: "Diesem Gerät 30 Tage lang vertrauen",
+      passkeyBtn: "WebAuthn Passkey nutzen",
+      submitBtn: "Autorisieren und Anmelden",
+      signupPrompt: "Neue Unternehmensdomäne oder Partner?",
+      signupLink: "Globalen Ingress-Arbeitsbereich anlegen →",
+      regionalAuth: "DATEV / ID Austria",
+      dir: "ltr"
+    },
+    ja: {
+      langName: "日本語 (日本)",
+      heroTitle: "190カ国以上の法域に対応したシームレスなグローバル認証基盤",
+      heroDesc: "個人情報保護法（APPI）やGDPRの厳格なデータ主権要件を満たし、超低遅延エッジノードで安全なエンタープライズ統合認証を提供します。",
+      formHeading: "グローバルアカウントへサインイン",
+      formSubheading: "統一されたエンタープライズセキュリティで、地域別ダッシュボードおよび国際アセットにアクセスします。",
+      federatedLabel: "グローバルIDによる高速シングルサインオン",
+      divider: "または組織の認証資格情報でログイン",
+      identifierLabel: "勤務先メールアドレス / ユーザーID",
+      identifierHint: "社内ID / 認証識別子",
+      identifierPlaceholder: "yamada@enterprise.terra.global",
+      passwordLabel: "パスワードまたはマスターパスキー",
+      forgotPassword: "認証資格情報をお忘れですか？",
+      rememberMe: "このデバイスを30日間信頼する",
+      passkeyBtn: "WebAuthn パスキーを使用",
+      submitBtn: "認証してイングレスに入る",
+      signupPrompt: "新しい法人ドメインをお持ちですか？",
+      signupLink: "新規グローバルワークスペースを開設 →",
+      regionalAuth: "LINE / SmartHR",
+      dir: "ltr"
+    },
+    ar: {
+      langName: "العربية (الشرق الأوسط)",
+      heroTitle: "مصادقة آمنة عبر الحدود لأكثر من 190 دولة ومنطقة قضائية.",
+      heroDesc: "إدارة ذكية للتشفير المتقدم والامتثال للوائح حماية البيانات وسيادة الحوسبة السحابية الموزعة.",
+      formHeading: "مرحبًا بك في حسابك العالمي الموحد",
+      formSubheading: "الوصول السريع والآمن إلى لوحة التحكم المحلية والأصول الدولية مع أعلى معايير الحماية.",
+      federatedLabel: "الدخول السريع عبر الهويات السحابية العالمية",
+      divider: "أو تسجيل الدخول عبر بيانات الاعتماد المباشرة",
+      identifierLabel: "البريد الإلكتروني للعمل / المعرّف المؤسسي",
+      identifierHint: "اسم المستخدم / المعرف الشخصي",
+      identifierPlaceholder: "user@enterprise.terra.global",
+      passwordLabel: "كلمة المرور أو مفتاح المرور المعتمد",
+      forgotPassword: "هل نسيت بيانات الاعتماد؟",
+      rememberMe: "الوثوق بهذا الجهاز لمدة 30 يومًا",
+      passkeyBtn: "استخدام مفتاح مرور WebAuthn",
+      submitBtn: "المصادقة والدخول الآمن",
+      signupPrompt: "هل لديك نطاق مؤسسي جديد؟",
+      signupLink: "إنشاء مساحة عمل عالمية جديدة ←",
+      regionalAuth: "UAE PASS / نفاذ",
+      dir: "rtl"
+    }
+  };
+
+  // Toggle Language Dropdown
+  const langBtn = document.getElementById('lang-btn');
+  const langMenu = document.getElementById('lang-menu');
+  langBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    langMenu.classList.toggle('hidden');
+    document.getElementById('region-dropdown').classList.add('hidden');
+  });
+
+  // Toggle Region Dropdown
+  const regionBtn = document.getElementById('region-btn');
+  const regionDropdown = document.getElementById('region-dropdown');
+  regionBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    regionDropdown.classList.toggle('hidden');
+    langMenu.classList.add('hidden');
+  });
+
+  // Close menus on outside click
+  window.addEventListener('click', () => {
+    langMenu.classList.add('hidden');
+    regionDropdown.classList.add('hidden');
+  });
+
+  // Change Language Implementation
+  function changeLanguage(langKey) {
+    const data = locales[langKey];
+    if (!data) return;
+
+    document.getElementById('current-lang-name').innerText = data.langName;
+    document.getElementById('left-hero-title').innerText = data.heroTitle;
+    document.getElementById('left-hero-desc').innerText = data.heroDesc;
+    document.getElementById('form-heading').innerText = data.formHeading;
+    document.getElementById('form-subheading').innerText = data.formSubheading;
+    document.getElementById('federated-label').innerText = data.federatedLabel;
+    document.getElementById('divider-text').innerText = data.divider;
+    document.getElementById('label-identifier').innerText = data.identifierLabel;
+    document.getElementById('translation-hint').innerText = data.identifierHint;
+    document.getElementById('identifier-input').placeholder = data.identifierPlaceholder;
+    document.getElementById('label-password').innerText = data.passwordLabel;
+    document.getElementById('link-forgot-password').innerText = data.forgotPassword;
+    document.getElementById('label-remember').innerText = data.rememberMe;
+    document.getElementById('btn-passkey').innerText = data.passkeyBtn;
+    document.getElementById('submit-text').innerText = data.submitBtn;
+    document.getElementById('signup-prompt').innerText = data.signupPrompt;
+    document.getElementById('signup-link').innerText = data.signupLink;
+    document.getElementById('regional-auth-label').innerText = data.regionalAuth;
+
+    // Apply RTL for Arabic
+    const formContainer = document.querySelector('form');
+    if (data.dir === 'rtl') {
+      formContainer.setAttribute('dir', 'rtl');
+    } else {
+      formContainer.removeAttribute('dir');
+    }
+
+    langMenu.classList.add('hidden');
+  }
+
+  // Set Region
+  function setRegion(regionName, datacenter) {
+    document.getElementById('selected-region').innerText = regionName;
+    document.getElementById('active-datacenter').innerText = datacenter;
+    regionDropdown.classList.add('hidden');
+  }
+
+  // Toggle Password Masking
+  function togglePasswordVisibility() {
+    const pwdField = document.getElementById('password-input');
+    const pwdIcon = document.getElementById('pwd-icon');
+    if (pwdField.type === 'password') {
+      pwdField.type = 'text';
+      pwdIcon.innerText = 'visibility_off';
+    } else {
+      pwdField.type = 'password';
+      pwdIcon.innerText = 'visibility';
+    }
+  }
+
+  // High Contrast Accessibility Toggle
+  let highContrast = false;
+  document.getElementById('contrast-toggle').addEventListener('click', () => {
+    highContrast = !highContrast;
+    if (highContrast) {
+      document.body.classList.add('contrast-125');
+    } else {
+      document.body.classList.remove('contrast-125');
+    }
+  });
+
+  // Simulate Interactive Ingress Authorization
+  function triggerSimulation() {
+    const btn = document.getElementById('submit-auth-btn');
+    const toast = document.getElementById('status-toast');
+    btn.disabled = true;
+    btn.classList.add('opacity-75', 'cursor-wait');
+    const originalText = document.getElementById('submit-text').innerText;
+    document.getElementById('submit-text').innerText = 'Validating Geo-Tenancy Token...';
+
+    setTimeout(() => {
+      btn.disabled = false;
+      btn.classList.remove('opacity-75', 'cursor-wait');
+      document.getElementById('submit-text').innerText = originalText;
+      toast.classList.remove('hidden');
+      setTimeout(() => toast.classList.add('hidden'), 4000);
+    }, 1100);
+  }
+</script></main></body></html>
