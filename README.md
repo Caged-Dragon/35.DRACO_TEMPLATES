@@ -31,3 +31,6 @@ All sign-in pages are front-end design demos. The submit action performs local i
 ## Accessibility and responsiveness
 
 The templates use semantic labels, keyboard-visible focus, accessible password visibility controls, status announcements, touch-friendly inputs, responsive breakpoints and `prefers-reduced-motion` overrides.
+### Important Vercel preview setting
+
+The Vercel configuration intentionally keeps `cleanUrls` disabled. Each template is opened at its explicit `/templates/<template-name>/index.html` URL, so its relative `./styles.css` and `./script.js` files resolve from that template's own folder. Do not enable `cleanUrls` or rewrite nested template HTML to an extensionless URL unless you also change the asset paths.

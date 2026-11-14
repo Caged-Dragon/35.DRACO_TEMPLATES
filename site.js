@@ -51,7 +51,7 @@
   }
   filters.forEach(button=>button.addEventListener('click',()=>{activeFilter=button.dataset.filter;filters.forEach(x=>x.classList.toggle('active',x===button));render();}));
   search.addEventListener('input',render);
-  grid.addEventListener('click',event=>{const button=event.target.closest('[data-preview]');if(!button)return;const t=templates.find(x=>x.slug===button.dataset.preview);if(!t)return;const url=`/templates/${t.slug}/index.html`;modalTitle.textContent=`${t.id} / ${t.name}`;frame.src=url;openFull.href=url;modalDownload.href=`/downloads/${t.slug}.zip`;modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.classList.add('modal-open');});
+  grid.addEventListener('click',event=>{const button=event.target.closest('[data-preview]');if(!button)return;const t=templates.find(x=>x.slug===button.dataset.preview);if(!t)return;const url=`/templates/${t.slug}/index.html`;frame.loading='eager';modalTitle.textContent=`${t.id} / ${t.name}`;frame.src=url;openFull.href=url;modalDownload.href=`/downloads/${t.slug}.zip`;modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.classList.add('modal-open');});
   function close(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');frame.src='about:blank';document.body.classList.remove('modal-open');}
   modal.addEventListener('click',event=>{if(event.target.closest('[data-close]'))close();});
   document.addEventListener('keydown',event=>{if(event.key==='Escape'&&modal.classList.contains('open'))close();});
