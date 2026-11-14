@@ -1,36 +1,27 @@
 # Caged Dragon Sign-in Design Studio
 
-A static storefront-style gallery for 20 distinct sign-in UI concepts. Built with plain HTML, CSS and JavaScript. No framework, database, API, authentication provider, build step or external runtime dependency is required.
+A static, Vercel-ready UI showcase containing 20 independently styled sign-in concepts. Each template is plain HTML, CSS, and vanilla JavaScript in its own folder.
 
 ## Project structure
 
-- `index.html`, `site.css`, `site.js` — responsive gallery storefront with category filters, search and live preview modal
-- `templates/<template-name>/` — each template is an independent folder containing `index.html`, `styles.css`, `script.js` and `README.md`
-- `downloads/<template-name>.zip` — ready-to-download archive for each individual design
-- `templates.json` — gallery catalogue
-- `vercel.json` — static Vercel configuration and basic response headers
+- `index.html`, `site.css`, `site.js`: the responsive template gallery and preview modal.
+- `templates/<slug>/`: standalone template source (`index.html`, `styles.css`, `script.js`, `README.md`).
+- `downloads/<slug>.zip`: individual ZIP for each template, linked from its gallery card.
+- `templates.json`: metadata for search, filtering, and the gallery.
+- `vercel.json`: static hosting headers and route behavior.
 
 ## Run locally
 
-Open `index.html` directly, or run a static server from this directory. For example:
-
-```bash
-python -m http.server 8000
-```
-
-Then visit `http://localhost:8000`. The gallery fetches `templates.json`, so use a local HTTP server rather than opening the gallery as a `file://` URL. Each template's `index.html` can be opened directly.
+Run `python -m http.server 8080` from this directory, then open `http://localhost:8080`. Serving over HTTP preserves the same relative asset behavior used on Vercel.
 
 ## Deploy to Vercel
 
-Import this folder/repository into Vercel and select **Other** as the framework preset. Leave the Build Command and Output Directory empty (or use `.` as the output directory). There is no build step. Deploy.
+Import the project root into Vercel. Use the **Other** framework preset, leave the build command empty, and set the output directory to `.`. No install command or environment variables are needed.
 
-## UI-only notice
+## Template contents
 
-All sign-in pages are front-end design demos. The submit action performs local input checks and displays a demo message only. It does not submit, store, transmit or authenticate credentials. Before production authentication, connect the form to a secure server-side endpoint, implement server validation and CSRF protections, and never store plaintext passwords. Password recovery and account creation are clearly marked as integration placeholders.
+Every design is self-contained and uses semantic HTML5, its own responsive CSS, accessible form labels, keyboard-visible focus states, password visibility control, and reduced-motion support. No framework, external image, or remote font is required.
 
-## Accessibility and responsiveness
+## Important
 
-The templates use semantic labels, keyboard-visible focus, accessible password visibility controls, status announcements, touch-friendly inputs, responsive breakpoints and `prefers-reduced-motion` overrides.
-### Important Vercel preview setting
-
-The Vercel configuration intentionally keeps `cleanUrls` disabled. Each template is opened at its explicit `/templates/<template-name>/index.html` URL, so its relative `./styles.css` and `./script.js` files resolve from that template's own folder. Do not enable `cleanUrls` or rewrite nested template HTML to an extensionless URL unless you also change the asset paths.
+These forms are UI demonstrations only. They do not authenticate, submit credentials, or send passwords to a server. Connect them to a separately implemented and secured authentication service before production use.
