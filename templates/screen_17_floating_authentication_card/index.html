@@ -492,7 +492,7 @@
     const queryPalette = new URLSearchParams(location.search).get('palette');
     selected = queryPalette || localStorage.getItem('cagedragon-colorway');
   } catch (error) {}
-  if (!palettes.some(p => p.id === selected)) selected = 'dragon-amethyst';
+  if (!palettes.some(p => p.id === selected)) selected = 'imperial-gold';
   applyPalette(selected);
 })();
 </script>

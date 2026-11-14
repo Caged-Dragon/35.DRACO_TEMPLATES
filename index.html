@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#15111d" />
+  <meta name="theme-color" content="#f5f2eb" />
   <meta name="description" content="Explore the CagedDragon authentication design collection — 60 original sign-in and access concepts." />
   <title>CagedDragon — Authentication Design Library</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -106,7 +106,7 @@
       const t=templates.find(x=>x.id===id); if(!t)return;
       document.getElementById('modalTitle').textContent=t.title;
       document.getElementById('modalDescription').textContent=`${t.group} · ${t.description} · 20 color themes available inside live preview`;
-      const savedPalette = (() => { try { return localStorage.getItem('cagedragon-colorway') || 'dragon-amethyst'; } catch (error) { return 'dragon-amethyst'; } })();
+      const savedPalette = (() => { try { return localStorage.getItem('cagedragon-colorway') || 'imperial-gold'; } catch (error) { return 'imperial-gold'; } })();
       const previewUrl = `${t.live}?palette=${encodeURIComponent(savedPalette)}`;
       document.getElementById('modalFrame').src = previewUrl;
       document.getElementById('modalLive').href = previewUrl;
