@@ -60,3 +60,129 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', install, {once:true});
   else install();
 })();
+
+
+/* Shared CAGED_DRAGON cinematic introduction, supplied landscape/portrait MP4.
+ * Works with existing cd-central-portals.js; never alters authentication, routing or product data.
+ * Browsers may reject unmuted autoplay. Do not bypass their playback permissions.
+ */
+(function () {
+  'use strict';
+  if (typeof window === 'undefined' || window.top !== window.self || window.__cdIntroInstalled) return;
+  if (location.pathname !== '/' && location.pathname !== '/index.html') return;
+  if (/[?&](?:code|state|error|token|invite|recover|access_token|refresh_token)=/i.test(location.search)) return;
+  window.__cdIntroInstalled = true;
+  const seenKey = 'cd:cinematic-intro:seen:v1';
+  try { if (sessionStorage.getItem(seenKey) === '1') return; } catch { /* storage disabled */ }
+
+  // The exact supplied ZIP media already exists in TimeForge, verified using Git blob SHA-1.
+  const rootUrl = 'https://draco-timeforge.caged-dragon.vercel.app/intro/';
+  const portrait = Boolean(window.matchMedia && window.matchMedia('(orientation: portrait)').matches);
+  const source = rootUrl + (portrait ? 'caged-dragon-portrait.mp4' : 'caged-dragon-landscape.mp4');
+  const poster = rootUrl + (portrait ? 'portrait-poster.jpg' : 'landscape-poster.jpg');
+
+  function install() {
+    if (!document.body || document.getElementById('cd-cinematic-intro')) return;
+    const css = document.createElement('style');
+    css.textContent = [
+      '.cd-cinematic-intro{position:fixed!important;inset:0!important;z-index:2147483646!important;background:#08090e!important;color:white!important;isolation:isolate;font:16px/1.45 system-ui,sans-serif;overflow:hidden}',
+      '.cd-cinematic-intro video{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}',
+      '.cd-cinematic-intro .cd-intro-blur{object-fit:cover;transform:scale(1.1);filter:blur(35px) brightness(.36);opacity:.8}',
+      '.cd-cinematic-intro .cd-intro-film{object-fit:contain;z-index:1}',
+      '.cd-cinematic-intro button{font:600 14px/1.2 system-ui,sans-serif;min-height:44px;padding:12px 18px;border-radius:10px;border:1px solid #f3cf8b;background:#e4b862;color:#16120c;cursor:pointer}',
+      '.cd-cinematic-intro button:focus-visible{outline:3px solid white;outline-offset:3px}',
+      '.cd-cinematic-intro .cd-intro-skip{position:absolute;z-index:5;top:18px;right:18px;background:#13151bdf;color:white;border:1px solid #ffffff8c}',
+      '.cd-cinematic-intro .cd-intro-launch{position:absolute;z-index:4;inset:0;display:grid;place-items:center;padding:20px;background:#080a11ba}',
+      '.cd-cinematic-intro .cd-intro-launch[hidden]{display:none}',
+      '.cd-cinematic-intro .cd-intro-panel{width:min(480px,100%);padding:clamp(20px,4vw,34px);border:1px solid #ffffff55;border-radius:20px;background:#10111bed;text-align:center;box-shadow:0 22px 70px #000a}',
+      '.cd-cinematic-intro .cd-intro-panel h2{color:white!important;font:bold clamp(24px,4vw,34px)/1.15 system-ui,sans-serif;margin:0 0 12px}',
+      '.cd-cinematic-intro .cd-intro-panel p{color:#f2e7d3!important;margin:0 0 22px}',
+      '.cd-cinematic-intro .cd-intro-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}',
+      '.cd-cinematic-intro .cd-intro-enter{background:#262836;color:white;border-color:#ffffff70}',
+      '@media(max-width:480px){.cd-cinematic-intro .cd-intro-actions{flex-direction:column}.cd-cinematic-intro .cd-intro-actions button{width:100%}}',
+      '@media(prefers-reduced-motion:reduce){.cd-cinematic-intro .cd-intro-blur{display:none}}'
+    ].join('\n');
+    document.head.appendChild(css);
+
+    const root = document.createElement('section');
+    root.id = 'cd-cinematic-intro';
+    root.className = 'cd-cinematic-intro';
+    root.setAttribute('role', 'dialog');
+    root.setAttribute('aria-modal', 'true');
+    root.setAttribute('aria-label', 'Caged Dragon opening film');
+    const blur = document.createElement('video');
+    blur.className = 'cd-intro-blur';
+    blur.muted = true; blur.playsInline = true; blur.tabIndex = -1;
+    blur.setAttribute('aria-hidden', 'true');
+    blur.src = source;
+    const film = document.createElement('video');
+    film.className = 'cd-intro-film';
+    film.playsInline = true; film.preload = 'auto'; film.poster = poster; film.src = source;
+    film.muted = false; film.volume = 1;
+    const skip = document.createElement('button');
+    skip.type = 'button'; skip.className = 'cd-intro-skip'; skip.textContent = 'Skip intro';
+    const launch = document.createElement('div');
+    launch.className = 'cd-intro-launch'; launch.hidden = true;
+    const panel = document.createElement('div');
+    panel.className = 'cd-intro-panel';
+    const heading = document.createElement('h2');
+    heading.textContent = 'CAGED DRAGON';
+    const note = document.createElement('p');
+    note.setAttribute('role', 'status');
+    const actions = document.createElement('div');
+    actions.className = 'cd-intro-actions';
+    const play = document.createElement('button');
+    play.type = 'button'; play.textContent = 'Play intro with sound';
+    const enter = document.createElement('button');
+    enter.type = 'button'; enter.className = 'cd-intro-enter'; enter.textContent = 'Enter product';
+    actions.append(play, enter); panel.append(heading, note, actions); launch.append(panel);
+    root.append(blur, film, skip, launch);
+    document.body.appendChild(root);
+    // A strict CSP that disallows inline styles should fail open, never block the product.
+    if (getComputedStyle(root).position !== 'fixed') { root.remove(); css.remove(); return; }
+
+    let ended = false;
+    const priorFocus = document.activeElement;
+    function finish() {
+      if (ended) return;
+      ended = true; film.pause(); blur.pause();
+      root.remove(); css.remove();
+      try { sessionStorage.setItem(seenKey, '1'); } catch { /* storage disabled */ }
+      if (priorFocus && priorFocus.isConnected && typeof priorFocus.focus === 'function')
+        priorFocus.focus({ preventScroll: true });
+    }
+    function prompt(message) {
+      if (ended) return;
+      note.textContent = message; launch.hidden = false;
+      play.focus({ preventScroll: true });
+    }
+    function playing() {
+      if (ended) return;
+      launch.hidden = true;
+      try { blur.currentTime = film.currentTime; } catch { /* decoration only */ }
+      void Promise.resolve(blur.play()).catch(() => {});
+    }
+    function playWithSound() {
+      if (ended) return;
+      film.muted = false; film.volume = 1;
+      try { film.currentTime = 0; } catch { /* media not ready */ }
+      void Promise.resolve(film.play()).then(playing)
+        .catch(() => prompt('Your browser blocked audio. Try Play intro with sound, or enter the product.'));
+    }
+    film.addEventListener('ended', finish);
+    film.addEventListener('error', () => prompt('The video could not load. You can enter the product.'));
+    skip.addEventListener('click', finish);
+    enter.addEventListener('click', finish);
+    play.addEventListener('click', playWithSound);
+    root.addEventListener('keydown', e => { if (e.key === 'Escape') finish(); });
+    window.addEventListener('pagehide', () => { film.pause(); blur.pause(); }, { once: true });
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      prompt('Play the opening film with sound, or enter the product.');
+    } else {
+      void Promise.resolve(film.play()).then(playing)
+        .catch(() => prompt('Your browser requires one click to play the original soundtrack.'));
+    }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', install, { once: true });
+  else install();
+})();
