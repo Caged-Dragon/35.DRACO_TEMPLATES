@@ -23,3 +23,14 @@
 .cd-portals :focus-visible { outline: 3px solid #f59e0b; outline-offset: 3px; }
 @media (prefers-reduced-motion: reduce) { .cd-portals * { animation: none !important; transition: none !important; } }
 @media (max-width: 400px) { .cd-portals { inset-inline-end: 8px; inset-block-end: 8px; } }
+
+/* CAGED_DRAGON portal typography and compact-screen adjustments. */
+.cd-portals { max-width: min(380px, calc(100vw - 24px)); font-size: .9375rem; line-height: 1.5; }
+.cd-portals summary { min-height: 48px; display: flex; align-items: center; font-size: 1rem; }
+.cd-portals nav { overscroll-behavior: contain; scrollbar-gutter: stable; }
+.cd-portals nav a { overflow-wrap: anywhere; }
+.cd-portals input[type="search"] { font: inherit; min-width: 0; }
+@media (max-width: 480px) {
+  .cd-portals { max-width: calc(100vw - 16px); }
+  .cd-portals nav { max-height: min(70dvh, 520px); }
+}
