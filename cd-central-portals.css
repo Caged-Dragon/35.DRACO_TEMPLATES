@@ -1,0 +1,25 @@
+/* This section can be recolored without touching the app's other UI. */
+:root { --cd-portals-accent: #1d4ed8; --cd-portals-on-accent: #ffffff; }
+.cd-portals { position: fixed; inset-inline-end: max(12px,env(safe-area-inset-right));
+  inset-block-end: max(12px,env(safe-area-inset-bottom)); z-index: 2147482000;
+  max-width: min(350px,calc(100vw - 24px)); font: 500 14px/1.45 system-ui,sans-serif;
+  color: #172237; isolation: isolate; }
+.cd-portals * { box-sizing: border-box; }
+.cd-portals summary { list-style: none; cursor: pointer; border-radius: 12px;
+  padding: 12px 16px; min-height: 44px; color: var(--cd-portals-on-accent);
+  background: var(--cd-portals-accent); border: 2px solid transparent;
+  box-shadow: 0 4px 24px #0004; font-weight: 700; }
+.cd-portals summary::-webkit-details-marker { display: none; }
+.cd-portals[open] summary { border-radius: 12px 12px 0 0; }
+.cd-portals nav { padding: 10px; max-height: min(65dvh,460px); overflow: auto;
+  border: 2px solid var(--cd-portals-accent); border-radius: 0 0 12px 12px;
+  background: #ffffff; box-shadow: 0 7px 28px #0005; display: grid; gap: 4px; }
+.cd-portals .cd-portals-title { margin: 3px 6px 9px; font-weight: 750; color: #172237; }
+.cd-portals nav a { display: block; min-height: 44px; padding: 11px 12px;
+  color: #172237; border-radius: 7px; text-decoration: none; }
+.cd-portals nav a:hover, .cd-portals nav a:focus-visible { background: #eaf2ff; color: #122d70; }
+.cd-portals nav a.cd-portals-signin { color: #ffffff; background: var(--cd-portals-accent); font-weight: 700; }
+.cd-portals .cd-portals-note { margin: 8px 6px 2px; font-size: 12px; color: #48566d; }
+.cd-portals :focus-visible { outline: 3px solid #f59e0b; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { .cd-portals * { animation: none !important; transition: none !important; } }
+@media (max-width: 400px) { .cd-portals { inset-inline-end: 8px; inset-block-end: 8px; } }
