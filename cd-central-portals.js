@@ -60,3 +60,136 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', install, {once:true});
   else install();
 })();
+
+/* CAGED_DRAGON opening film v2. Asset SHA-1 matches ANIMATION.zip; no analytics. */
+(function () {
+  'use strict';
+  const BASE = 'https://draco-timeforge.caged-dragon.vercel.app/intro/';
+  const SEEN = 'cd:intro:v2:seen';
+  function installIntro() {
+    if (!document.body || (location.pathname !== '/' && location.pathname !== '/index.html')) return;
+    if (window.self !== window.top || document.querySelector('[data-cd-intro-v2]')) return;
+    const params = new URLSearchParams(location.search);
+    if (['code', 'access_token', 'refresh_token', 'token_hash', 'error', 'error_description'].some(key => params.has(key)) ||
+        /(?:^|[&#])(access_token|refresh_token|code|error)=/i.test(location.hash)) return;
+    try { if (sessionStorage.getItem(SEEN) === '1') return; } catch { /* private mode */ }
+    const portrait = window.matchMedia && window.matchMedia('(orientation: portrait)').matches;
+    const film = document.createElement('video');
+    film.className = 'cd-intro-v2-film';
+    film.src = BASE + (portrait ? 'caged-dragon-portrait.mp4' : 'caged-dragon-landscape.mp4');
+    film.poster = BASE + (portrait ? 'portrait-poster.jpg' : 'landscape-poster.jpg');
+    film.preload = 'auto';
+    film.playsInline = true;
+    film.defaultMuted = false;
+    film.muted = false;
+    film.volume = 1;
+    film.setAttribute('aria-label', 'CAGED DRAGON cinematic opening with soundtrack');
+    const root = document.createElement('section');
+    root.className = 'cd-intro-v2';
+    root.setAttribute('data-cd-intro-v2', '');
+    root.setAttribute('role', 'dialog');
+    root.setAttribute('aria-modal', 'true');
+    root.setAttribute('aria-label', 'CAGED DRAGON opening film');
+    const panel = document.createElement('div');
+    panel.className = 'cd-intro-v2-panel';
+    const kicker = document.createElement('p');
+    kicker.className = 'cd-intro-v2-kicker';
+    kicker.textContent = 'CAGED DRAGON';
+    const heading = document.createElement('h2');
+    heading.textContent = 'The dragon awakens';
+    const message = document.createElement('p');
+    message.className = 'cd-intro-v2-message';
+    message.setAttribute('role', 'status');
+    message.textContent = 'Preparing the opening film with its original soundtrack…';
+    const actions = document.createElement('div');
+    actions.className = 'cd-intro-v2-actions';
+    const play = document.createElement('button');
+    play.type = 'button';
+    play.className = 'cd-intro-v2-play';
+    play.textContent = 'Play intro with sound';
+    const skip = document.createElement('button');
+    skip.type = 'button';
+    skip.className = 'cd-intro-v2-enter';
+    skip.textContent = 'Enter product';
+    const playingSkip = document.createElement('button');
+    playingSkip.type = 'button';
+    playingSkip.className = 'cd-intro-v2-skip';
+    playingSkip.textContent = 'Skip intro';
+    const note = document.createElement('small');
+    note.textContent = 'The product opens as soon as the film finishes.';
+    actions.append(play, skip);
+    panel.append(kicker, heading, message, actions, note);
+    root.append(film, panel, playingSkip);
+    const focusBefore = document.activeElement;
+    let finished = false;
+    function finish() {
+      if (finished) return;
+      finished = true;
+      film.pause();
+      film.removeAttribute('src');
+      film.load();
+      try { sessionStorage.setItem(SEEN, '1'); } catch { /* storage may be blocked */ }
+      root.remove();
+      if (focusBefore && focusBefore.isConnected && typeof focusBefore.focus === 'function') {
+        try { focusBefore.focus({ preventScroll: true }); } catch { /* no longer focusable */ }
+      }
+    }
+    function soundOn() {
+      if (finished) return;
+      film.defaultMuted = false;
+      film.muted = false;
+      film.volume = 1;
+      try { film.currentTime = 0; } catch { /* media not buffered */ }
+      message.textContent = 'Starting the original soundtrack…';
+      let attempt;
+      try { attempt = film.play(); } catch { message.textContent = 'Sound could not start. You can enter the product.'; return; }
+      if (attempt && typeof attempt.catch === 'function') attempt.catch(() => {
+        if (!finished) message.textContent = 'Your browser could not start sound. Check audio permissions or enter the product.';
+      });
+    }
+    film.addEventListener('playing', () => {
+      if (!finished) {
+        root.classList.add('cd-intro-v2-playing');
+        try { playingSkip.focus({ preventScroll: true }); } catch { /* no focus support */ }
+      }
+    });
+    film.addEventListener('ended', finish);
+    film.addEventListener('error', () => {
+      if (!finished) {
+        message.textContent = 'The film could not load. You can still enter the product.';
+        play.disabled = true;
+      }
+    });
+    play.addEventListener('click', soundOn);
+    skip.addEventListener('click', finish);
+    playingSkip.addEventListener('click', finish);
+    root.addEventListener('keydown', event => {
+      if (event.key === 'Escape') { event.preventDefault(); finish(); }
+      if (event.key === 'Tab') {
+        const options = root.classList.contains('cd-intro-v2-playing') ? [playingSkip] : [play, skip].filter(x => !x.disabled);
+        const first = options[0], last = options[options.length - 1];
+        if (first && ((event.shiftKey && document.activeElement === first) ||
+          (!event.shiftKey && document.activeElement === last))) {
+          event.preventDefault();
+          (event.shiftKey ? last : first).focus();
+        }
+      }
+    });
+    document.body.appendChild(root);
+    try { play.focus({ preventScroll: true }); } catch { /* no focus support */ }
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      message.textContent = 'Motion is reduced on this device. Play the film with sound, or enter the product.';
+      return;
+    }
+    let attempt;
+    try { attempt = film.play(); } catch { attempt = null; }
+    if (attempt && typeof attempt.catch === 'function') attempt.catch(() => {
+      if (!finished && !root.classList.contains('cd-intro-v2-playing')) {
+        message.textContent = 'Your browser requires one tap to allow the original soundtrack.';
+      }
+    });
+    else if (!attempt) message.textContent = 'Tap Play intro with sound to start the opening film.';
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', installIntro, { once: true });
+  else installIntro();
+})();
