@@ -1,4 +1,4 @@
-/* CAGED_DRAGON central product portals. No credentials, analytics, or cross-site session sharing. */
+/* CAGED_DRAGON central product portals. No credentials or cross-site session sharing. */
 (function () {
   'use strict';
   const app = "Templates";
@@ -57,6 +57,17 @@
       if (details.open && !details.contains(event.target)) details.open = false;
     });
   }
+  // First-party, cookie-free Vercel Web Analytics page views; no credentials or custom user data.
+  function loadVercelWebAnalytics() {
+    if (document.querySelector('script[data-cd-vercel-analytics], script[src="/_vercel/insights/script.js"]')) return;
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    const script = document.createElement('script');
+    script.defer = true;
+    script.src = '/_vercel/insights/script.js';
+    script.setAttribute('data-cd-vercel-analytics', 'true');
+    document.head.appendChild(script);
+  }
+  if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') loadVercelWebAnalytics();
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', install, {once:true});
   else install();
 })();

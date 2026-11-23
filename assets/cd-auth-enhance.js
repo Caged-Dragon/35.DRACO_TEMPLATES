@@ -24,6 +24,17 @@
   if (window.__cdEnhance) return;
   window.__cdEnhance = true;
 
+  // Every standalone template imports this helper; count only anonymous page views.
+  if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1' &&
+      !document.querySelector('script[data-cd-vercel-analytics], script[src="/_vercel/insights/script.js"]')) {
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    var analyticsScript = document.createElement('script');
+    analyticsScript.defer = true;
+    analyticsScript.src = '/_vercel/insights/script.js';
+    analyticsScript.setAttribute('data-cd-vercel-analytics', 'true');
+    document.head.appendChild(analyticsScript);
+  }
+
   var doc = document;
   var reduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
   var uid = 0;
