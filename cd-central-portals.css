@@ -34,3 +34,14 @@
   .cd-portals { max-width: calc(100vw - 16px); }
   .cd-portals nav { max-height: min(70dvh, 520px); }
 }
+
+/* Product-local navigation drawer. The retired ecosystem launcher is not restored. */
+.cd-local-nav-trigger,.cd-local-nav-close { display:inline-flex!important; align-items:center; justify-content:center; gap:.5rem; min-width:44px; min-height:44px; padding:.5rem .75rem; flex:0 0 auto; font:inherit; font-weight:650; border:1px solid var(--line,var(--border,GrayText)); border-radius:10px; background-color:var(--surface,var(--panel,var(--paper,var(--card,Canvas)))); color:var(--text,var(--ink,CanvasText)); cursor:pointer; }
+.cd-local-nav-trigger { order:-1; }
+.cd-local-nav[open] { position:fixed; inset:0 auto 0 0; display:block; box-sizing:border-box; width:min(22rem,100vw); max-width:100%; height:100dvh; max-height:100dvh; margin:0; padding:0; border:0; border-right:1px solid var(--line,var(--border,GrayText)); border-radius:0; background-color:var(--surface,var(--panel,var(--paper,var(--card,Canvas)))); color:var(--text,var(--ink,CanvasText)); overflow:auto; overscroll-behavior:contain; box-shadow:12px 0 40px #0003; }
+.cd-local-nav::backdrop { background:rgba(0,0,0,.48); }
+.cd-local-nav-panel { box-sizing:border-box; min-height:100%; padding:1rem; }
+.cd-local-nav-heading { display:flex; align-items:center; justify-content:space-between; gap:.75rem; margin-bottom:1rem; }
+.cd-local-nav .cd-local-nav-source { display:flex!important; position:static!important; inset:auto!important; transform:none!important; flex-direction:column!important; align-items:stretch!important; width:100%!important; max-width:none!important; height:auto!important; max-height:none!important; gap:.4rem!important; overflow:visible!important; padding:0!important; margin:0!important; border:0!important; background:none!important; box-shadow:none!important; }
+.cd-local-nav .cd-local-nav-source :is(a,button) { min-height:44px; width:100%; box-sizing:border-box; white-space:normal; overflow-wrap:anywhere; text-align:left; }
+.cd-local-nav-trigger:focus-visible,.cd-local-nav :focus-visible { outline:3px solid var(--accent,var(--brand,Highlight)); outline-offset:3px; }
