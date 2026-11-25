@@ -1,63 +1,6 @@
-/* CAGED_DRAGON central product portals. No credentials or cross-site session sharing. */
+/* Retired product launcher. Retained for existing script references. */
 (function () {
   'use strict';
-  const app = "Templates";
-  const current = "templates";
-  const signInPath = "";
-  // CAGED_DRAGON searchable ecosystem 2026-11-22
-  const destinations = [["accounts","Accounts","https://draco-accounts.caged-dragon.vercel.app/","கணக்குகள்"],["feedback","Feedback","https://draco-feedback.caged-dragon.vercel.app/","கருத்துகள்"],["care","Customer Care","https://draco-customer-care.caged-dragon.vercel.app/","வாடிக்கையாளர் உதவி"],["payment","Payment (demo)","https://draco-payment-gateway.caged-dragon.vercel.app/","மாதிரி கட்டணம்"],["authenticator","Authenticator","https://draco-authenticator.caged-dragon.vercel.app/","அங்கீகாரச் செயலி"],["portfolio","Portfolio","https://draco-portfolio.caged-dragon.vercel.app/","திட்டங்களின் தொகுப்பு"],["chat","Draco Chat","https://draco-chat.caged-dragon.vercel.app/","டிராகோ அரட்டை"],["mail","Draco Mail","https://draco-mail.caged-dragon.vercel.app/","டிராகோ அஞ்சல்"],["meet","Draco Meet","https://draco-meet.caged-dragon.vercel.app/","டிராகோ சந்திப்பு"],["calendar","Draco Calendar","https://draco-calender.caged-dragon.vercel.app/","டிராகோ நாள்காட்டி"],["timeforge","Draco TimeForge","https://draco-timeforge.caged-dragon.vercel.app/","டிராகோ நேர மேலாண்மை"],["office","Draco Office","https://draco-office.caged-dragon.vercel.app/","டிராகோ அலுவலகம்"],["drive","Draco Drive","https://draco-drive.caged-dragon.vercel.app/","டிராகோ இயக்ககம்"],["files","Draco Files","https://draco-files.caged-dragon.vercel.app/","டிராகோ கோப்புகள்"],["docs","Draco Docs","https://draco-docs.caged-dragon.vercel.app/","டிராகோ ஆவணங்கள்"],["sheets","Draco Sheets","https://draco-sheets.caged-dragon.vercel.app/","டிராகோ தாள்கள்"],["slides","Draco Slides","https://draco-slides.caged-dragon.vercel.app/","டிராகோ விளக்கக்காட்சிகள்"],["code","Draco Code","https://draco-code.caged-dragon.vercel.app/","டிராகோ குறியீடு"],["webhub","Draco WebHub","https://draco-webhub.caged-dragon.vercel.app/","டிராகோ இணைய மையம்"],["store","Draco Store","https://draco-store.caged-dragon.vercel.app/","டிராகோ கடை"],["cart","Draco Cart","https://draco-cart.caged-dragon.vercel.app/","டிராகோ வண்டி"],["templates","Draco Templates","https://draco-template.caged-dragon.vercel.app/","டிராகோ வார்ப்புருக்கள்"],["gamehub","Draco Game Hub","https://draco-game-hub.caged-dragon.vercel.app/","டிராகோ விளையாட்டு மையம்"],["2042","Draco 2042","https://draco-2042.caged-dragon.vercel.app/","டிராகோ 2042"],["tic-tac-toe","Tic-Tac-Toe","https://draco-tic-tac-toe.caged-dragon.vercel.app/","டிக் டாக் டோ"],["sudoku","Sudoku","https://draco-soduku.caged-dragon.vercel.app/","சுடோகு"],["serpant","Serpent","https://draco-serpant.caged-dragon.vercel.app/","பாம்பு விளையாட்டு"],["breaker","Breaker","https://draco-breaker.caged-dragon.vercel.app/","பிரேக்கர்"],["flight","Flight","https://draco-flight.caged-dragon.vercel.app/","விமான விளையாட்டு"],["strike","Strike","https://draco-strike.caged-dragon.vercel.app/","ஸ்ட்ரைக்"],["fire-clash","Fire Clash","https://draco-fire-clash.caged-dragon.vercel.app/","நெருப்பு மோதல்"],["chess","Chess","https://draco-chess.caged-dragon.vercel.app/","சதுரங்கம்"]];
-  const translate = document.documentElement.lang.toLowerCase().startsWith('ta');
-  function node(tag, attributes, value) {
-    const el = document.createElement(tag);
-    for (const [key, val] of Object.entries(attributes || {})) el.setAttribute(key, val);
-    if (value) el.textContent = value;
-    return el;
-  }
-  function install() {
-    if (document.querySelector('[data-cd-portals]')) return;
-    const script = document.querySelector('script[src*="cd-central-portals.js"]');
-    const prefix = script ? new URL('.', script.src).href : '/';
-    const style = node('link', {rel: 'stylesheet', href: prefix + 'cd-central-portals.css'});
-    document.head.appendChild(style);
-    const details = node('details', {'class':'cd-portals', 'data-cd-portals':'', 'aria-label':'CAGED_DRAGON services'});
-    const summary = node('summary', {}, translate ? 'CAGED_DRAGON சேவைகள்' : 'CAGED_DRAGON Portals');
-    details.appendChild(summary);
-    const nav = node('nav', {'aria-label': translate ? 'மைய சேவைகள்' : 'Central services'});
-    const heading = node('p', {'class':'cd-portals-title'}, translate ? app + ' · உதவி இணைப்புகள்' : app + ' · Quick links');
-    nav.appendChild(heading);
-    if (signInPath) {
-      const signIn = node('a', {href:signInPath, 'class':'cd-portals-signin'}, translate ? 'உள்நுழை' : 'Sign in / Login');
-      nav.appendChild(signIn);
-    }
-    const search = node('input', {type:'search', 'aria-label':translate?'செயலிகளைத் தேடுக':'Search products', placeholder:translate?'செயலிகளைத் தேடுக':'Search products'});
-    search.style.cssText='width:100%;min-height:44px;padding:10px;border-radius:8px;border:1px solid #94a3b8;color:#172237;background:#fff';
-    nav.appendChild(search);
-    const links=[];
-    for (const [id, label, url, tamil] of destinations) {
-      if (id === current) continue;
-      const link=node('a',{href:url,rel:'noopener noreferrer'},translate?tamil:label);
-      link.dataset.search=(label+' '+tamil+' '+id).toLowerCase();
-      nav.appendChild(link);links.push(link);
-    }
-    const result=node('p',{role:'status','aria-live':'polite','class':'cd-portals-note'},links.length+' products');
-    nav.appendChild(result);
-    search.addEventListener('input',()=>{const q=search.value.trim().toLowerCase();let count=0;
-      for(const link of links){const visible=link.dataset.search.includes(q);link.style.display=visible?'':'none';if(visible)count++;}
-      result.textContent=count?count+' products':(translate?'பொருந்தும் செயலிகள் இல்லை':'No matching products');
-    });
-    details.addEventListener('toggle',()=>{if(details.open)search.focus();});
-    const note = node('p', {'class':'cd-portals-note'}, translate ? 'பாதுகாப்பான உள்நுழைவு தயாரிப்பில் தொடங்கும்.' : 'Secure sign-in always begins in its product.');
-    nav.appendChild(note);
-    details.appendChild(nav);
-    document.body.appendChild(details);
-    details.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape') { details.open = false; summary.focus(); }
-    });
-    document.addEventListener('pointerdown', function(event) {
-      if (details.open && !details.contains(event.target)) details.open = false;
-    });
-  }
-  // First-party, cookie-free Vercel Web Analytics page views; no credentials or custom user data.
   function loadVercelWebAnalytics() {
     if (document.querySelector('script[data-cd-vercel-analytics], script[src="/_vercel/insights/script.js"]')) return;
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -68,6 +11,4 @@
     document.head.appendChild(script);
   }
   if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') loadVercelWebAnalytics();
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', install, {once:true});
-  else install();
 })();
